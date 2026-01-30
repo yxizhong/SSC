@@ -1,0 +1,11 @@
+Starting batch processing at Thu Nov  6 03:46:34 UTC 2025
+Processing 30 questions
+Creating complete snapshot environment...
+Created script snapshot: /share/yangxizhong/workspace/step_level_deepconf/output/result/UpdateBaseline/brumo2025-baseline-20251106/snapshot_20251106_034634/selfstepconf_online_snapshot.py
+Created model directory snapshot: /share/yangxizhong/workspace/step_level_deepconf/output/result/UpdateBaseline/brumo2025-baseline-20251106/snapshot_20251106_034634/model
+Modified script to use snapshot model directory
+Script snapshot checksum: fc41a03823b6a89bd7cea6d9d76838b1
+Model directory checksum: 67a5060a35c8b3ce23080cf6c149b31a
+Batch processing completed at Thu Nov  6 03:46:34 UTC 2025
+Starting execution with snapshot environment...
+Processing question 0/29 at Thu Nov  6 03:46:34 UTC 2025

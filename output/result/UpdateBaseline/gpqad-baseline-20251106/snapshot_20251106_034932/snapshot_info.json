@@ -1,0 +1,13 @@
+{
+    "timestamp": "20251106_034932",
+    "original_script": "/share/yangxizhong/workspace/step_level_deepconf/scripts/deepconf_dpsk_evaluate.py",
+    "original_model_dir": "/share/yangxizhong/workspace/step_level_deepconf/model",
+    "snapshot_script": "/share/yangxizhong/workspace/step_level_deepconf/output/result/UpdateBaseline/gpqad-baseline-20251106/snapshot_20251106_034932/selfstepconf_online_snapshot.py",
+    "snapshot_model_dir": "/share/yangxizhong/workspace/step_level_deepconf/output/result/UpdateBaseline/gpqad-baseline-20251106/snapshot_20251106_034932/model",
+    "script_checksum": "b0719b4cb115321d55a415a075594817",
+    "model_checksum": "f4a4e4bfc0acf9c085f64645799fd9f0",
+    "execution_log": "/share/yangxizhong/workspace/step_level_deepconf/output/result/UpdateBaseline/gpqad-baseline-20251106/run_all_baseline_20251106_034932.log",
+    "parameters": {
+        "dataset": "/share/yangxizhong/data/GPQA-Diamond/test/gpqa_diamond.jsonl"
+    }
+}

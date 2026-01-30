@@ -1,0 +1,25 @@
+开始执行实验队列...
+Starting process at Wed Jan 21 15:30:56 UTC 2026, PID will be recorded...
+0.1x0.3 HMMT2025 Process PID: 360048
+HMMT2025 completed
+Starting process at Wed Jan 21 17:29:12 UTC 2026, PID will be recorded...
+0.1x0.4 HMMT2025 Process PID: 383086
+HMMT2025 completed
+ablation/Ablation-Alpha-40-All-Delta_control_selfstepconf_B64_dpsk-distill-qwen3-8b.sh: line 90: -p: command not found
+Starting process at Thu Jan 22 07:29:16 UTC 2026, PID will be recorded...
+0.1x0.9 HMMT2025 Process PID: 481391
+HMMT2025 completed
+ablation/Ablation-Alpha-40-All-Delta_control_selfstepconf_B64_dpsk-distill-qwen3-8b.sh: line 125: unexpected EOF while looking for matching `"'
+ablation/Ablation-Alpha-40-All-Delta_control_selfstepconf_B64_dpsk-distill-qwen3-8b.sh: line 126: syntax error: unexpected end of file
+ HMMT2025 Process PID: 24536
+HMMT2025 completed
+ablation/Ablation-Alpha-40-All-Delta_control_selfstepconf_B64_dpsk-distill-qwen3-8b.sh: line 114: /share/yangxizhong/output/deepconf/selfstepconf_deepthink/hmmt2025-B64-95-80-80-20251204/Ablation-Alpha-40-All-Delta-dpsk-distill-qwen3-8b/Ablation-Alpha-40-Delta-90-dpsk-distill-qwen3-8b/hmmt2025_Ablation-Alpha-40-Delta-90-dpsk-distill-qwen3-8b_selfstepconf_B64_T60.log): No such file or directory
+Starting process at Thu Jan 22 13:45:59 UTC 2026, PID will be recorded...
+0.1x0.9 HMMT2025 Process PID: 1596742
+HMMT2025 completed
+所有实验完成
+开始执行实验队列...
+Starting process at Thu Jan 22 14:25:34 UTC 2026, PID will be recorded...
+0.1x0.5 HMMT2025 Process PID: 1608047
+HMMT2025 completed
+所有实验完成

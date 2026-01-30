@@ -1,0 +1,698 @@
+INFO 10-09 16:17:44 [__init__.py:216] Automatically detected platform cuda.
+Loading dataset from /share/yangxizhong/data/brumo_2025/data/train-00000-of-00001.parquet...
+Initializing vLLM engine...
+INFO 10-09 16:17:46 [utils.py:328] non-default args: {'trust_remote_code': True, 'enable_prefix_caching': True, 'disable_log_stats': True, 'logits_processors': [<class 'deepconf.processors.WrappedPerReqLogitsProcessor'>], 'model': '/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B'}
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
+INFO 10-09 16:17:52 [__init__.py:742] Resolved architecture: Qwen3ForCausalLM
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 10-09 16:17:52 [__init__.py:1815] Using max model len 131072
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
+INFO 10-09 16:17:53 [scheduler.py:222] Chunked prefill is enabled with max_num_batched_tokens=8192.
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
+WARNING 10-09 16:17:53 [__init__.py:2974] We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing for more information. Reasons: CUDA is initialized
+INFO 10-09 16:17:57 [__init__.py:216] Automatically detected platform cuda.
+[1;36m(EngineCore_DP0 pid=169325)[0;0m INFO 10-09 16:17:59 [core.py:654] Waiting for init message from front-end.
+[1;36m(EngineCore_DP0 pid=169325)[0;0m INFO 10-09 16:17:59 [core.py:76] Initializing a V1 LLM engine (v0.10.2) with config: model='/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B', speculative_config=None, tokenizer='/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=131072, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.mamba_mixer2","vllm.mamba_mixer","vllm.short_conv","vllm.linear_attention","vllm.plamo2_mamba_mixer","vllm.gdn_attention"],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":1,"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"pass_config":{},"max_capture_size":512,"local_cache_dir":null}
+[W1009 16:18:01.269725381 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[1;36m(EngineCore_DP0 pid=169325)[0;0m INFO 10-09 16:18:01 [parallel_state.py:1165] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+[1;36m(EngineCore_DP0 pid=169325)[0;0m WARNING 10-09 16:18:01 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(EngineCore_DP0 pid=169325)[0;0m INFO 10-09 16:18:01 [gpu_model_runner.py:2338] Starting to load model /share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B...
+[1;36m(EngineCore_DP0 pid=169325)[0;0m INFO 10-09 16:18:01 [gpu_model_runner.py:2370] Loading model from scratch...
+[1;36m(EngineCore_DP0 pid=169325)[0;0m INFO 10-09 16:18:01 [cuda.py:362] Using Flash Attention backend on V1 engine.
+[1;36m(EngineCore_DP0 pid=169325)[0;0m 
+Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
+[1;36m(EngineCore_DP0 pid=169325)[0;0m 
+Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:02<00:02,  2.06s/it]
+[1;36m(EngineCore_DP0 pid=169325)[0;0m 
+Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:04<00:00,  2.35s/it]
+[1;36m(EngineCore_DP0 pid=169325)[0;0m 
+Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:04<00:00,  2.30s/it]
+[1;36m(EngineCore_DP0 pid=169325)[0;0m 
+[1;36m(EngineCore_DP0 pid=169325)[0;0m INFO 10-09 16:18:06 [default_loader.py:268] Loading weights took 4.89 seconds
+[1;36m(EngineCore_DP0 pid=169325)[0;0m INFO 10-09 16:18:06 [gpu_model_runner.py:2392] Model loading took 15.2898 GiB and 5.128336 seconds
+[1;36m(EngineCore_DP0 pid=169325)[0;0m INFO 10-09 16:18:13 [backends.py:539] Using cache directory: /root/.cache/vllm/torch_compile_cache/b549e05668/rank_0_0/backbone for vLLM's torch.compile
+[1;36m(EngineCore_DP0 pid=169325)[0;0m INFO 10-09 16:18:13 [backends.py:550] Dynamo bytecode transform time: 6.17 s
+[1;36m(EngineCore_DP0 pid=169325)[0;0m INFO 10-09 16:18:16 [backends.py:161] Directly load the compiled graph(s) for dynamic shape from the cache, took 2.298 s
+[1;36m(EngineCore_DP0 pid=169325)[0;0m INFO 10-09 16:18:17 [monitor.py:34] torch.compile takes 6.17 s in total
+[1;36m(EngineCore_DP0 pid=169325)[0;0m INFO 10-09 16:18:18 [gpu_worker.py:298] Available KV cache memory: 54.48 GiB
+[1;36m(EngineCore_DP0 pid=169325)[0;0m INFO 10-09 16:18:18 [kv_cache_utils.py:864] GPU KV cache size: 396,688 tokens
+[1;36m(EngineCore_DP0 pid=169325)[0;0m INFO 10-09 16:18:18 [kv_cache_utils.py:868] Maximum concurrency for 131,072 tokens per request: 3.03x
+[1;36m(EngineCore_DP0 pid=169325)[0;0m 
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/67 [00:00<?, ?it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   3%|▎         | 2/67 [00:00<00:03, 16.68it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   6%|▌         | 4/67 [00:00<00:03, 17.38it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   9%|▉         | 6/67 [00:00<00:03, 17.62it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  12%|█▏        | 8/67 [00:00<00:03, 17.18it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  15%|█▍        | 10/67 [00:00<00:03, 17.23it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  18%|█▊        | 12/67 [00:00<00:03, 17.13it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  21%|██        | 14/67 [00:00<00:03, 17.29it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  24%|██▍       | 16/67 [00:00<00:02, 17.16it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  27%|██▋       | 18/67 [00:01<00:02, 17.88it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  31%|███▏      | 21/67 [00:01<00:02, 18.28it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  34%|███▍      | 23/67 [00:01<00:02, 18.28it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  37%|███▋      | 25/67 [00:01<00:02, 18.47it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  40%|████      | 27/67 [00:01<00:02, 18.88it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  45%|████▍     | 30/67 [00:01<00:01, 19.35it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  48%|████▊     | 32/67 [00:01<00:01, 19.30it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  52%|█████▏    | 35/67 [00:01<00:01, 20.57it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  57%|█████▋    | 38/67 [00:02<00:01, 21.26it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  61%|██████    | 41/67 [00:02<00:01, 21.48it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  66%|██████▌   | 44/67 [00:02<00:01, 22.07it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  70%|███████   | 47/67 [00:02<00:00, 21.73it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  75%|███████▍  | 50/67 [00:02<00:00, 22.13it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  79%|███████▉  | 53/67 [00:02<00:00, 22.64it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  84%|████████▎ | 56/67 [00:02<00:00, 23.33it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  88%|████████▊ | 59/67 [00:02<00:00, 22.73it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  93%|█████████▎| 62/67 [00:03<00:00, 23.64it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  97%|█████████▋| 65/67 [00:03<00:00, 24.38it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 67/67 [00:03<00:00, 20.51it/s]
+[1;36m(EngineCore_DP0 pid=169325)[0;0m INFO 10-09 16:18:22 [gpu_model_runner.py:3118] Graph capturing finished in 4 secs, took 2.24 GiB
+[1;36m(EngineCore_DP0 pid=169325)[0;0m INFO 10-09 16:18:22 [gpu_worker.py:391] Free memory on device (78.66/79.15 GiB) on startup. Desired GPU memory utilization is (0.9, 71.24 GiB). Actual usage is 15.29 GiB for weight, 1.45 GiB for peak activation, 0.02 GiB for non-torch memory, and 2.24 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=55927124992` to fit into requested memory, or `--kv-cache-memory=63898137600` to fully utilize gpu memory. Current kv cache memory in use is 58494039040 bytes.
+[1;36m(EngineCore_DP0 pid=169325)[0;0m INFO 10-09 16:18:22 [core.py:218] init engine (profile, create kv cache, warmup model) took 15.85 seconds
+INFO 10-09 16:18:23 [llm.py:295] Supported_tasks: ['generate']
+INFO 10-09 16:18:23 [__init__.py:36] No IOProcessor plugins requested by the model
+vLLM engine initialized in 37.24 seconds
+Initializing tokenizer...
+Tokenizer initialized in 0.35 seconds
+
+  0%|          | 0/30 [00:00<?, ?it/s]Processing question 0: One hundred concentric circles are labelled $C_{1}, C_{2}, C_{3}, \ldots, C_{100}$. Each circle $C_{...
+Preparing prompt...
+
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][A
+Adding requests: 100%|██████████| 1/1 [00:00<00:00, 180.89it/s]
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [03:11<00:00, 191.47s/it, est. speed input: 0.63 toks/s, output: 75.12 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [03:11<00:00, 191.47s/it, est. speed input: 0.63 toks/s, output: 75.12 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [03:11<00:00, 191.48s/it, est. speed input: 0.63 toks/s, output: 75.12 toks/s]
+
+  3%|▎         | 1/30 [03:11<1:32:36, 191.59s/it]Processing question 1: An infinite geometric sequence with common ratio $r$ sums to $91$. A new sequence starting with the ...
+Preparing prompt...
+
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][A
+Adding requests: 100%|██████████| 1/1 [00:00<00:00, 439.75it/s]
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [01:50<00:00, 110.44s/it, est. speed input: 0.81 toks/s, output: 77.00 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [01:50<00:00, 110.44s/it, est. speed input: 0.81 toks/s, output: 77.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [01:50<00:00, 110.44s/it, est. speed input: 0.81 toks/s, output: 77.00 toks/s]
+
+  7%|▋         | 2/30 [05:02<1:07:12, 144.02s/it]save question success:  1
+Processing question 2: Let $A, B, C, D$, and $E$ be five equally spaced points on a line in that order. Let $F, G, H$, and ...
+Preparing prompt...
+
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][A
+Adding requests: 100%|██████████| 1/1 [00:00<00:00, 500.57it/s]
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [03:43<00:00, 223.58s/it, est. speed input: 0.66 toks/s, output: 74.46 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [03:43<00:00, 223.58s/it, est. speed input: 0.66 toks/s, output: 74.46 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [03:43<00:00, 223.58s/it, est. speed input: 0.66 toks/s, output: 74.46 toks/s]
+
+ 10%|█         | 3/30 [08:45<1:21:10, 180.38s/it]save question success:  2
+Processing question 3: If $5 f(x)-x f\left(\frac{1}{x}\right)=\frac{1}{17} x^{2}$, determine $f(3)$....
+Preparing prompt...
+
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][A
+Adding requests: 100%|██████████| 1/1 [00:00<00:00, 845.11it/s]
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [01:09<00:00, 69.97s/it, est. speed input: 1.06 toks/s, output: 78.03 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [01:09<00:00, 69.97s/it, est. speed input: 1.06 toks/s, output: 78.03 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [01:09<00:00, 69.98s/it, est. speed input: 1.06 toks/s, output: 78.03 toks/s]
+
+ 13%|█▎        | 4/30 [09:55<59:17, 136.81s/it]  save question success:  3
+Processing question 4: How many ways are there to arrange $1,2,3,4,5,6$ such that no two consecutive numbers have the same ...
+Preparing prompt...
+
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][A
+Adding requests: 100%|██████████| 1/1 [00:00<00:00, 734.17it/s]
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [04:16<00:00, 256.29s/it, est. speed input: 0.28 toks/s, output: 73.93 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [04:16<00:00, 256.29s/it, est. speed input: 0.28 toks/s, output: 73.93 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [04:16<00:00, 256.29s/it, est. speed input: 0.28 toks/s, output: 73.93 toks/s]
+
+ 17%|█▋        | 5/30 [14:12<1:14:57, 179.92s/it]save question success:  4
+Processing question 5: Joshua is playing with his number cards. He has $9$ cards of $9$ lined up in a row. He puts a multip...
+Preparing prompt...
+
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][A
+Adding requests: 100%|██████████| 1/1 [00:00<00:00, 552.83it/s]
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [09:27<00:00, 567.23s/it, est. speed input: 0.33 toks/s, output: 69.00 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [09:27<00:00, 567.23s/it, est. speed input: 0.33 toks/s, output: 69.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [09:27<00:00, 567.24s/it, est. speed input: 0.33 toks/s, output: 69.00 toks/s]
+
+ 20%|██        | 6/30 [23:39<2:04:39, 311.64s/it]save question success:  5
+Processing question 6: Bruno the Bear is tasked to organize $16$ identical brown balls into $7$ bins labeled 1-7. He must d...
+Preparing prompt...
+
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][A
+Adding requests: 100%|██████████| 1/1 [00:00<00:00, 646.17it/s]
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [01:35<00:00, 95.06s/it, est. speed input: 1.18 toks/s, output: 77.11 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [01:35<00:00, 95.06s/it, est. speed input: 1.18 toks/s, output: 77.11 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [01:35<00:00, 95.06s/it, est. speed input: 1.18 toks/s, output: 77.11 toks/s]
+
+ 23%|██▎       | 7/30 [25:14<1:32:19, 240.84s/it]save question success:  6
+Processing question 7: Let $f(n)$ be the number obtained by increasing every prime factor in $f$ by one. For instance, $f(1...
+Preparing prompt...
+
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][A
+Adding requests: 100%|██████████| 1/1 [00:00<00:00, 872.36it/s]
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [04:44<00:00, 284.76s/it, est. speed input: 0.46 toks/s, output: 73.36 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [04:44<00:00, 284.76s/it, est. speed input: 0.46 toks/s, output: 73.36 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [04:44<00:00, 284.76s/it, est. speed input: 0.46 toks/s, output: 73.36 toks/s]
+
+ 27%|██▋       | 8/30 [29:59<1:33:26, 254.84s/it]save question success:  7
+Processing question 8: How many positive integer divisors of $63^{10}$ do not end in a $1$ ?...
+Preparing prompt...
+
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][A
+Adding requests: 100%|██████████| 1/1 [00:00<00:00, 912.00it/s]
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [01:51<00:00, 111.82s/it, est. speed input: 0.52 toks/s, output: 76.87 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [01:51<00:00, 111.82s/it, est. speed input: 0.52 toks/s, output: 76.87 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [01:51<00:00, 111.82s/it, est. speed input: 0.52 toks/s, output: 76.87 toks/s]
+
+ 30%|███       | 9/30 [31:51<1:13:32, 210.14s/it]save question success:  8
+Processing question 9: Bruno is throwing a party and invites $n$ guests. Each pair of party guests are either friends or en...
+Preparing prompt...
+
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][A
+Adding requests: 100%|██████████| 1/1 [00:00<00:00, 743.41it/s]
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [03:21<00:00, 201.49s/it, est. speed input: 0.54 toks/s, output: 74.89 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [03:21<00:00, 201.49s/it, est. speed input: 0.54 toks/s, output: 74.89 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [03:21<00:00, 201.49s/it, est. speed input: 0.54 toks/s, output: 74.89 toks/s]
+
+ 33%|███▎      | 10/30 [35:12<1:09:09, 207.49s/it]save question success:  9
+Processing question 10: In acute $\triangle A B C$, let $D$ be the foot of the altitude from $A$ to $B C$ and $O$ be the cir...
+Preparing prompt...
+
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][A
+Adding requests: 100%|██████████| 1/1 [00:00<00:00, 921.02it/s]
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [03:21<00:00, 201.70s/it, est. speed input: 0.57 toks/s, output: 74.89 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [03:21<00:00, 201.70s/it, est. speed input: 0.57 toks/s, output: 74.89 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [03:21<00:00, 201.70s/it, est. speed input: 0.57 toks/s, output: 74.89 toks/s]
+
+ 37%|███▋      | 11/30 [38:34<1:05:08, 205.73s/it]save question success:  10
+Processing question 11: Alice has $10$ gifts $g_{1}, g_{2}, \ldots, g_{10}$ and $10$ friends $f_{1}, f_{2}, \ldots, f_{10}$....
+Preparing prompt...
+
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][A
+Adding requests: 100%|██████████| 1/1 [00:00<00:00, 971.35it/s]
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [06:49<00:00, 409.33s/it, est. speed input: 0.39 toks/s, output: 71.29 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [06:49<00:00, 409.33s/it, est. speed input: 0.39 toks/s, output: 71.29 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [06:49<00:00, 409.33s/it, est. speed input: 0.39 toks/s, output: 71.29 toks/s]
+
+ 40%|████      | 12/30 [45:24<1:20:18, 267.71s/it]save question success:  11
+Processing question 12: Let $\triangle A B C$ be an equilateral triangle with side length $1$. A real number $d$ is selected...
+Preparing prompt...
+
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][A
+Adding requests: 100%|██████████| 1/1 [00:00<00:00, 385.29it/s]
+
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [16:41<00:00, 1001.78s/it, est. speed input: 0.25 toks/s, output: 63.89 toks/s][A
+
+Processed prompts: 100%|██████████| 1/1 [16:41<00:00, 1001.78s/it, est. speed input: 0.25 toks/s, output: 63.89 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [16:41<00:00, 1001.79s/it, est. speed input: 0.25 toks/s, output: 63.89 toks/s]
+
+ 40%|████      | 12/30 [1:02:06<1:33:09, 310.51s/it]
+Traceback (most recent call last):
+  File "/share/yangxizhong/workspace/deepconf/step_level_deepconf/scripts/deepseek_evaluate.py", line 206, in <module>
+    answer = extract_answer(output)
+^^^^^^
+  File "/share/yangxizhong/workspace/deepconf/step_level_deepconf/scripts/deepseek_evaluate.py", line 192, in main
+    sampling_params = SamplingParams(
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "/share/yangxizhong/workspace/deepconf/step_level_deepconf/scripts/deepseek_evaluate.py", line 79, in equal_func
+    def equal_func(answer: str, ground_truth: str) -> bool:
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/share/yangxizhong/workspace/deepconf/step_level_deepconf/scripts/deepseek_evaluate.py", line 63, in quick_parse
+    def quick_parse(text: str) -> str:
+           ^^^^^^^^^^^^^^^^^
+TypeError: argument of type 'NoneType' is not iterable
+[1;36m(EngineCore_DP0 pid=169325)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=169325)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=169325)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=169325)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=169325)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=169325)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=169325)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=169325)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=169325)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=169325)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=169325)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=169325)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=169325)[0;0m Not using ConfPerReqLogitsProcessor None
+[rank0]:[W1009 17:20:31.332145793 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+ERROR 10-09 17:20:31 [core_client.py:564] Engine core proc EngineCore_DP0 died unexpectedly, shutting down client.
+INFO 10-09 17:26:02 [__init__.py:216] Automatically detected platform cuda.
+Traceback (most recent call last):
+  File "/share/yangxizhong/workspace/deepconf/step_level_deepconf/scripts/deepseek_evaluate.py", line 19, in <module>
+    from utils import math_equal
+ModuleNotFoundError: No module named 'utils'
+INFO 10-09 17:27:24 [__init__.py:216] Automatically detected platform cuda.
+skip: 0
+INFO 10-09 17:29:33 [__init__.py:216] Automatically detected platform cuda.
+Loading dataset from /share/yangxizhong/data/brumo_2025/data/train-00000-of-00001.parquet...
+Traceback (most recent call last):
+  File "/share/yangxizhong/workspace/deepconf/step_level_deepconf/scripts/deepseek_evaluate.py", line 214, in <module>
+    main()
+  File "/share/yangxizhong/workspace/deepconf/step_level_deepconf/scripts/deepseek_evaluate.py", line 150, in main
+    if args.dataset.endwith("jsonl"):
+       ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'endwith'. Did you mean: 'endswith'?
+INFO 10-09 17:29:56 [__init__.py:216] Automatically detected platform cuda.
+Loading dataset from /share/yangxizhong/data/brumo_2025/data/train-00000-of-00001.parquet...
+Traceback (most recent call last):
+  File "/share/yangxizhong/workspace/deepconf/step_level_deepconf/scripts/deepseek_evaluate.py", line 214, in <module>
+    main()
+  File "/share/yangxizhong/workspace/deepconf/step_level_deepconf/scripts/deepseek_evaluate.py", line 164, in main
+    deep_llm = DeepThinkLLM(model=args.model, tensor_parallel_size=args.tensor_parallel_size, enable_prefix_caching=True)
+               ^^^^^^^^^^^^
+NameError: name 'DeepThinkLLM' is not defined
+INFO 10-09 17:30:13 [__init__.py:216] Automatically detected platform cuda.
+Traceback (most recent call last):
+  File "/share/yangxizhong/workspace/deepconf/step_level_deepconf/scripts/deepseek_evaluate.py", line 17, in <module>
+    from deepconf import DeepThinkLLM
+ImportError: cannot import name 'DeepThinkLLM' from 'deepconf' (/share/yangxizhong/workspace/deepconf/deepconf/__init__.py)
+INFO 10-09 17:31:03 [__init__.py:216] Automatically detected platform cuda.
+Loading dataset from /share/yangxizhong/data/brumo_2025/data/train-00000-of-00001.parquet...
+Initializing vLLM engine...
+INFO 10-09 17:31:05 [utils.py:328] non-default args: {'trust_remote_code': True, 'enable_prefix_caching': True, 'disable_log_stats': True, 'logits_processors': [<class 'deepconf.processors.WrappedPerReqLogitsProcessor'>], 'model': '/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B'}
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
+INFO 10-09 17:31:12 [__init__.py:742] Resolved architecture: Qwen3ForCausalLM
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 10-09 17:31:12 [__init__.py:1815] Using max model len 131072
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
+INFO 10-09 17:31:13 [scheduler.py:222] Chunked prefill is enabled with max_num_batched_tokens=8192.
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
+WARNING 10-09 17:31:13 [__init__.py:2974] We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing for more information. Reasons: CUDA is initialized
+INFO 10-09 17:31:17 [__init__.py:216] Automatically detected platform cuda.
+[1;36m(EngineCore_DP0 pid=33369)[0;0m INFO 10-09 17:31:19 [core.py:654] Waiting for init message from front-end.
+[1;36m(EngineCore_DP0 pid=33369)[0;0m INFO 10-09 17:31:19 [core.py:76] Initializing a V1 LLM engine (v0.10.2) with config: model='/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B', speculative_config=None, tokenizer='/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=131072, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.mamba_mixer2","vllm.mamba_mixer","vllm.short_conv","vllm.linear_attention","vllm.plamo2_mamba_mixer","vllm.gdn_attention"],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":1,"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"pass_config":{},"max_capture_size":512,"local_cache_dir":null}
+[W1009 17:31:22.811073945 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[1;36m(EngineCore_DP0 pid=33369)[0;0m INFO 10-09 17:31:22 [parallel_state.py:1165] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+[1;36m(EngineCore_DP0 pid=33369)[0;0m WARNING 10-09 17:31:22 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(EngineCore_DP0 pid=33369)[0;0m INFO 10-09 17:31:22 [gpu_model_runner.py:2338] Starting to load model /share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B...
+[1;36m(EngineCore_DP0 pid=33369)[0;0m INFO 10-09 17:31:22 [gpu_model_runner.py:2370] Loading model from scratch...
+[1;36m(EngineCore_DP0 pid=33369)[0;0m INFO 10-09 17:31:23 [cuda.py:362] Using Flash Attention backend on V1 engine.
+[1;36m(EngineCore_DP0 pid=33369)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
+[1;36m(EngineCore_DP0 pid=33369)[0;0m Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:06<00:06,  6.85s/it]
+[1;36m(EngineCore_DP0 pid=33369)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:14<00:00,  7.21s/it]
+[1;36m(EngineCore_DP0 pid=33369)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:14<00:00,  7.16s/it]
+[1;36m(EngineCore_DP0 pid=33369)[0;0m 
+[1;36m(EngineCore_DP0 pid=33369)[0;0m INFO 10-09 17:31:37 [default_loader.py:268] Loading weights took 14.48 seconds
+[1;36m(EngineCore_DP0 pid=33369)[0;0m INFO 10-09 17:31:38 [gpu_model_runner.py:2392] Model loading took 15.2898 GiB and 14.721126 seconds
+[1;36m(EngineCore_DP0 pid=33369)[0;0m INFO 10-09 17:31:45 [backends.py:539] Using cache directory: /root/.cache/vllm/torch_compile_cache/b549e05668/rank_0_0/backbone for vLLM's torch.compile
+[1;36m(EngineCore_DP0 pid=33369)[0;0m INFO 10-09 17:31:45 [backends.py:550] Dynamo bytecode transform time: 7.54 s
+[1;36m(EngineCore_DP0 pid=33369)[0;0m INFO 10-09 17:31:48 [backends.py:161] Directly load the compiled graph(s) for dynamic shape from the cache, took 2.278 s
+[1;36m(EngineCore_DP0 pid=33369)[0;0m INFO 10-09 17:31:49 [monitor.py:34] torch.compile takes 7.54 s in total
+[1;36m(EngineCore_DP0 pid=33369)[0;0m INFO 10-09 17:31:50 [gpu_worker.py:298] Available KV cache memory: 54.48 GiB
+[1;36m(EngineCore_DP0 pid=33369)[0;0m INFO 10-09 17:31:51 [kv_cache_utils.py:864] GPU KV cache size: 396,688 tokens
+[1;36m(EngineCore_DP0 pid=33369)[0;0m INFO 10-09 17:31:51 [kv_cache_utils.py:868] Maximum concurrency for 131,072 tokens per request: 3.03x
+[1;36m(EngineCore_DP0 pid=33369)[0;0m Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/67 [00:00<?, ?it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   3%|▎         | 2/67 [00:00<00:04, 15.68it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   6%|▌         | 4/67 [00:00<00:03, 15.80it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   9%|▉         | 6/67 [00:00<00:03, 16.61it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  12%|█▏        | 8/67 [00:00<00:03, 16.84it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  15%|█▍        | 10/67 [00:00<00:03, 16.53it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  18%|█▊        | 12/67 [00:00<00:03, 16.96it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  21%|██        | 14/67 [00:00<00:03, 17.21it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  24%|██▍       | 16/67 [00:00<00:02, 17.42it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  27%|██▋       | 18/67 [00:01<00:02, 17.89it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  31%|███▏      | 21/67 [00:01<00:02, 18.85it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  34%|███▍      | 23/67 [00:01<00:02, 19.10it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  39%|███▉      | 26/67 [00:01<00:02, 19.62it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  42%|████▏     | 28/67 [00:01<00:02, 18.74it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  45%|████▍     | 30/67 [00:01<00:01, 18.58it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  49%|████▉     | 33/67 [00:01<00:01, 19.46it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  54%|█████▎    | 36/67 [00:01<00:01, 20.31it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  58%|█████▊    | 39/67 [00:02<00:01, 20.90it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  63%|██████▎   | 42/67 [00:02<00:01, 21.06it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  67%|██████▋   | 45/67 [00:02<00:01, 21.07it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  72%|███████▏  | 48/67 [00:02<00:00, 21.82it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  76%|███████▌  | 51/67 [00:02<00:00, 22.69it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  81%|████████  | 54/67 [00:02<00:00, 23.10it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  85%|████████▌ | 57/67 [00:02<00:00, 23.85it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  90%|████████▉ | 60/67 [00:02<00:00, 24.66it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  94%|█████████▍| 63/67 [00:03<00:00, 24.81it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  99%|█████████▊| 66/67 [00:03<00:00, 23.91it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 67/67 [00:03<00:00, 20.42it/s]
+[1;36m(EngineCore_DP0 pid=33369)[0;0m INFO 10-09 17:31:55 [gpu_model_runner.py:3118] Graph capturing finished in 4 secs, took 2.24 GiB
+[1;36m(EngineCore_DP0 pid=33369)[0;0m INFO 10-09 17:31:55 [gpu_worker.py:391] Free memory on device (78.66/79.15 GiB) on startup. Desired GPU memory utilization is (0.9, 71.24 GiB). Actual usage is 15.29 GiB for weight, 1.45 GiB for peak activation, 0.02 GiB for non-torch memory, and 2.24 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=55927124992` to fit into requested memory, or `--kv-cache-memory=63898137600` to fully utilize gpu memory. Current kv cache memory in use is 58494039040 bytes.
+[1;36m(EngineCore_DP0 pid=33369)[0;0m INFO 10-09 17:31:55 [core.py:218] init engine (profile, create kv cache, warmup model) took 17.02 seconds
+INFO 10-09 17:31:55 [llm.py:295] Supported_tasks: ['generate']
+INFO 10-09 17:31:55 [__init__.py:36] No IOProcessor plugins requested by the model
+vLLM engine initialized in 50.24 seconds
+Initializing tokenizer...
+Tokenizer initialized in 0.30 seconds
+  0%|          | 0/30 [00:00<?, ?it/s]skip: 0
+skip: 1
+skip: 2
+skip: 3
+skip: 4
+skip: 5
+skip: 6
+skip: 7
+skip: 8
+skip: 9
+skip: 10
+skip: 11
+Processing question 12: Let $\triangle A B C$ be an equilateral triangle with side length $1$. A real number $d$ is selected...
+Preparing prompt...
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 190.87it/s]
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [16:44<00:00, 1004.63s/it, est. speed input: 0.25 toks/s, output: 63.71 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [16:44<00:00, 1004.63s/it, est. speed input: 0.25 toks/s, output: 63.71 toks/s][AProcessed prompts: 100%|██████████| 1/1 [16:44<00:00, 1004.63s/it, est. speed input: 0.25 toks/s, output: 63.71 toks/s]
+ 40%|████      | 12/30 [16:44<25:07, 83.74s/it]
+Traceback (most recent call last):
+  File "/share/yangxizhong/workspace/deepconf/step_level_deepconf/scripts/deepseek_evaluate.py", line 214, in <module>
+    save_detail_res2json(res, detail_res_json_file)
+^^^^^^
+  File "/share/yangxizhong/workspace/deepconf/step_level_deepconf/scripts/deepseek_evaluate.py", line 200, in main
+    if answer:
+               
+  File "/share/yangxizhong/workspace/deepconf/step_level_deepconf/scripts/deepseek_evaluate.py", line 81, in equal_func
+    answer = quick_parse(answer)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/share/yangxizhong/workspace/deepconf/step_level_deepconf/scripts/deepseek_evaluate.py", line 65, in quick_parse
+    if '\\text{' in text and '}' in text:
+       ^^^^^^^^^^^^^^^^^
+TypeError: argument of type 'NoneType' is not iterable
+[1;36m(EngineCore_DP0 pid=33369)[0;0m Not using ConfPerReqLogitsProcessor None
+[rank0]:[W1009 17:48:41.365813975 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+ERROR 10-09 17:48:41 [core_client.py:564] Engine core proc EngineCore_DP0 died unexpectedly, shutting down client.
+INFO 10-09 17:54:31 [__init__.py:216] Automatically detected platform cuda.
+Loading dataset from /share/yangxizhong/data/brumo_2025/data/train-00000-of-00001.parquet...
+Initializing vLLM engine...
+INFO 10-09 17:54:33 [utils.py:328] non-default args: {'trust_remote_code': True, 'enable_prefix_caching': True, 'disable_log_stats': True, 'logits_processors': [<class 'deepconf.processors.WrappedPerReqLogitsProcessor'>], 'model': '/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B'}
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
+INFO 10-09 17:54:38 [__init__.py:742] Resolved architecture: Qwen3ForCausalLM
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 10-09 17:54:38 [__init__.py:1815] Using max model len 131072
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
+INFO 10-09 17:54:39 [scheduler.py:222] Chunked prefill is enabled with max_num_batched_tokens=8192.
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
+WARNING 10-09 17:54:39 [__init__.py:2974] We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing for more information. Reasons: CUDA is initialized
+INFO 10-09 17:54:43 [__init__.py:216] Automatically detected platform cuda.
+[1;36m(EngineCore_DP0 pid=74297)[0;0m INFO 10-09 17:54:45 [core.py:654] Waiting for init message from front-end.
+[1;36m(EngineCore_DP0 pid=74297)[0;0m INFO 10-09 17:54:45 [core.py:76] Initializing a V1 LLM engine (v0.10.2) with config: model='/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B', speculative_config=None, tokenizer='/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=131072, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.mamba_mixer2","vllm.mamba_mixer","vllm.short_conv","vllm.linear_attention","vllm.plamo2_mamba_mixer","vllm.gdn_attention"],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":1,"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"pass_config":{},"max_capture_size":512,"local_cache_dir":null}
+[W1009 17:54:46.798980488 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[1;36m(EngineCore_DP0 pid=74297)[0;0m INFO 10-09 17:54:46 [parallel_state.py:1165] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+[1;36m(EngineCore_DP0 pid=74297)[0;0m WARNING 10-09 17:54:46 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(EngineCore_DP0 pid=74297)[0;0m INFO 10-09 17:54:46 [gpu_model_runner.py:2338] Starting to load model /share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B...
+[1;36m(EngineCore_DP0 pid=74297)[0;0m INFO 10-09 17:54:46 [gpu_model_runner.py:2370] Loading model from scratch...
+[1;36m(EngineCore_DP0 pid=74297)[0;0m INFO 10-09 17:54:47 [cuda.py:362] Using Flash Attention backend on V1 engine.
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:02<00:02,  2.06s/it]
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:04<00:00,  2.33s/it]
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:04<00:00,  2.29s/it]
+[1;36m(EngineCore_DP0 pid=74297)[0;0m 
+[1;36m(EngineCore_DP0 pid=74297)[0;0m INFO 10-09 17:54:51 [default_loader.py:268] Loading weights took 4.87 seconds
+[1;36m(EngineCore_DP0 pid=74297)[0;0m INFO 10-09 17:54:52 [gpu_model_runner.py:2392] Model loading took 15.2898 GiB and 5.092077 seconds
+[1;36m(EngineCore_DP0 pid=74297)[0;0m INFO 10-09 17:54:58 [backends.py:539] Using cache directory: /root/.cache/vllm/torch_compile_cache/b549e05668/rank_0_0/backbone for vLLM's torch.compile
+[1;36m(EngineCore_DP0 pid=74297)[0;0m INFO 10-09 17:54:58 [backends.py:550] Dynamo bytecode transform time: 5.84 s
+[1;36m(EngineCore_DP0 pid=74297)[0;0m INFO 10-09 17:55:01 [backends.py:161] Directly load the compiled graph(s) for dynamic shape from the cache, took 2.310 s
+[1;36m(EngineCore_DP0 pid=74297)[0;0m INFO 10-09 17:55:02 [monitor.py:34] torch.compile takes 5.84 s in total
+[1;36m(EngineCore_DP0 pid=74297)[0;0m INFO 10-09 17:55:03 [gpu_worker.py:298] Available KV cache memory: 54.48 GiB
+[1;36m(EngineCore_DP0 pid=74297)[0;0m INFO 10-09 17:55:03 [kv_cache_utils.py:864] GPU KV cache size: 396,688 tokens
+[1;36m(EngineCore_DP0 pid=74297)[0;0m INFO 10-09 17:55:03 [kv_cache_utils.py:868] Maximum concurrency for 131,072 tokens per request: 3.03x
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/67 [00:00<?, ?it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   3%|▎         | 2/67 [00:00<00:03, 17.27it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   6%|▌         | 4/67 [00:00<00:03, 17.60it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   9%|▉         | 6/67 [00:00<00:03, 16.04it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  12%|█▏        | 8/67 [00:00<00:03, 16.41it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  15%|█▍        | 10/67 [00:00<00:03, 15.81it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  18%|█▊        | 12/67 [00:00<00:03, 16.20it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  21%|██        | 14/67 [00:00<00:03, 16.61it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  24%|██▍       | 16/67 [00:00<00:03, 16.93it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  27%|██▋       | 18/67 [00:01<00:02, 17.68it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  31%|███▏      | 21/67 [00:01<00:02, 18.68it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  34%|███▍      | 23/67 [00:01<00:02, 18.68it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  37%|███▋      | 25/67 [00:01<00:02, 18.72it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  40%|████      | 27/67 [00:01<00:02, 18.04it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  43%|████▎     | 29/67 [00:01<00:02, 18.07it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  46%|████▋     | 31/67 [00:01<00:01, 18.57it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  51%|█████     | 34/67 [00:01<00:01, 19.74it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  55%|█████▌    | 37/67 [00:02<00:01, 20.86it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  60%|█████▉    | 40/67 [00:02<00:01, 21.38it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  64%|██████▍   | 43/67 [00:02<00:01, 21.52it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  69%|██████▊   | 46/67 [00:02<00:00, 21.31it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  73%|███████▎  | 49/67 [00:02<00:00, 22.06it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  78%|███████▊  | 52/67 [00:02<00:00, 21.51it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  82%|████████▏ | 55/67 [00:02<00:00, 22.42it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  87%|████████▋ | 58/67 [00:02<00:00, 22.99it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  91%|█████████ | 61/67 [00:03<00:00, 23.86it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  96%|█████████▌| 64/67 [00:03<00:00, 24.00it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 67/67 [00:03<00:00, 22.42it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 67/67 [00:03<00:00, 20.02it/s]
+[1;36m(EngineCore_DP0 pid=74297)[0;0m INFO 10-09 17:55:07 [gpu_model_runner.py:3118] Graph capturing finished in 4 secs, took 2.24 GiB
+[1;36m(EngineCore_DP0 pid=74297)[0;0m INFO 10-09 17:55:07 [gpu_worker.py:391] Free memory on device (78.66/79.15 GiB) on startup. Desired GPU memory utilization is (0.9, 71.24 GiB). Actual usage is 15.29 GiB for weight, 1.45 GiB for peak activation, 0.02 GiB for non-torch memory, and 2.24 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=55927124992` to fit into requested memory, or `--kv-cache-memory=63898137600` to fully utilize gpu memory. Current kv cache memory in use is 58494039040 bytes.
+[1;36m(EngineCore_DP0 pid=74297)[0;0m INFO 10-09 17:55:07 [core.py:218] init engine (profile, create kv cache, warmup model) took 15.44 seconds
+INFO 10-09 17:55:08 [llm.py:295] Supported_tasks: ['generate']
+INFO 10-09 17:55:08 [__init__.py:36] No IOProcessor plugins requested by the model
+vLLM engine initialized in 35.55 seconds
+Initializing tokenizer...
+Tokenizer initialized in 0.31 seconds
+  0%|          | 0/30 [00:00<?, ?it/s]skip: 0
+skip: 1
+skip: 2
+skip: 3
+skip: 4
+skip: 5
+skip: 6
+skip: 7
+skip: 8
+skip: 9
+skip: 10
+skip: 11
+Processing question 12: Let $\triangle A B C$ be an equilateral triangle with side length $1$. A real number $d$ is selected...
+Preparing prompt...
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 184.60it/s]
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [16:43<00:00, 1003.86s/it, est. speed input: 0.25 toks/s, output: 63.75 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [16:43<00:00, 1003.86s/it, est. speed input: 0.25 toks/s, output: 63.75 toks/s][AProcessed prompts: 100%|██████████| 1/1 [16:43<00:00, 1003.89s/it, est. speed input: 0.25 toks/s, output: 63.75 toks/s]
+ 43%|████▎     | 13/30 [16:44<21:53, 77.24s/it]save question success:  12
+Processing question 13: Define sequence $\left\{a_{n}\right\}_{n=1}^{\infty}$ such that $a_{1}=\frac{\pi}{3}$ and $a_{n+1}=\...
+Preparing prompt...
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 701.27it/s]
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [01:53<00:00, 113.96s/it, est. speed input: 1.43 toks/s, output: 76.64 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [01:53<00:00, 113.96s/it, est. speed input: 1.43 toks/s, output: 76.64 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:53<00:00, 113.97s/it, est. speed input: 1.43 toks/s, output: 76.64 toks/s]
+ 47%|████▋     | 14/30 [18:38<21:34, 80.89s/it]save question success:  13
+Processing question 14: Define $\{x\}$ to be the fractional part of $x$. For example, $\{20.25\}=0.25$ and $\{\pi\}=\pi-3$. ...
+Preparing prompt...
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 959.14it/s]
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [14:20<00:00, 860.62s/it, est. speed input: 0.17 toks/s, output: 65.30 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [14:20<00:00, 860.62s/it, est. speed input: 0.17 toks/s, output: 65.30 toks/s][AProcessed prompts: 100%|██████████| 1/1 [14:20<00:00, 860.80s/it, est. speed input: 0.17 toks/s, output: 65.30 toks/s]
+ 50%|█████     | 15/30 [32:59<44:23, 177.55s/it]save question success:  14
+Processing question 15: Find the smallest positive integer $n$ such that $n$ is divisible by exactly $25$ different positive...
+Preparing prompt...
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 499.92it/s]
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [03:56<00:00, 236.94s/it, est. speed input: 0.25 toks/s, output: 74.18 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [03:56<00:00, 236.94s/it, est. speed input: 0.25 toks/s, output: 74.18 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:56<00:00, 236.94s/it, est. speed input: 0.25 toks/s, output: 74.18 toks/s]
+ 53%|█████▎    | 16/30 [36:56<43:30, 186.50s/it]save question success:  15
+Processing question 16: Two squares, $A B C D$ and $A E F G$, have equal side length $x$. They intersect at $A$ and $O$. Giv...
+Preparing prompt...
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 641.63it/s]
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [10:22<00:00, 622.19s/it, est. speed input: 0.15 toks/s, output: 68.25 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [10:22<00:00, 622.19s/it, est. speed input: 0.15 toks/s, output: 68.25 toks/s][AProcessed prompts: 100%|██████████| 1/1 [10:22<00:00, 622.19s/it, est. speed input: 0.15 toks/s, output: 68.25 toks/s]
+ 57%|█████▋    | 17/30 [47:19<57:09, 263.78s/it]save question success:  16
+Processing question 17: Bruno and Brutus are running on a circular track with a $20$ foot radius. Bruno completes $5$ laps e...
+Preparing prompt...
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 428.87it/s]
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [02:27<00:00, 147.89s/it, est. speed input: 0.87 toks/s, output: 76.08 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [02:27<00:00, 147.89s/it, est. speed input: 0.87 toks/s, output: 76.08 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:27<00:00, 147.89s/it, est. speed input: 0.87 toks/s, output: 76.08 toks/s]
+ 60%|██████    | 18/30 [49:47<48:04, 240.41s/it]save question success:  17
+Processing question 18: What is the smallest positive integer $n$ such that $z^{n}-1$ and $(z-\sqrt{3})^{n}-1$ share a commo...
+Preparing prompt...
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 699.17it/s]
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [03:39<00:00, 219.32s/it, est. speed input: 0.33 toks/s, output: 74.63 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [03:39<00:00, 219.32s/it, est. speed input: 0.33 toks/s, output: 74.63 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:39<00:00, 219.32s/it, est. speed input: 0.33 toks/s, output: 74.63 toks/s]
+ 63%|██████▎   | 19/30 [53:27<43:12, 235.71s/it]save question success:  18
+Processing question 19: Consider a pond with lily pads numbered from $1$ to $12$ arranged in a circle. Bruno the frog starts...
+Preparing prompt...
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 547.70it/s]
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [07:26<00:00, 446.87s/it, est. speed input: 0.31 toks/s, output: 70.66 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [07:26<00:00, 446.87s/it, est. speed input: 0.31 toks/s, output: 70.66 toks/s][AProcessed prompts: 100%|██████████| 1/1 [07:26<00:00, 446.87s/it, est. speed input: 0.31 toks/s, output: 70.66 toks/s]
+ 67%|██████▋   | 20/30 [1:00:53<47:48, 286.87s/it]save question success:  19
+Processing question 20: $4$ bears - Aruno, Bruno, Cruno and Druno - are each given a card with a positive integer and are to...
+Preparing prompt...
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 481.66it/s]
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [04:33<00:00, 273.06s/it, est. speed input: 0.73 toks/s, output: 73.46 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [04:33<00:00, 273.06s/it, est. speed input: 0.73 toks/s, output: 73.46 toks/s][AProcessed prompts: 100%|██████████| 1/1 [04:33<00:00, 273.06s/it, est. speed input: 0.73 toks/s, output: 73.46 toks/s]
+ 70%|███████   | 21/30 [1:05:27<42:30, 283.34s/it]save question success:  20
+Processing question 21: Digits $1$ through $9$ are placed on a $3 x 3$ square such that all rows and columns sum to the same...
+Preparing prompt...
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 908.84it/s]
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [05:40<00:00, 340.48s/it, est. speed input: 0.26 toks/s, output: 72.40 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [05:40<00:00, 340.48s/it, est. speed input: 0.26 toks/s, output: 72.40 toks/s][AProcessed prompts: 100%|██████████| 1/1 [05:40<00:00, 340.48s/it, est. speed input: 0.26 toks/s, output: 72.40 toks/s]
+ 73%|███████▎  | 22/30 [1:11:07<39:49, 298.71s/it]save question success:  21
+Processing question 22: Define the operation $\oplus$ by
+
+$$
+x \oplus y=x y-2 x-2 y+6 .
+$$
+
+Compute all complex numbers $a$ ...
+Preparing prompt...
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 911.41it/s]
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [01:04<00:00, 64.82s/it, est. speed input: 1.45 toks/s, output: 78.11 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [01:04<00:00, 64.82s/it, est. speed input: 1.45 toks/s, output: 78.11 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:04<00:00, 64.82s/it, est. speed input: 1.45 toks/s, output: 78.11 toks/s]
+ 77%|███████▋  | 23/30 [1:12:12<27:17, 233.88s/it]save question success:  22
+Processing question 23: Define the function $f$ on positive integers
+
+$$
+f(n)= \begin{cases}\frac{n}{2} & \text { if } n \te...
+Preparing prompt...
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 582.70it/s]
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [13:00<00:00, 780.84s/it, est. speed input: 0.17 toks/s, output: 66.23 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [13:00<00:00, 780.84s/it, est. speed input: 0.17 toks/s, output: 66.23 toks/s][AProcessed prompts: 100%|██████████| 1/1 [13:00<00:00, 780.84s/it, est. speed input: 0.17 toks/s, output: 66.23 toks/s]
+ 80%|████████  | 24/30 [1:25:13<38:54, 389.11s/it]save question success:  23
+Processing question 24: Let $A B C D E F$ be a convex cyclic hexagon. Suppose that $A B=D E=\sqrt{5}, B C=E F=3$, and $C D=F...
+Preparing prompt...
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 759.70it/s]
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [04:29<00:00, 269.48s/it, est. speed input: 0.36 toks/s, output: 73.56 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [04:29<00:00, 269.48s/it, est. speed input: 0.36 toks/s, output: 73.56 toks/s][AProcessed prompts: 100%|██████████| 1/1 [04:29<00:00, 269.49s/it, est. speed input: 0.36 toks/s, output: 73.56 toks/s]
+ 83%|████████▎ | 25/30 [1:29:43<29:33, 354.65s/it]save question success:  24
+Processing question 25: A repetend is the infinitely repeated digit sequence of a repeating decimal. What are the last three...
+Preparing prompt...
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 267.66it/s]
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [02:20<00:00, 140.67s/it, est. speed input: 0.75 toks/s, output: 76.13 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [02:20<00:00, 140.67s/it, est. speed input: 0.75 toks/s, output: 76.13 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:20<00:00, 140.67s/it, est. speed input: 0.75 toks/s, output: 76.13 toks/s]
+ 87%|████████▋ | 26/30 [1:32:03<19:28, 292.23s/it]save question success:  25
+Processing question 26: Consider a $54$-deck of cards, i.e. a standard $52$-card deck together with two jokers. Ada draws ca...
+Preparing prompt...
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 677.92it/s]
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [09:36<00:00, 576.08s/it, est. speed input: 0.16 toks/s, output: 68.91 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [09:36<00:00, 576.08s/it, est. speed input: 0.16 toks/s, output: 68.91 toks/s][AProcessed prompts: 100%|██████████| 1/1 [09:36<00:00, 576.08s/it, est. speed input: 0.16 toks/s, output: 68.91 toks/s]
+ 90%|█████████ | 27/30 [1:41:40<18:47, 375.79s/it]save question success:  26
+Processing question 27: Let $\omega$ be a circle, and let a line $\ell$ intersect $\omega$ at two points, $P$ and $Q$. Circl...
+Preparing prompt...
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 654.75it/s]
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [10:18<00:00, 618.50s/it, est. speed input: 0.35 toks/s, output: 68.14 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [10:18<00:00, 618.50s/it, est. speed input: 0.35 toks/s, output: 68.14 toks/s][AProcessed prompts: 100%|██████████| 1/1 [10:18<00:00, 618.50s/it, est. speed input: 0.35 toks/s, output: 68.14 toks/s]
+ 93%|█████████▎| 28/30 [1:51:58<14:55, 447.65s/it]save question success:  27
+Processing question 28: Let $f$ be a degree $7$ polynomial satisfying
+$$
+f(k)=\frac{1}{k^{2}}
+$$
+
+for $k \in\{1 \cdot 2,2 \c...
+Preparing prompt...
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 924.06it/s]
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [08:00<00:00, 480.95s/it, est. speed input: 0.24 toks/s, output: 70.20 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [08:00<00:00, 480.95s/it, est. speed input: 0.24 toks/s, output: 70.20 toks/s][AProcessed prompts: 100%|██████████| 1/1 [08:00<00:00, 480.96s/it, est. speed input: 0.24 toks/s, output: 70.20 toks/s]
+ 97%|█████████▋| 29/30 [1:59:59<07:37, 457.58s/it]save question success:  28
+Processing question 29: Let $\triangle A B C$ be an isosceles triangle with $A B=A C$. Let $D$ be a point on the circumcircl...
+Preparing prompt...
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 674.76it/s]
+
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [11:12<00:00, 672.84s/it, est. speed input: 0.31 toks/s, output: 67.50 toks/s][A
+Processed prompts: 100%|██████████| 1/1 [11:12<00:00, 672.84s/it, est. speed input: 0.31 toks/s, output: 67.50 toks/s][AProcessed prompts: 100%|██████████| 1/1 [11:12<00:00, 672.85s/it, est. speed input: 0.31 toks/s, output: 67.50 toks/s]
+100%|██████████| 30/30 [2:11:12<00:00, 521.79s/it]100%|██████████| 30/30 [2:11:12<00:00, 262.43s/it]
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Not using ConfPerReqLogitsProcessor None
+[1;36m(EngineCore_DP0 pid=74297)[0;0m Not using ConfPerReqLogitsProcessor None
+[rank0]:[W1009 20:06:22.429197100 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+save question success:  29

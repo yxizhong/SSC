@@ -1,0 +1,13 @@
+开始执行实验队列...
+Starting process at Thu Jan 22 08:19:30 UTC 2026, PID will be recorded...
+0.1x0.5 HMMT2025 Process PID: 622622
+HMMT2025 completed
+ablation/Ablation-Alpha-20-All-Delta_control_selfstepconf_B64_dpsk-distill-qwen3-8b.sh: line 125: unexpected EOF while looking for matching `"'
+ablation/Ablation-Alpha-20-All-Delta_control_selfstepconf_B64_dpsk-distill-qwen3-8b.sh: line 126: syntax error: unexpected end of file
+HMMT2025 completed
+所有实验完成
+开始执行实验队列...
+Starting process at Thu Jan 22 14:16:13 UTC 2026, PID will be recorded...
+0.1x0.5 HMMT2025 Process PID: 1436291
+HMMT2025 completed
+所有实验完成

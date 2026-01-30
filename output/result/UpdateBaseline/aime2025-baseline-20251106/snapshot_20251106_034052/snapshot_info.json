@@ -1,0 +1,13 @@
+{
+    "timestamp": "20251106_034052",
+    "original_script": "/share/yangxizhong/workspace/step_level_deepconf/scripts/deepconf_dpsk_evaluate.py",
+    "original_model_dir": "/share/yangxizhong/workspace/step_level_deepconf/model",
+    "snapshot_script": "/share/yangxizhong/workspace/step_level_deepconf/output/result/UpdateBaseline/aime2025-baseline-20251106/snapshot_20251106_034052/selfstepconf_online_snapshot.py",
+    "snapshot_model_dir": "/share/yangxizhong/workspace/step_level_deepconf/output/result/UpdateBaseline/aime2025-baseline-20251106/snapshot_20251106_034052/model",
+    "script_checksum": "ba7f0d4e2686bacd0d24e8cf087ce9a3",
+    "model_checksum": "ce3772c165e302a138e9c7bcc7c825c5",
+    "execution_log": "/share/yangxizhong/workspace/step_level_deepconf/output/result/UpdateBaseline/aime2025-baseline-20251106/run_all_baseline_20251106_034052.log",
+    "parameters": {
+        "dataset": "/share/yangxizhong/data/aime_2025/aime2025.jsonl"
+    }
+}

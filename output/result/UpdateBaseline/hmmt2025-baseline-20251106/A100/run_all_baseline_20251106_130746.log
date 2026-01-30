@@ -1,0 +1,100 @@
+Starting batch processing at Thu Nov  6 13:07:46 CST 2025
+Processing 30 questions
+Creating complete snapshot environment...
+Created script snapshot: /share/yangxizhong/workspace/step_level_deepconf/output/result/UpdateBaseline/hmmt2025-baseline-20251106/A100/snapshot_20251106_130746/selfstepconf_online_snapshot.py
+Created model directory snapshot: /share/yangxizhong/workspace/step_level_deepconf/output/result/UpdateBaseline/hmmt2025-baseline-20251106/A100/snapshot_20251106_130746/model
+Modified script to use snapshot model directory
+Script snapshot checksum: 7f4304ebe15f0d94a85f6f51bed03b14
+Model directory checksum: fb113a051befd6df2697da9a1ee0828c
+Batch processing completed at Thu Nov  6 13:07:47 CST 2025
+Starting execution with snapshot environment...
+Processing question 0/29 at Thu Nov  6 13:07:47 CST 2025
+Question 0 completed successfully
+---
+Processing question 1/29 at Thu Nov  6 13:10:20 CST 2025
+Question 1 completed successfully
+---
+Processing question 2/29 at Thu Nov  6 13:13:03 CST 2025
+Question 2 completed successfully
+---
+Processing question 3/29 at Thu Nov  6 13:17:03 CST 2025
+Question 3 completed successfully
+---
+Processing question 4/29 at Thu Nov  6 13:21:54 CST 2025
+Question 4 completed successfully
+---
+Processing question 5/29 at Thu Nov  6 13:25:39 CST 2025
+Question 5 completed successfully
+---
+Processing question 6/29 at Thu Nov  6 13:29:34 CST 2025
+Question 6 completed successfully
+---
+Processing question 7/29 at Thu Nov  6 13:40:48 CST 2025
+Question 7 completed successfully
+---
+Processing question 8/29 at Thu Nov  6 13:48:01 CST 2025
+Question 8 completed successfully
+---
+Processing question 9/29 at Thu Nov  6 13:52:46 CST 2025
+Question 9 completed successfully
+---
+Processing question 10/29 at Thu Nov  6 13:56:56 CST 2025
+Question 10 completed successfully
+---
+Processing question 11/29 at Thu Nov  6 14:01:57 CST 2025
+Question 11 completed successfully
+---
+Processing question 12/29 at Thu Nov  6 14:08:12 CST 2025
+Question 12 completed successfully
+---
+Processing question 13/29 at Thu Nov  6 14:20:41 CST 2025
+Question 13 completed successfully
+---
+Processing question 14/29 at Thu Nov  6 14:30:26 CST 2025
+Question 14 completed successfully
+---
+Processing question 15/29 at Thu Nov  6 14:41:38 CST 2025
+Question 15 completed successfully
+---
+Processing question 16/29 at Thu Nov  6 14:49:12 CST 2025
+Question 16 completed successfully
+---
+Processing question 17/29 at Thu Nov  6 14:57:30 CST 2025
+Question 17 completed successfully
+---
+Processing question 18/29 at Thu Nov  6 15:07:54 CST 2025
+Question 18 completed successfully
+---
+Processing question 19/29 at Thu Nov  6 15:18:08 CST 2025
+Question 19 completed successfully
+---
+Processing question 20/29 at Thu Nov  6 15:25:17 CST 2025
+Question 20 completed successfully
+---
+Processing question 21/29 at Thu Nov  6 15:28:27 CST 2025
+Question 21 completed successfully
+---
+Processing question 22/29 at Thu Nov  6 15:34:50 CST 2025
+Question 22 completed successfully
+---
+Processing question 23/29 at Thu Nov  6 15:41:43 CST 2025
+Question 23 completed successfully
+---
+Processing question 24/29 at Thu Nov  6 15:48:59 CST 2025
+Question 24 completed successfully
+---
+Processing question 25/29 at Thu Nov  6 16:03:52 CST 2025
+Question 25 completed successfully
+---
+Processing question 26/29 at Thu Nov  6 16:10:06 CST 2025
+Question 26 completed successfully
+---
+Processing question 27/29 at Thu Nov  6 16:15:02 CST 2025
+Question 27 completed successfully
+---
+Processing question 28/29 at Thu Nov  6 16:24:33 CST 2025
+Question 28 completed successfully
+---
+Processing question 29/29 at Thu Nov  6 16:40:11 CST 2025
+Question 29 completed successfully
+---

@@ -1,0 +1,10 @@
+Starting batch processing at Thu Nov  6 03:49:32 UTC 2025
+Processing  questions
+Creating complete snapshot environment...
+Created script snapshot: /share/yangxizhong/workspace/step_level_deepconf/output/result/UpdateBaseline/gpqad-baseline-20251106/snapshot_20251106_034932/selfstepconf_online_snapshot.py
+Created model directory snapshot: /share/yangxizhong/workspace/step_level_deepconf/output/result/UpdateBaseline/gpqad-baseline-20251106/snapshot_20251106_034932/model
+Modified script to use snapshot model directory
+Script snapshot checksum: b0719b4cb115321d55a415a075594817
+Model directory checksum: f4a4e4bfc0acf9c085f64645799fd9f0
+Batch processing completed at Thu Nov  6 03:49:32 UTC 2025
+Starting execution with snapshot environment...
