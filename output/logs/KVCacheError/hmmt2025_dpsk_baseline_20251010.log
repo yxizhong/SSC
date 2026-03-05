@@ -1,360 +1,0 @@
-INFO 10-10 10:14:59 [__init__.py:216] Automatically detected platform cuda.
-Loading dataset from /share/yangxizhong/data/HMMT_2025/hmmt_25.jsonl...
-Initializing vLLM engine...
-INFO 10-10 10:15:03 [utils.py:328] non-default args: {'trust_remote_code': True, 'enable_prefix_caching': True, 'disable_log_stats': True, 'logits_processors': [<class 'deepconf.processors.WrappedPerReqLogitsProcessor'>], 'model': '/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B'}
-The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
-Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
-INFO 10-10 10:15:10 [__init__.py:742] Resolved architecture: Qwen3ForCausalLM
-`torch_dtype` is deprecated! Use `dtype` instead!
-INFO 10-10 10:15:10 [__init__.py:1815] Using max model len 131072
-Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
-INFO 10-10 10:15:10 [scheduler.py:222] Chunked prefill is enabled with max_num_batched_tokens=8192.
-Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
-WARNING 10-10 10:15:11 [__init__.py:2974] We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing for more information. Reasons: CUDA is initialized
-INFO 10-10 10:15:15 [__init__.py:216] Automatically detected platform cuda.
-[1;36m(EngineCore_DP0 pid=222369)[0;0m INFO 10-10 10:15:16 [core.py:654] Waiting for init message from front-end.
-[1;36m(EngineCore_DP0 pid=222369)[0;0m INFO 10-10 10:15:16 [core.py:76] Initializing a V1 LLM engine (v0.10.2) with config: model='/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B', speculative_config=None, tokenizer='/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=131072, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.mamba_mixer2","vllm.mamba_mixer","vllm.short_conv","vllm.linear_attention","vllm.plamo2_mamba_mixer","vllm.gdn_attention"],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":1,"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"pass_config":{},"max_capture_size":512,"local_cache_dir":null}
-[W1010 10:15:18.006202451 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[1;36m(EngineCore_DP0 pid=222369)[0;0m INFO 10-10 10:15:18 [parallel_state.py:1165] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
-[1;36m(EngineCore_DP0 pid=222369)[0;0m WARNING 10-10 10:15:18 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
-[1;36m(EngineCore_DP0 pid=222369)[0;0m INFO 10-10 10:15:18 [gpu_model_runner.py:2338] Starting to load model /share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B...
-[1;36m(EngineCore_DP0 pid=222369)[0;0m INFO 10-10 10:15:19 [gpu_model_runner.py:2370] Loading model from scratch...
-[1;36m(EngineCore_DP0 pid=222369)[0;0m INFO 10-10 10:15:19 [cuda.py:362] Using Flash Attention backend on V1 engine.
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:07<00:07,  7.00s/it]
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:14<00:00,  7.44s/it]
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:14<00:00,  7.38s/it]
-[1;36m(EngineCore_DP0 pid=222369)[0;0m 
-[1;36m(EngineCore_DP0 pid=222369)[0;0m INFO 10-10 10:15:34 [default_loader.py:268] Loading weights took 15.00 seconds
-[1;36m(EngineCore_DP0 pid=222369)[0;0m INFO 10-10 10:15:34 [gpu_model_runner.py:2392] Model loading took 15.2898 GiB and 15.237638 seconds
-[1;36m(EngineCore_DP0 pid=222369)[0;0m INFO 10-10 10:15:42 [backends.py:539] Using cache directory: /root/.cache/vllm/torch_compile_cache/b549e05668/rank_0_0/backbone for vLLM's torch.compile
-[1;36m(EngineCore_DP0 pid=222369)[0;0m INFO 10-10 10:15:42 [backends.py:550] Dynamo bytecode transform time: 7.24 s
-[1;36m(EngineCore_DP0 pid=222369)[0;0m INFO 10-10 10:15:45 [backends.py:161] Directly load the compiled graph(s) for dynamic shape from the cache, took 2.357 s
-[1;36m(EngineCore_DP0 pid=222369)[0;0m INFO 10-10 10:15:46 [monitor.py:34] torch.compile takes 7.24 s in total
-[1;36m(EngineCore_DP0 pid=222369)[0;0m INFO 10-10 10:15:47 [gpu_worker.py:298] Available KV cache memory: 54.48 GiB
-[1;36m(EngineCore_DP0 pid=222369)[0;0m INFO 10-10 10:15:47 [kv_cache_utils.py:864] GPU KV cache size: 396,688 tokens
-[1;36m(EngineCore_DP0 pid=222369)[0;0m INFO 10-10 10:15:47 [kv_cache_utils.py:868] Maximum concurrency for 131,072 tokens per request: 3.03x
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/67 [00:00<?, ?it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   3%|▎         | 2/67 [00:00<00:03, 17.11it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   6%|▌         | 4/67 [00:00<00:03, 17.23it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   9%|▉         | 6/67 [00:00<00:03, 17.51it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  12%|█▏        | 8/67 [00:00<00:03, 17.29it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  15%|█▍        | 10/67 [00:00<00:03, 17.47it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  18%|█▊        | 12/67 [00:00<00:03, 17.51it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  21%|██        | 14/67 [00:00<00:03, 16.98it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  24%|██▍       | 16/67 [00:00<00:02, 17.21it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  27%|██▋       | 18/67 [00:01<00:02, 17.88it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  31%|███▏      | 21/67 [00:01<00:02, 18.82it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  34%|███▍      | 23/67 [00:01<00:02, 18.61it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  37%|███▋      | 25/67 [00:01<00:02, 18.87it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  40%|████      | 27/67 [00:01<00:02, 18.85it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  43%|████▎     | 29/67 [00:01<00:02, 18.74it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  46%|████▋     | 31/67 [00:01<00:01, 18.91it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  51%|█████     | 34/67 [00:01<00:01, 19.71it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  55%|█████▌    | 37/67 [00:01<00:01, 20.33it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  60%|█████▉    | 40/67 [00:02<00:01, 20.97it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  64%|██████▍   | 43/67 [00:02<00:01, 21.65it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  69%|██████▊   | 46/67 [00:02<00:01, 20.97it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  73%|███████▎  | 49/67 [00:02<00:00, 21.43it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  78%|███████▊  | 52/67 [00:02<00:00, 21.76it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  82%|████████▏ | 55/67 [00:02<00:00, 22.29it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  87%|████████▋ | 58/67 [00:02<00:00, 22.97it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  91%|█████████ | 61/67 [00:03<00:00, 22.56it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  96%|█████████▌| 64/67 [00:03<00:00, 23.35it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 67/67 [00:03<00:00, 23.36it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 67/67 [00:03<00:00, 20.26it/s]
-[1;36m(EngineCore_DP0 pid=222369)[0;0m INFO 10-10 10:15:51 [gpu_model_runner.py:3118] Graph capturing finished in 4 secs, took 2.24 GiB
-[1;36m(EngineCore_DP0 pid=222369)[0;0m INFO 10-10 10:15:51 [gpu_worker.py:391] Free memory on device (78.66/79.15 GiB) on startup. Desired GPU memory utilization is (0.9, 71.24 GiB). Actual usage is 15.29 GiB for weight, 1.45 GiB for peak activation, 0.02 GiB for non-torch memory, and 2.24 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=55927124992` to fit into requested memory, or `--kv-cache-memory=63898137600` to fully utilize gpu memory. Current kv cache memory in use is 58494039040 bytes.
-[1;36m(EngineCore_DP0 pid=222369)[0;0m INFO 10-10 10:15:51 [core.py:218] init engine (profile, create kv cache, warmup model) took 17.06 seconds
-INFO 10-10 10:15:52 [llm.py:295] Supported_tasks: ['generate']
-INFO 10-10 10:15:52 [__init__.py:36] No IOProcessor plugins requested by the model
-vLLM engine initialized in 49.45 seconds
-Initializing tokenizer...
-Tokenizer initialized in 0.31 seconds
-  0%|          | 0/30 [00:00<?, ?it/s]Processing question 0: Compute the sum of the positive divisors (including $1$) of $9!$ that have units digit $1$....
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 179.92it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:24<00:00, 84.14s/it, est. speed input: 0.72 toks/s, output: 77.39 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:24<00:00, 84.14s/it, est. speed input: 0.72 toks/s, output: 77.39 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:24<00:00, 84.14s/it, est. speed input: 0.72 toks/s, output: 77.39 toks/s]
-  3%|▎         | 1/30 [01:24<40:41, 84.20s/it]Processing question 1: Mark writes the expression $\sqrt{\underline{a b c d}}$ on the board, where $\underline{a b c d}$ is...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 996.51it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:37<00:00, 97.55s/it, est. speed input: 1.34 toks/s, output: 76.92 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:37<00:00, 97.55s/it, est. speed input: 1.34 toks/s, output: 76.92 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:37<00:00, 97.55s/it, est. speed input: 1.34 toks/s, output: 76.92 toks/s]
-  7%|▋         | 2/30 [03:01<42:57, 92.07s/it]save question success:  1
-Processing question 2: Given that $x, y$, and $z$ are positive real numbers such that
-
-$$
-x^{\log _{2}(y z)}=2^{8} \cdot 3^...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 776.29it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [07:36<00:00, 456.87s/it, est. speed input: 0.33 toks/s, output: 70.39 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [07:36<00:00, 456.87s/it, est. speed input: 0.33 toks/s, output: 70.39 toks/s][AProcessed prompts: 100%|██████████| 1/1 [07:36<00:00, 456.89s/it, est. speed input: 0.33 toks/s, output: 70.39 toks/s]
- 10%|█         | 3/30 [10:38<1:56:27, 258.79s/it]save question success:  2
-Processing question 3: Let $\lfloor z\rfloor$ denote the greatest integer less than or equal to $z$. Compute
-
-$$
-\sum_{j=-1...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 966.43it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:17<00:00, 197.88s/it, est. speed input: 0.51 toks/s, output: 74.94 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:17<00:00, 197.88s/it, est. speed input: 0.51 toks/s, output: 74.94 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:17<00:00, 197.89s/it, est. speed input: 0.51 toks/s, output: 74.94 toks/s]
- 13%|█▎        | 4/30 [13:56<1:41:44, 234.79s/it]save question success:  3
-Processing question 4: Let $\mathcal{S}$ be the set of all nonconstant monic polynomials $P$ with integer coefficients sati...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 629.40it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:56<00:00, 176.90s/it, est. speed input: 0.68 toks/s, output: 75.22 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:56<00:00, 176.90s/it, est. speed input: 0.68 toks/s, output: 75.22 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:56<00:00, 176.90s/it, est. speed input: 0.68 toks/s, output: 75.22 toks/s]
- 17%|█▋        | 5/30 [16:53<1:29:08, 213.94s/it]save question success:  4
-Processing question 5: Let $r$ be the remainder when $2017^{2025!}-1$ is divided by 2025!. Compute $\frac{r}{2025!}$. (Note...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1237.26it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:39<00:00, 279.52s/it, est. speed input: 0.33 toks/s, output: 73.43 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:39<00:00, 279.52s/it, est. speed input: 0.33 toks/s, output: 73.43 toks/s][AProcessed prompts: 100%|██████████| 1/1 [04:39<00:00, 279.52s/it, est. speed input: 0.33 toks/s, output: 73.43 toks/s]
- 20%|██        | 6/30 [21:33<1:34:30, 236.26s/it]save question success:  5
-Processing question 6: There exists a unique triple $(a, b, c)$ of positive real numbers that satisfies the equations
-$$
-2\...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1010.92it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [10:14<00:00, 614.31s/it, est. speed input: 0.20 toks/s, output: 68.32 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [10:14<00:00, 614.31s/it, est. speed input: 0.20 toks/s, output: 68.32 toks/s][AProcessed prompts: 100%|██████████| 1/1 [10:14<00:00, 614.31s/it, est. speed input: 0.20 toks/s, output: 68.32 toks/s]
- 23%|██▎       | 7/30 [31:47<2:17:57, 359.90s/it]save question success:  6
-Processing question 7: Define $\operatorname{sgn}(x)$ to be $1$ when $x$ is positive, $-1$ when $x$ is negative, and $0$ wh...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 874.72it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [06:55<00:00, 415.52s/it, est. speed input: 0.32 toks/s, output: 71.20 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [06:55<00:00, 415.52s/it, est. speed input: 0.32 toks/s, output: 71.20 toks/s][AProcessed prompts: 100%|██████████| 1/1 [06:55<00:00, 415.52s/it, est. speed input: 0.32 toks/s, output: 71.20 toks/s]
- 27%|██▋       | 8/30 [38:43<2:18:28, 377.64s/it]save question success:  7
-Processing question 8: Let $f$ be the unique polynomial of degree at most $2026$ such that for all $n \in\{1,2,3, \ldots, 2...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 718.82it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [07:02<00:00, 422.30s/it, est. speed input: 0.52 toks/s, output: 70.91 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [07:02<00:00, 422.30s/it, est. speed input: 0.52 toks/s, output: 70.91 toks/s][AProcessed prompts: 100%|██████████| 1/1 [07:02<00:00, 422.30s/it, est. speed input: 0.52 toks/s, output: 70.91 toks/s]
- 30%|███       | 9/30 [45:45<2:17:04, 391.63s/it]save question success:  8
-Processing question 9: Let $a, b$, and $c$ be pairwise distinct complex numbers such that
-$$
-a^{2}=b+6, \quad b^{2}=c+6, \q...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1017.29it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [16:41<00:00, 1001.78s/it, est. speed input: 0.12 toks/s, output: 63.89 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [16:41<00:00, 1001.78s/it, est. speed input: 0.12 toks/s, output: 63.89 toks/s][AProcessed prompts: 100%|██████████| 1/1 [16:41<00:00, 1001.79s/it, est. speed input: 0.12 toks/s, output: 63.89 toks/s]
- 33%|███▎      | 10/30 [1:02:27<3:13:20, 580.04s/it]save question success:  9
-Processing question 10: Compute the number of ways to arrange the numbers $1,2,3,4,5,6$, and $7$ around a circle such that t...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 947.01it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [08:17<00:00, 497.04s/it, est. speed input: 0.19 toks/s, output: 69.90 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [08:17<00:00, 497.04s/it, est. speed input: 0.19 toks/s, output: 69.90 toks/s][AProcessed prompts: 100%|██████████| 1/1 [08:17<00:00, 497.04s/it, est. speed input: 0.19 toks/s, output: 69.90 toks/s]
- 37%|███▋      | 11/30 [1:10:45<2:55:38, 554.67s/it]save question success:  10
-Processing question 11: Kevin the frog in on the bottom-left lily pad of a $3 \times 3$ grid of lily pads, and his home is a...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 966.21it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:22<00:00, 262.24s/it, est. speed input: 0.48 toks/s, output: 73.71 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:22<00:00, 262.24s/it, est. speed input: 0.48 toks/s, output: 73.71 toks/s][AProcessed prompts: 100%|██████████| 1/1 [04:22<00:00, 262.24s/it, est. speed input: 0.48 toks/s, output: 73.71 toks/s]
- 40%|████      | 12/30 [1:15:07<2:19:43, 465.73s/it]save question success:  11
-Processing question 12: Ben has $16$ balls labeled $1,2,3, \ldots, 16$, as well as $4$ indistinguishable boxes. Two balls ar...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 798.76it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [12:36<00:00, 756.84s/it, est. speed input: 0.17 toks/s, output: 66.45 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [12:36<00:00, 756.84s/it, est. speed input: 0.17 toks/s, output: 66.45 toks/s][AProcessed prompts: 100%|██████████| 1/1 [12:36<00:00, 756.84s/it, est. speed input: 0.17 toks/s, output: 66.45 toks/s]
- 43%|████▎     | 13/30 [1:27:44<2:36:57, 553.96s/it]save question success:  12
-Processing question 13: Sophie is at $(0,0)$ on a coordinate grid and would like to get to $(3,3)$. If Sophie is at $(x, y)$...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 925.08it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [07:31<00:00, 451.78s/it, est. speed input: 0.37 toks/s, output: 70.62 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [07:31<00:00, 451.78s/it, est. speed input: 0.37 toks/s, output: 70.62 toks/s][AProcessed prompts: 100%|██████████| 1/1 [07:31<00:00, 451.78s/it, est. speed input: 0.37 toks/s, output: 70.62 toks/s]
- 47%|████▋     | 14/30 [1:35:16<2:19:29, 523.12s/it]save question success:  13
-Processing question 14: In an $11 \times 11$ grid of cells, each pair of edge-adjacent cells is connected by a door. Karthik...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 905.12it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [07:45<00:00, 465.11s/it, est. speed input: 0.27 toks/s, output: 70.37 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [07:45<00:00, 465.11s/it, est. speed input: 0.27 toks/s, output: 70.37 toks/s][AProcessed prompts: 100%|██████████| 1/1 [07:45<00:00, 465.11s/it, est. speed input: 0.27 toks/s, output: 70.37 toks/s]
- 50%|█████     | 15/30 [1:43:01<2:06:24, 505.66s/it]save question success:  14
-Processing question 15: Compute the number of ways to pick two rectangles in a $5 \times 5$ grid of squares such that the ed...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1163.15it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [09:22<00:00, 562.05s/it, est. speed input: 0.17 toks/s, output: 68.97 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [09:22<00:00, 562.05s/it, est. speed input: 0.17 toks/s, output: 68.97 toks/s][AProcessed prompts: 100%|██████████| 1/1 [09:22<00:00, 562.14s/it, est. speed input: 0.17 toks/s, output: 68.97 toks/s]
- 53%|█████▎    | 16/30 [1:52:23<2:01:57, 522.70s/it]save question success:  15
-Processing question 16: Compute the number of ways to arrange $3$ copies of each of the $26$ lowercase letters of the Englis...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 759.70it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [09:54<00:00, 594.33s/it, est. speed input: 0.21 toks/s, output: 68.52 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [09:54<00:00, 594.33s/it, est. speed input: 0.21 toks/s, output: 68.52 toks/s][AProcessed prompts: 100%|██████████| 1/1 [09:54<00:00, 594.36s/it, est. speed input: 0.21 toks/s, output: 68.52 toks/s]
- 57%|█████▋    | 17/30 [2:02:18<1:57:56, 544.31s/it]save question success:  16
-Processing question 17: Albert writes $2025$ numbers $a_{1}, \ldots, a_{2025}$ in a circle on a blackboard. Initially, each ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 858.26it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [11:49<00:00, 709.17s/it, est. speed input: 0.28 toks/s, output: 67.06 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [11:49<00:00, 709.17s/it, est. speed input: 0.28 toks/s, output: 67.06 toks/s][AProcessed prompts: 100%|██████████| 1/1 [11:49<00:00, 709.17s/it, est. speed input: 0.28 toks/s, output: 67.06 toks/s]
- 60%|██████    | 18/30 [2:14:07<1:58:46, 593.89s/it]save question success:  17
-Processing question 18: Two points are selected independently and uniformly at random inside a regular hexagon. Compute the ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1328.57it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [11:07<00:00, 667.06s/it, est. speed input: 0.11 toks/s, output: 67.62 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [11:07<00:00, 667.06s/it, est. speed input: 0.11 toks/s, output: 67.62 toks/s][AProcessed prompts: 100%|██████████| 1/1 [11:07<00:00, 667.07s/it, est. speed input: 0.11 toks/s, output: 67.62 toks/s]
- 63%|██████▎   | 19/30 [2:25:14<1:52:55, 615.91s/it]save question success:  18
-Processing question 19: The circumference of a circle is divided into $45$ arcs, each of length $1$. Initially, there are $1...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 858.08it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [09:13<00:00, 554.00s/it, est. speed input: 0.27 toks/s, output: 69.12 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [09:13<00:00, 554.00s/it, est. speed input: 0.27 toks/s, output: 69.12 toks/s][AProcessed prompts: 100%|██████████| 1/1 [09:13<00:00, 554.00s/it, est. speed input: 0.27 toks/s, output: 69.12 toks/s]
- 67%|██████▋   | 20/30 [2:34:28<1:39:33, 597.36s/it]save question success:  19
-Processing question 20: Equilateral triangles $\triangle A B C$ and $\triangle D E F$ are drawn such that points $B, E, F$, ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1173.89it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:19<00:00, 139.23s/it, est. speed input: 0.83 toks/s, output: 76.08 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:19<00:00, 139.23s/it, est. speed input: 0.83 toks/s, output: 76.08 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:19<00:00, 139.23s/it, est. speed input: 0.83 toks/s, output: 76.08 toks/s]
- 70%|███████   | 21/30 [2:36:48<1:08:58, 459.86s/it]save question success:  20
-Processing question 21: In a two-dimensional cave with a parallel floor and ceiling, two stalactites of lengths $16$ and $36...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1120.87it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [05:17<00:00, 317.82s/it, est. speed input: 0.37 toks/s, output: 72.72 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [05:17<00:00, 317.82s/it, est. speed input: 0.37 toks/s, output: 72.72 toks/s][AProcessed prompts: 100%|██████████| 1/1 [05:17<00:00, 317.83s/it, est. speed input: 0.37 toks/s, output: 72.72 toks/s]
- 73%|███████▎  | 22/30 [2:42:06<55:38, 417.26s/it]  save question success:  21
-Processing question 22: Point $P$ lies inside square $A B C D$ such that the areas of $\triangle P A B, \triangle P B C, \tr...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1377.89it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:30<00:00, 270.26s/it, est. speed input: 0.41 toks/s, output: 73.42 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:30<00:00, 270.26s/it, est. speed input: 0.41 toks/s, output: 73.42 toks/s][AProcessed prompts: 100%|██████████| 1/1 [04:30<00:00, 270.26s/it, est. speed input: 0.41 toks/s, output: 73.42 toks/s]
- 77%|███████▋  | 23/30 [2:46:36<43:32, 373.18s/it]save question success:  22
-Processing question 23: A semicircle is inscribed in another semicircle if the smaller semicircle's diameter is a chord of t...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 375.63it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [05:20<00:00, 320.50s/it, est. speed input: 2.06 toks/s, output: 72.38 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [05:20<00:00, 320.50s/it, est. speed input: 2.06 toks/s, output: 72.38 toks/s][AProcessed prompts: 100%|██████████| 1/1 [05:20<00:00, 320.50s/it, est. speed input: 2.06 toks/s, output: 72.38 toks/s]
- 80%|████████  | 24/30 [2:51:57<35:44, 357.40s/it]save question success:  23
-Processing question 24: Let $\triangle A B C$ be an equilateral triangle with side length $6$. Let $P$ be a point inside tri...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1157.05it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [14:20<00:00, 860.86s/it, est. speed input: 0.15 toks/s, output: 65.25 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [14:20<00:00, 860.86s/it, est. speed input: 0.15 toks/s, output: 65.25 toks/s][AProcessed prompts: 100%|██████████| 1/1 [14:20<00:00, 860.87s/it, est. speed input: 0.15 toks/s, output: 65.25 toks/s]
- 83%|████████▎ | 25/30 [3:06:18<42:22, 508.53s/it]save question success:  24
-Processing question 25: Trapezoid $A B C D$, with $A B \| C D$, has side lengths $A B=11, B C=8, C D=19$, and $D A=4$. Compu...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1198.03it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:13<00:00, 193.02s/it, est. speed input: 0.63 toks/s, output: 74.89 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:13<00:00, 193.02s/it, est. speed input: 0.63 toks/s, output: 74.89 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:13<00:00, 193.02s/it, est. speed input: 0.63 toks/s, output: 74.89 toks/s]
- 87%|████████▋ | 26/30 [3:09:31<27:35, 413.89s/it]save question success:  25
-Processing question 26: Point $P$ is inside triangle $\triangle A B C$ such that $\angle A B P=\angle A C P$. Given that $A ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1053.58it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:38<00:00, 218.78s/it, est. speed input: 0.61 toks/s, output: 74.45 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:38<00:00, 218.78s/it, est. speed input: 0.61 toks/s, output: 74.45 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:38<00:00, 218.78s/it, est. speed input: 0.61 toks/s, output: 74.45 toks/s]
- 90%|█████████ | 27/30 [3:13:10<17:46, 355.38s/it]save question success:  26
-Processing question 27: Let $A B C D$ be an isosceles trapezoid such that $C D>A B=4$. Let $E$ be a point on line $C D$ such...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1027.76it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:49<00:00, 169.14s/it, est. speed input: 0.84 toks/s, output: 75.42 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:49<00:00, 169.14s/it, est. speed input: 0.84 toks/s, output: 75.42 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:49<00:00, 169.14s/it, est. speed input: 0.84 toks/s, output: 75.42 toks/s]
- 93%|█████████▎| 28/30 [3:15:59<09:59, 299.52s/it]save question success:  27
-Processing question 28: Let $A B C D$ be a rectangle with $B C=24$. Point $X$ lies inside the rectangle such that $\angle A ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1231.08it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [16:43<00:00, 1003.21s/it, est. speed input: 0.12 toks/s, output: 63.80 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [16:43<00:00, 1003.21s/it, est. speed input: 0.12 toks/s, output: 63.80 toks/s][AProcessed prompts: 100%|██████████| 1/1 [16:43<00:00, 1003.21s/it, est. speed input: 0.12 toks/s, output: 63.80 toks/s]
- 97%|█████████▋| 29/30 [3:32:42<08:30, 510.68s/it]save question success:  28
-Processing question 29: A plane $\mathcal{P}$ intersects a rectangular prism at a hexagon which has side lengths $45,66,63,5...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1074.36it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [09:09<00:00, 549.59s/it, est. speed input: 0.18 toks/s, output: 69.19 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [09:09<00:00, 549.59s/it, est. speed input: 0.18 toks/s, output: 69.19 toks/s][AProcessed prompts: 100%|██████████| 1/1 [09:09<00:00, 549.59s/it, est. speed input: 0.18 toks/s, output: 69.19 toks/s]
-100%|██████████| 30/30 [3:41:52<00:00, 522.40s/it]100%|██████████| 30/30 [3:41:52<00:00, 443.75s/it]
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(EngineCore_DP0 pid=222369)[0;0m Not using ConfPerReqLogitsProcessor None

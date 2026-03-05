@@ -1,0 +1,1 @@
+{"AIME2025-I": {"features": {"question": {"_type": "Value"}, "answer": {"_type": "Value"}}, "splits": {"test": {"name": "test", "dataset_name": "AIME2025"}}}, "AIME2025-II": {"features": {"question": {"_type": "Value"}, "answer": {"_type": "Value"}}, "splits": {"test": {"name": "test", "dataset_name": "AIME2025"}}}}

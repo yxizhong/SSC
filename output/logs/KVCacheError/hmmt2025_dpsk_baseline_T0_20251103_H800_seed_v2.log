@@ -1,797 +1,0 @@
-INFO 11-04 06:41:16 [__init__.py:216] Automatically detected platform cuda.
-Loading dataset from /share/yangxizhong/data/HMMT_2025/hmmt_25.jsonl...
-Initializing vLLM engine...
-INFO 11-04 06:41:20 [utils.py:328] non-default args: {'trust_remote_code': True, 'tensor_parallel_size': 8, 'enable_prefix_caching': True, 'disable_log_stats': True, 'logits_processors': [<class 'model.processors.WrappedPerReqLogitsProcessor'>], 'model': '/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B'}
-The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
-Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
-INFO 11-04 06:41:30 [__init__.py:742] Resolved architecture: Qwen3ForCausalLM
-`torch_dtype` is deprecated! Use `dtype` instead!
-INFO 11-04 06:41:30 [__init__.py:1815] Using max model len 131072
-Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
-INFO 11-04 06:41:31 [scheduler.py:222] Chunked prefill is enabled with max_num_batched_tokens=16384.
-Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
-WARNING 11-04 06:41:32 [__init__.py:2974] We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing for more information. Reasons: CUDA is initialized
-INFO 11-04 06:41:36 [__init__.py:216] Automatically detected platform cuda.
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:41:38 [core.py:654] Waiting for init message from front-end.
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:41:38 [core.py:76] Initializing a V1 LLM engine (v0.10.2) with config: model='/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B', speculative_config=None, tokenizer='/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=131072, download_dir=None, load_format=auto, tensor_parallel_size=8, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.mamba_mixer2","vllm.mamba_mixer","vllm.short_conv","vllm.linear_attention","vllm.plamo2_mamba_mixer","vllm.gdn_attention"],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":1,"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"pass_config":{},"max_capture_size":512,"local_cache_dir":null}
-[1;36m(EngineCore_DP0 pid=337948)[0;0m WARNING 11-04 06:41:38 [multiproc_worker_utils.py:273] Reducing Torch parallelism from 96 threads to 1 to avoid unnecessary CPU contention. Set OMP_NUM_THREADS in the external environment to tune this value as needed.
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:41:38 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[0, 1, 2, 3, 4, 5, 6, 7], buffer_handle=(8, 16777216, 10, 'psm_bfcc2ef8'), local_subscribe_addr='ipc:///tmp/537eef63-06b5-4a48-9ec9-28b062cec374', remote_subscribe_addr=None, remote_addr_ipv6=False)
-INFO 11-04 06:41:45 [__init__.py:216] Automatically detected platform cuda.
-INFO 11-04 06:41:45 [__init__.py:216] Automatically detected platform cuda.
-INFO 11-04 06:41:46 [__init__.py:216] Automatically detected platform cuda.
-INFO 11-04 06:41:46 [__init__.py:216] Automatically detected platform cuda.
-INFO 11-04 06:41:46 [__init__.py:216] Automatically detected platform cuda.
-INFO 11-04 06:41:46 [__init__.py:216] Automatically detected platform cuda.
-INFO 11-04 06:41:46 [__init__.py:216] Automatically detected platform cuda.
-INFO 11-04 06:41:46 [__init__.py:216] Automatically detected platform cuda.
-INFO 11-04 06:41:49 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_1a7d2a8f'), local_subscribe_addr='ipc:///tmp/eececd13-0e31-4654-a30b-013eae80059f', remote_subscribe_addr=None, remote_addr_ipv6=False)
-INFO 11-04 06:41:49 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_2f26c37e'), local_subscribe_addr='ipc:///tmp/04960d9b-b1ce-4b0d-9917-4d851f2daec2', remote_subscribe_addr=None, remote_addr_ipv6=False)
-INFO 11-04 06:41:49 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_0cbb6355'), local_subscribe_addr='ipc:///tmp/a53a13cc-bd6d-407a-9318-20974e96442f', remote_subscribe_addr=None, remote_addr_ipv6=False)
-INFO 11-04 06:41:49 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_526be8c2'), local_subscribe_addr='ipc:///tmp/8cc7bcb3-1dfc-495c-b199-871fb12ec91a', remote_subscribe_addr=None, remote_addr_ipv6=False)
-INFO 11-04 06:41:49 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_549c0ddd'), local_subscribe_addr='ipc:///tmp/ad2668fa-658f-4198-9dbe-0162513c3d04', remote_subscribe_addr=None, remote_addr_ipv6=False)
-INFO 11-04 06:41:49 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_cdeeeee0'), local_subscribe_addr='ipc:///tmp/b981ec1b-51ca-4263-bfc2-d6d65ee9530f', remote_subscribe_addr=None, remote_addr_ipv6=False)
-INFO 11-04 06:41:49 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_4e176180'), local_subscribe_addr='ipc:///tmp/e28f14b0-402a-4e1b-99a2-e3fd8737f3d9', remote_subscribe_addr=None, remote_addr_ipv6=False)
-INFO 11-04 06:41:49 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_8283085e'), local_subscribe_addr='ipc:///tmp/7d6aff3d-096d-49f5-a428-9984c54358a2', remote_subscribe_addr=None, remote_addr_ipv6=False)
-[W1104 06:41:50.699924177 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
-[W1104 06:41:50.699939740 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
-[W1104 06:41:50.699944783 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
-[W1104 06:41:50.699939955 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
-[W1104 06:41:50.699966213 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
-[W1104 06:41:50.699950040 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
-[W1104 06:41:50.699989262 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
-[W1104 06:41:50.700045250 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
-[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-INFO 11-04 06:41:50 [__init__.py:1433] Found nccl from library libnccl.so.2
-INFO 11-04 06:41:50 [__init__.py:1433] Found nccl from library libnccl.so.2
-INFO 11-04 06:41:50 [__init__.py:1433] Found nccl from library libnccl.so.2
-INFO 11-04 06:41:50 [__init__.py:1433] Found nccl from library libnccl.so.2
-INFO 11-04 06:41:50 [__init__.py:1433] Found nccl from library libnccl.so.2
-INFO 11-04 06:41:50 [__init__.py:1433] Found nccl from library libnccl.so.2
-INFO 11-04 06:41:50 [__init__.py:1433] Found nccl from library libnccl.so.2
-INFO 11-04 06:41:50 [__init__.py:1433] Found nccl from library libnccl.so.2
-INFO 11-04 06:41:50 [pynccl.py:70] vLLM is using nccl==2.27.3
-INFO 11-04 06:41:50 [pynccl.py:70] vLLM is using nccl==2.27.3
-INFO 11-04 06:41:50 [pynccl.py:70] vLLM is using nccl==2.27.3
-INFO 11-04 06:41:50 [pynccl.py:70] vLLM is using nccl==2.27.3
-INFO 11-04 06:41:50 [pynccl.py:70] vLLM is using nccl==2.27.3
-INFO 11-04 06:41:50 [pynccl.py:70] vLLM is using nccl==2.27.3
-INFO 11-04 06:41:50 [pynccl.py:70] vLLM is using nccl==2.27.3
-INFO 11-04 06:41:50 [pynccl.py:70] vLLM is using nccl==2.27.3
-INFO 11-04 06:41:53 [custom_all_reduce.py:35] Skipping P2P check and trusting the driver's P2P report.
-INFO 11-04 06:41:53 [custom_all_reduce.py:35] Skipping P2P check and trusting the driver's P2P report.
-INFO 11-04 06:41:53 [custom_all_reduce.py:35] Skipping P2P check and trusting the driver's P2P report.
-INFO 11-04 06:41:53 [custom_all_reduce.py:35] Skipping P2P check and trusting the driver's P2P report.
-INFO 11-04 06:41:53 [custom_all_reduce.py:35] Skipping P2P check and trusting the driver's P2P report.
-INFO 11-04 06:41:53 [custom_all_reduce.py:35] Skipping P2P check and trusting the driver's P2P report.
-INFO 11-04 06:41:53 [custom_all_reduce.py:35] Skipping P2P check and trusting the driver's P2P report.
-INFO 11-04 06:41:53 [custom_all_reduce.py:35] Skipping P2P check and trusting the driver's P2P report.
-INFO 11-04 06:41:54 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[1, 2, 3, 4, 5, 6, 7], buffer_handle=(7, 4194304, 6, 'psm_7df732a0'), local_subscribe_addr='ipc:///tmp/61ddd550-b94b-47be-b2c6-8d8572aa04e4', remote_subscribe_addr=None, remote_addr_ipv6=False)
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
-INFO 11-04 06:41:54 [parallel_state.py:1165] rank 3 in world size 8 is assigned as DP rank 0, PP rank 0, TP rank 3, EP rank 3
-INFO 11-04 06:41:54 [parallel_state.py:1165] rank 0 in world size 8 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
-INFO 11-04 06:41:54 [parallel_state.py:1165] rank 1 in world size 8 is assigned as DP rank 0, PP rank 0, TP rank 1, EP rank 1
-INFO 11-04 06:41:54 [parallel_state.py:1165] rank 4 in world size 8 is assigned as DP rank 0, PP rank 0, TP rank 4, EP rank 4
-INFO 11-04 06:41:54 [parallel_state.py:1165] rank 5 in world size 8 is assigned as DP rank 0, PP rank 0, TP rank 5, EP rank 5
-INFO 11-04 06:41:54 [parallel_state.py:1165] rank 2 in world size 8 is assigned as DP rank 0, PP rank 0, TP rank 2, EP rank 2
-INFO 11-04 06:41:54 [parallel_state.py:1165] rank 7 in world size 8 is assigned as DP rank 0, PP rank 0, TP rank 7, EP rank 7
-INFO 11-04 06:41:54 [parallel_state.py:1165] rank 6 in world size 8 is assigned as DP rank 0, PP rank 0, TP rank 6, EP rank 6
-WARNING 11-04 06:41:54 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
-WARNING 11-04 06:41:54 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
-WARNING 11-04 06:41:54 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
-WARNING 11-04 06:41:54 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
-WARNING 11-04 06:41:54 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
-WARNING 11-04 06:41:54 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
-WARNING 11-04 06:41:54 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
-WARNING 11-04 06:41:54 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
-[1;36m(Worker_TP5 pid=338087)[0;0m INFO 11-04 06:41:54 [gpu_model_runner.py:2338] Starting to load model /share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B...
-[1;36m(Worker_TP6 pid=338088)[0;0m INFO 11-04 06:41:54 [gpu_model_runner.py:2338] Starting to load model /share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B...
-[1;36m(Worker_TP4 pid=338086)[0;0m INFO 11-04 06:41:54 [gpu_model_runner.py:2338] Starting to load model /share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B...
-[1;36m(Worker_TP3 pid=338085)[0;0m INFO 11-04 06:41:54 [gpu_model_runner.py:2338] Starting to load model /share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B...
-[1;36m(Worker_TP7 pid=338089)[0;0m INFO 11-04 06:41:54 [gpu_model_runner.py:2338] Starting to load model /share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B...
-[1;36m(Worker_TP2 pid=338084)[0;0m INFO 11-04 06:41:54 [gpu_model_runner.py:2338] Starting to load model /share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B...
-[1;36m(Worker_TP1 pid=338083)[0;0m INFO 11-04 06:41:54 [gpu_model_runner.py:2338] Starting to load model /share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B...
-[1;36m(Worker_TP0 pid=338082)[0;0m INFO 11-04 06:41:54 [gpu_model_runner.py:2338] Starting to load model /share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B...
-[1;36m(Worker_TP5 pid=338087)[0;0m INFO 11-04 06:41:54 [gpu_model_runner.py:2370] Loading model from scratch...
-[1;36m(Worker_TP6 pid=338088)[0;0m INFO 11-04 06:41:54 [gpu_model_runner.py:2370] Loading model from scratch...
-[1;36m(Worker_TP7 pid=338089)[0;0m INFO 11-04 06:41:54 [gpu_model_runner.py:2370] Loading model from scratch...
-[1;36m(Worker_TP4 pid=338086)[0;0m INFO 11-04 06:41:54 [gpu_model_runner.py:2370] Loading model from scratch...
-[1;36m(Worker_TP3 pid=338085)[0;0m INFO 11-04 06:41:54 [gpu_model_runner.py:2370] Loading model from scratch...
-[1;36m(Worker_TP2 pid=338084)[0;0m INFO 11-04 06:41:54 [gpu_model_runner.py:2370] Loading model from scratch...
-[1;36m(Worker_TP0 pid=338082)[0;0m INFO 11-04 06:41:54 [gpu_model_runner.py:2370] Loading model from scratch...
-[1;36m(Worker_TP1 pid=338083)[0;0m INFO 11-04 06:41:54 [gpu_model_runner.py:2370] Loading model from scratch...
-[1;36m(Worker_TP5 pid=338087)[0;0m INFO 11-04 06:41:54 [cuda.py:362] Using Flash Attention backend on V1 engine.
-[1;36m(Worker_TP6 pid=338088)[0;0m INFO 11-04 06:41:54 [cuda.py:362] Using Flash Attention backend on V1 engine.
-[1;36m(Worker_TP7 pid=338089)[0;0m INFO 11-04 06:41:54 [cuda.py:362] Using Flash Attention backend on V1 engine.
-[1;36m(Worker_TP4 pid=338086)[0;0m INFO 11-04 06:41:54 [cuda.py:362] Using Flash Attention backend on V1 engine.
-[1;36m(Worker_TP3 pid=338085)[0;0m INFO 11-04 06:41:54 [cuda.py:362] Using Flash Attention backend on V1 engine.
-[1;36m(Worker_TP0 pid=338082)[0;0m INFO 11-04 06:41:54 [cuda.py:362] Using Flash Attention backend on V1 engine.
-[1;36m(Worker_TP2 pid=338084)[0;0m INFO 11-04 06:41:54 [cuda.py:362] Using Flash Attention backend on V1 engine.
-[1;36m(Worker_TP1 pid=338083)[0;0m INFO 11-04 06:41:54 [cuda.py:362] Using Flash Attention backend on V1 engine.
-[1;36m(Worker_TP0 pid=338082)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
-[1;36m(Worker_TP0 pid=338082)[0;0m Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:05<00:05,  5.08s/it]
-[1;36m(Worker_TP0 pid=338082)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:10<00:00,  5.44s/it]
-[1;36m(Worker_TP0 pid=338082)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:10<00:00,  5.38s/it]
-[1;36m(Worker_TP0 pid=338082)[0;0m 
-[1;36m(Worker_TP6 pid=338088)[0;0m INFO 11-04 06:42:05 [default_loader.py:268] Loading weights took 10.82 seconds
-[1;36m(Worker_TP1 pid=338083)[0;0m INFO 11-04 06:42:05 [default_loader.py:268] Loading weights took 10.81 seconds
-[1;36m(Worker_TP3 pid=338085)[0;0m INFO 11-04 06:42:05 [default_loader.py:268] Loading weights took 10.88 seconds
-[1;36m(Worker_TP0 pid=338082)[0;0m INFO 11-04 06:42:05 [default_loader.py:268] Loading weights took 10.85 seconds
-[1;36m(Worker_TP5 pid=338087)[0;0m INFO 11-04 06:42:05 [default_loader.py:268] Loading weights took 10.88 seconds
-[1;36m(Worker_TP7 pid=338089)[0;0m INFO 11-04 06:42:05 [default_loader.py:268] Loading weights took 10.88 seconds
-[1;36m(Worker_TP4 pid=338086)[0;0m INFO 11-04 06:42:05 [default_loader.py:268] Loading weights took 10.88 seconds
-[1;36m(Worker_TP2 pid=338084)[0;0m INFO 11-04 06:42:05 [default_loader.py:268] Loading weights took 10.85 seconds
-[1;36m(Worker_TP6 pid=338088)[0;0m INFO 11-04 06:42:06 [gpu_model_runner.py:2392] Model loading took 1.9389 GiB and 11.052841 seconds
-[1;36m(Worker_TP1 pid=338083)[0;0m INFO 11-04 06:42:06 [gpu_model_runner.py:2392] Model loading took 1.9389 GiB and 11.008996 seconds
-[1;36m(Worker_TP5 pid=338087)[0;0m INFO 11-04 06:42:06 [gpu_model_runner.py:2392] Model loading took 1.9389 GiB and 11.116093 seconds
-[1;36m(Worker_TP7 pid=338089)[0;0m INFO 11-04 06:42:06 [gpu_model_runner.py:2392] Model loading took 1.9389 GiB and 11.110872 seconds
-[1;36m(Worker_TP4 pid=338086)[0;0m INFO 11-04 06:42:06 [gpu_model_runner.py:2392] Model loading took 1.9389 GiB and 11.089883 seconds
-[1;36m(Worker_TP2 pid=338084)[0;0m INFO 11-04 06:42:06 [gpu_model_runner.py:2392] Model loading took 1.9389 GiB and 11.048201 seconds
-[1;36m(Worker_TP3 pid=338085)[0;0m INFO 11-04 06:42:06 [gpu_model_runner.py:2392] Model loading took 1.9389 GiB and 11.087171 seconds
-[1;36m(Worker_TP0 pid=338082)[0;0m INFO 11-04 06:42:06 [gpu_model_runner.py:2392] Model loading took 1.9389 GiB and 11.045661 seconds
-[1;36m(Worker_TP7 pid=338089)[0;0m INFO 11-04 06:42:16 [backends.py:539] Using cache directory: /root/.cache/vllm/torch_compile_cache/fcd0f181c3/rank_7_0/backbone for vLLM's torch.compile
-[1;36m(Worker_TP4 pid=338086)[0;0m INFO 11-04 06:42:16 [backends.py:539] Using cache directory: /root/.cache/vllm/torch_compile_cache/fcd0f181c3/rank_4_0/backbone for vLLM's torch.compile
-[1;36m(Worker_TP5 pid=338087)[0;0m INFO 11-04 06:42:16 [backends.py:539] Using cache directory: /root/.cache/vllm/torch_compile_cache/fcd0f181c3/rank_5_0/backbone for vLLM's torch.compile
-[1;36m(Worker_TP2 pid=338084)[0;0m INFO 11-04 06:42:16 [backends.py:539] Using cache directory: /root/.cache/vllm/torch_compile_cache/fcd0f181c3/rank_2_0/backbone for vLLM's torch.compile
-[1;36m(Worker_TP0 pid=338082)[0;0m INFO 11-04 06:42:16 [backends.py:539] Using cache directory: /root/.cache/vllm/torch_compile_cache/fcd0f181c3/rank_0_0/backbone for vLLM's torch.compile
-[1;36m(Worker_TP6 pid=338088)[0;0m INFO 11-04 06:42:16 [backends.py:539] Using cache directory: /root/.cache/vllm/torch_compile_cache/fcd0f181c3/rank_6_0/backbone for vLLM's torch.compile
-[1;36m(Worker_TP3 pid=338085)[0;0m INFO 11-04 06:42:16 [backends.py:539] Using cache directory: /root/.cache/vllm/torch_compile_cache/fcd0f181c3/rank_3_0/backbone for vLLM's torch.compile
-[1;36m(Worker_TP1 pid=338083)[0;0m INFO 11-04 06:42:16 [backends.py:539] Using cache directory: /root/.cache/vllm/torch_compile_cache/fcd0f181c3/rank_1_0/backbone for vLLM's torch.compile
-[1;36m(Worker_TP7 pid=338089)[0;0m INFO 11-04 06:42:16 [backends.py:550] Dynamo bytecode transform time: 9.92 s
-[1;36m(Worker_TP5 pid=338087)[0;0m INFO 11-04 06:42:16 [backends.py:550] Dynamo bytecode transform time: 9.92 s
-[1;36m(Worker_TP4 pid=338086)[0;0m INFO 11-04 06:42:16 [backends.py:550] Dynamo bytecode transform time: 9.89 s
-[1;36m(Worker_TP6 pid=338088)[0;0m INFO 11-04 06:42:16 [backends.py:550] Dynamo bytecode transform time: 9.87 s
-[1;36m(Worker_TP2 pid=338084)[0;0m INFO 11-04 06:42:16 [backends.py:550] Dynamo bytecode transform time: 9.91 s
-[1;36m(Worker_TP0 pid=338082)[0;0m INFO 11-04 06:42:16 [backends.py:550] Dynamo bytecode transform time: 9.94 s
-[1;36m(Worker_TP1 pid=338083)[0;0m INFO 11-04 06:42:16 [backends.py:550] Dynamo bytecode transform time: 9.91 s
-[1;36m(Worker_TP3 pid=338085)[0;0m INFO 11-04 06:42:16 [backends.py:550] Dynamo bytecode transform time: 9.94 s
-[1;36m(Worker_TP7 pid=338089)[0;0m INFO 11-04 06:42:19 [backends.py:161] Directly load the compiled graph(s) for dynamic shape from the cache, took 2.232 s
-[1;36m(Worker_TP0 pid=338082)[0;0m INFO 11-04 06:42:19 [backends.py:161] Directly load the compiled graph(s) for dynamic shape from the cache, took 2.231 s
-[1;36m(Worker_TP6 pid=338088)[0;0m INFO 11-04 06:42:19 [backends.py:161] Directly load the compiled graph(s) for dynamic shape from the cache, took 2.246 s
-[1;36m(Worker_TP4 pid=338086)[0;0m INFO 11-04 06:42:19 [backends.py:161] Directly load the compiled graph(s) for dynamic shape from the cache, took 2.251 s
-[1;36m(Worker_TP1 pid=338083)[0;0m INFO 11-04 06:42:19 [backends.py:161] Directly load the compiled graph(s) for dynamic shape from the cache, took 2.243 s
-[1;36m(Worker_TP3 pid=338085)[0;0m INFO 11-04 06:42:19 [backends.py:161] Directly load the compiled graph(s) for dynamic shape from the cache, took 2.252 s
-[1;36m(Worker_TP2 pid=338084)[0;0m INFO 11-04 06:42:19 [backends.py:161] Directly load the compiled graph(s) for dynamic shape from the cache, took 2.247 s
-[1;36m(Worker_TP5 pid=338087)[0;0m INFO 11-04 06:42:19 [backends.py:161] Directly load the compiled graph(s) for dynamic shape from the cache, took 2.268 s
-[1;36m(Worker_TP7 pid=338089)[0;0m INFO 11-04 06:42:20 [monitor.py:34] torch.compile takes 9.92 s in total
-[1;36m(Worker_TP4 pid=338086)[0;0m INFO 11-04 06:42:20 [monitor.py:34] torch.compile takes 9.89 s in total
-[1;36m(Worker_TP6 pid=338088)[0;0m INFO 11-04 06:42:20 [monitor.py:34] torch.compile takes 9.87 s in total
-[1;36m(Worker_TP5 pid=338087)[0;0m INFO 11-04 06:42:20 [monitor.py:34] torch.compile takes 9.92 s in total
-[1;36m(Worker_TP3 pid=338085)[0;0m INFO 11-04 06:42:20 [monitor.py:34] torch.compile takes 9.94 s in total
-[1;36m(Worker_TP2 pid=338084)[0;0m INFO 11-04 06:42:20 [monitor.py:34] torch.compile takes 9.91 s in total
-[1;36m(Worker_TP1 pid=338083)[0;0m INFO 11-04 06:42:20 [monitor.py:34] torch.compile takes 9.91 s in total
-[1;36m(Worker_TP0 pid=338082)[0;0m INFO 11-04 06:42:20 [monitor.py:34] torch.compile takes 9.94 s in total
-[1;36m(Worker_TP7 pid=338089)[0;0m INFO 11-04 06:42:22 [gpu_worker.py:298] Available KV cache memory: 116.50 GiB
-[1;36m(Worker_TP6 pid=338088)[0;0m INFO 11-04 06:42:22 [gpu_worker.py:298] Available KV cache memory: 116.50 GiB
-[1;36m(Worker_TP5 pid=338087)[0;0m INFO 11-04 06:42:22 [gpu_worker.py:298] Available KV cache memory: 116.50 GiB
-[1;36m(Worker_TP4 pid=338086)[0;0m INFO 11-04 06:42:22 [gpu_worker.py:298] Available KV cache memory: 116.50 GiB
-[1;36m(Worker_TP2 pid=338084)[0;0m INFO 11-04 06:42:22 [gpu_worker.py:298] Available KV cache memory: 116.50 GiB
-[1;36m(Worker_TP0 pid=338082)[0;0m INFO 11-04 06:42:22 [gpu_worker.py:298] Available KV cache memory: 116.50 GiB
-[1;36m(Worker_TP1 pid=338083)[0;0m INFO 11-04 06:42:22 [gpu_worker.py:298] Available KV cache memory: 116.50 GiB
-[1;36m(Worker_TP3 pid=338085)[0;0m INFO 11-04 06:42:22 [gpu_worker.py:298] Available KV cache memory: 116.50 GiB
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:42:22 [kv_cache_utils.py:864] GPU KV cache size: 6,786,800 tokens
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:42:22 [kv_cache_utils.py:868] Maximum concurrency for 131,072 tokens per request: 51.78x
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:42:22 [kv_cache_utils.py:864] GPU KV cache size: 6,786,800 tokens
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:42:22 [kv_cache_utils.py:868] Maximum concurrency for 131,072 tokens per request: 51.78x
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:42:22 [kv_cache_utils.py:864] GPU KV cache size: 6,786,800 tokens
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:42:22 [kv_cache_utils.py:868] Maximum concurrency for 131,072 tokens per request: 51.78x
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:42:22 [kv_cache_utils.py:864] GPU KV cache size: 6,786,800 tokens
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:42:22 [kv_cache_utils.py:868] Maximum concurrency for 131,072 tokens per request: 51.78x
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:42:22 [kv_cache_utils.py:864] GPU KV cache size: 6,786,800 tokens
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:42:22 [kv_cache_utils.py:868] Maximum concurrency for 131,072 tokens per request: 51.78x
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:42:22 [kv_cache_utils.py:864] GPU KV cache size: 6,786,800 tokens
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:42:22 [kv_cache_utils.py:868] Maximum concurrency for 131,072 tokens per request: 51.78x
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:42:22 [kv_cache_utils.py:864] GPU KV cache size: 6,786,800 tokens
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:42:22 [kv_cache_utils.py:868] Maximum concurrency for 131,072 tokens per request: 51.78x
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:42:22 [kv_cache_utils.py:864] GPU KV cache size: 6,786,800 tokens
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:42:22 [kv_cache_utils.py:868] Maximum concurrency for 131,072 tokens per request: 51.78x
-[1;36m(Worker_TP0 pid=338082)[0;0m Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/67 [00:00<?, ?it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   4%|▍         | 3/67 [00:00<00:02, 22.56it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   9%|▉         | 6/67 [00:00<00:02, 23.37it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  13%|█▎        | 9/67 [00:00<00:02, 23.68it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  18%|█▊        | 12/67 [00:00<00:02, 23.81it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  22%|██▏       | 15/67 [00:00<00:02, 23.79it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  27%|██▋       | 18/67 [00:00<00:02, 23.75it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  31%|███▏      | 21/67 [00:00<00:01, 23.59it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  36%|███▌      | 24/67 [00:01<00:01, 23.59it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  40%|████      | 27/67 [00:01<00:01, 23.60it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  45%|████▍     | 30/67 [00:01<00:01, 23.27it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  49%|████▉     | 33/67 [00:01<00:01, 22.48it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  54%|█████▎    | 36/67 [00:01<00:01, 22.37it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  58%|█████▊    | 39/67 [00:01<00:01, 22.03it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  63%|██████▎   | 42/67 [00:01<00:01, 21.08it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  67%|██████▋   | 45/67 [00:01<00:01, 20.96it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  72%|███████▏  | 48/67 [00:02<00:00, 21.06it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  76%|███████▌  | 51/67 [00:02<00:00, 20.46it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  81%|████████  | 54/67 [00:02<00:00, 20.15it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  85%|████████▌ | 57/67 [00:02<00:00, 19.99it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  90%|████████▉ | 60/67 [00:02<00:00, 20.13it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  94%|█████████▍| 63/67 [00:02<00:00, 20.35it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  99%|█████████▊| 66/67 [00:03<00:00, 21.09it/s][1;36m(Worker_TP7 pid=338089)[0;0m INFO 11-04 06:42:25 [custom_all_reduce.py:203] Registering 4891 cuda graph addresses
-[1;36m(Worker_TP2 pid=338084)[0;0m INFO 11-04 06:42:25 [custom_all_reduce.py:203] Registering 4891 cuda graph addresses
-Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 67/67 [00:03<00:00, 21.76it/s]
-[1;36m(Worker_TP0 pid=338082)[0;0m INFO 11-04 06:42:26 [custom_all_reduce.py:203] Registering 4891 cuda graph addresses
-[1;36m(Worker_TP4 pid=338086)[0;0m INFO 11-04 06:42:26 [custom_all_reduce.py:203] Registering 4891 cuda graph addresses
-[1;36m(Worker_TP5 pid=338087)[0;0m INFO 11-04 06:42:26 [custom_all_reduce.py:203] Registering 4891 cuda graph addresses
-[1;36m(Worker_TP1 pid=338083)[0;0m INFO 11-04 06:42:26 [custom_all_reduce.py:203] Registering 4891 cuda graph addresses
-[1;36m(Worker_TP6 pid=338088)[0;0m INFO 11-04 06:42:26 [custom_all_reduce.py:203] Registering 4891 cuda graph addresses
-[1;36m(Worker_TP3 pid=338085)[0;0m INFO 11-04 06:42:26 [custom_all_reduce.py:203] Registering 4891 cuda graph addresses
-[1;36m(Worker_TP7 pid=338089)[0;0m INFO 11-04 06:42:26 [gpu_model_runner.py:3118] Graph capturing finished in 4 secs, took 0.70 GiB
-[1;36m(Worker_TP7 pid=338089)[0;0m INFO 11-04 06:42:26 [gpu_worker.py:391] Free memory on device (139.22/139.83 GiB) on startup. Desired GPU memory utilization is (0.9, 125.85 GiB). Actual usage is 1.94 GiB for weight, 5.68 GiB for peak activation, 1.72 GiB for non-torch memory, and 0.7 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=124184230195` to fit into requested memory, or `--kv-cache-memory=138547217920` to fully utilize gpu memory. Current kv cache memory in use is 125094394163 bytes.
-[1;36m(Worker_TP5 pid=338087)[0;0m INFO 11-04 06:42:26 [gpu_model_runner.py:3118] Graph capturing finished in 4 secs, took 0.70 GiB
-[1;36m(Worker_TP5 pid=338087)[0;0m INFO 11-04 06:42:26 [gpu_worker.py:391] Free memory on device (139.22/139.83 GiB) on startup. Desired GPU memory utilization is (0.9, 125.85 GiB). Actual usage is 1.94 GiB for weight, 5.68 GiB for peak activation, 1.72 GiB for non-torch memory, and 0.7 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=124184230195` to fit into requested memory, or `--kv-cache-memory=138547217920` to fully utilize gpu memory. Current kv cache memory in use is 125094394163 bytes.
-[1;36m(Worker_TP0 pid=338082)[0;0m INFO 11-04 06:42:26 [gpu_model_runner.py:3118] Graph capturing finished in 4 secs, took 0.70 GiB
-[1;36m(Worker_TP0 pid=338082)[0;0m INFO 11-04 06:42:26 [gpu_worker.py:391] Free memory on device (139.22/139.83 GiB) on startup. Desired GPU memory utilization is (0.9, 125.85 GiB). Actual usage is 1.94 GiB for weight, 5.68 GiB for peak activation, 1.72 GiB for non-torch memory, and 0.7 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=124184230195` to fit into requested memory, or `--kv-cache-memory=138547217920` to fully utilize gpu memory. Current kv cache memory in use is 125094394163 bytes.
-[1;36m(Worker_TP4 pid=338086)[0;0m INFO 11-04 06:42:26 [gpu_model_runner.py:3118] Graph capturing finished in 4 secs, took 0.70 GiB
-[1;36m(Worker_TP4 pid=338086)[0;0m INFO 11-04 06:42:26 [gpu_worker.py:391] Free memory on device (139.22/139.83 GiB) on startup. Desired GPU memory utilization is (0.9, 125.85 GiB). Actual usage is 1.94 GiB for weight, 5.68 GiB for peak activation, 1.72 GiB for non-torch memory, and 0.7 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=124184230195` to fit into requested memory, or `--kv-cache-memory=138547217920` to fully utilize gpu memory. Current kv cache memory in use is 125094394163 bytes.
-[1;36m(Worker_TP6 pid=338088)[0;0m INFO 11-04 06:42:26 [gpu_model_runner.py:3118] Graph capturing finished in 4 secs, took 0.70 GiB
-[1;36m(Worker_TP6 pid=338088)[0;0m INFO 11-04 06:42:26 [gpu_worker.py:391] Free memory on device (139.22/139.83 GiB) on startup. Desired GPU memory utilization is (0.9, 125.85 GiB). Actual usage is 1.94 GiB for weight, 5.68 GiB for peak activation, 1.72 GiB for non-torch memory, and 0.7 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=124184230195` to fit into requested memory, or `--kv-cache-memory=138547217920` to fully utilize gpu memory. Current kv cache memory in use is 125094394163 bytes.
-[1;36m(Worker_TP3 pid=338085)[0;0m INFO 11-04 06:42:26 [gpu_model_runner.py:3118] Graph capturing finished in 4 secs, took 0.70 GiB
-[1;36m(Worker_TP3 pid=338085)[0;0m INFO 11-04 06:42:26 [gpu_worker.py:391] Free memory on device (139.22/139.83 GiB) on startup. Desired GPU memory utilization is (0.9, 125.85 GiB). Actual usage is 1.94 GiB for weight, 5.68 GiB for peak activation, 1.72 GiB for non-torch memory, and 0.7 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=124184230195` to fit into requested memory, or `--kv-cache-memory=138547217920` to fully utilize gpu memory. Current kv cache memory in use is 125094394163 bytes.
-[1;36m(Worker_TP2 pid=338084)[0;0m INFO 11-04 06:42:26 [gpu_model_runner.py:3118] Graph capturing finished in 4 secs, took 0.70 GiB
-[1;36m(Worker_TP2 pid=338084)[0;0m INFO 11-04 06:42:26 [gpu_worker.py:391] Free memory on device (139.22/139.83 GiB) on startup. Desired GPU memory utilization is (0.9, 125.85 GiB). Actual usage is 1.94 GiB for weight, 5.68 GiB for peak activation, 1.72 GiB for non-torch memory, and 0.7 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=124184230195` to fit into requested memory, or `--kv-cache-memory=138547217920` to fully utilize gpu memory. Current kv cache memory in use is 125094394163 bytes.
-[1;36m(Worker_TP1 pid=338083)[0;0m INFO 11-04 06:42:26 [gpu_model_runner.py:3118] Graph capturing finished in 4 secs, took 0.70 GiB
-[1;36m(Worker_TP1 pid=338083)[0;0m INFO 11-04 06:42:26 [gpu_worker.py:391] Free memory on device (139.22/139.83 GiB) on startup. Desired GPU memory utilization is (0.9, 125.85 GiB). Actual usage is 1.94 GiB for weight, 5.68 GiB for peak activation, 1.72 GiB for non-torch memory, and 0.7 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=124184230195` to fit into requested memory, or `--kv-cache-memory=138547217920` to fully utilize gpu memory. Current kv cache memory in use is 125094394163 bytes.
-[1;36m(EngineCore_DP0 pid=337948)[0;0m INFO 11-04 06:42:26 [core.py:218] init engine (profile, create kv cache, warmup model) took 20.44 seconds
-INFO 11-04 06:42:27 [llm.py:295] Supported_tasks: ['generate']
-INFO 11-04 06:42:27 [__init__.py:36] No IOProcessor plugins requested by the model
-vLLM engine initialized in 67.00 seconds
-Initializing tokenizer...
-Tokenizer initialized in 0.35 seconds
-  0%|          | 0/30 [00:00<?, ?it/s]Processing question 0: Compute the sum of the positive divisors (including $1$) of $9!$ that have units digit $1$....
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 121.71it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:41<00:00, 41.92s/it, est. speed input: 1.84 toks/s, output: 227.08 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:41<00:00, 41.92s/it, est. speed input: 1.84 toks/s, output: 227.08 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:41<00:00, 41.92s/it, est. speed input: 1.84 toks/s, output: 227.08 toks/s]
-  3%|▎         | 1/30 [00:41<20:17, 41.99s/it]Processing question 1: Mark writes the expression $\sqrt{\underline{a b c d}}$ on the board, where $\underline{a b c d}$ is...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 926.10it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:41<00:00, 41.16s/it, est. speed input: 3.55 toks/s, output: 230.16 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:41<00:00, 41.16s/it, est. speed input: 3.55 toks/s, output: 230.16 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:41<00:00, 41.16s/it, est. speed input: 3.55 toks/s, output: 230.16 toks/s]
-  7%|▋         | 2/30 [01:23<19:22, 41.52s/it]save question success:  1
-Processing question 2: Given that $x, y$, and $z$ are positive real numbers such that
-
-$$
-x^{\log _{2}(y z)}=2^{8} \cdot 3^...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 764.97it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:02<00:00, 62.09s/it, est. speed input: 2.66 toks/s, output: 229.49 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:02<00:00, 62.09s/it, est. speed input: 2.66 toks/s, output: 229.49 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:02<00:00, 62.09s/it, est. speed input: 2.66 toks/s, output: 229.49 toks/s]
- 10%|█         | 3/30 [02:25<22:57, 51.02s/it]save question success:  2
-Processing question 3: Let $\lfloor z\rfloor$ denote the greatest integer less than or equal to $z$. Compute
-
-$$
-\sum_{j=-1...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 986.43it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:17<00:00, 77.22s/it, est. speed input: 1.50 toks/s, output: 229.56 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:17<00:00, 77.22s/it, est. speed input: 1.50 toks/s, output: 229.56 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:17<00:00, 77.22s/it, est. speed input: 1.50 toks/s, output: 229.56 toks/s]
- 13%|█▎        | 4/30 [03:42<26:35, 61.38s/it]save question success:  3
-Processing question 4: Let $\mathcal{S}$ be the set of all nonconstant monic polynomials $P$ with integer coefficients sati...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 951.74it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:56<00:00, 56.36s/it, est. speed input: 2.41 toks/s, output: 230.74 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:56<00:00, 56.36s/it, est. speed input: 2.41 toks/s, output: 230.74 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:56<00:00, 56.36s/it, est. speed input: 2.41 toks/s, output: 230.74 toks/s]
- 17%|█▋        | 5/30 [04:39<24:49, 59.59s/it]save question success:  4
-Processing question 5: Let $r$ be the remainder when $2017^{2025!}-1$ is divided by 2025!. Compute $\frac{r}{2025!}$. (Note...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 947.01it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:14<00:00, 134.15s/it, est. speed input: 0.79 toks/s, output: 228.64 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:14<00:00, 134.15s/it, est. speed input: 0.79 toks/s, output: 228.64 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:14<00:00, 134.15s/it, est. speed input: 0.79 toks/s, output: 228.64 toks/s]
- 20%|██        | 6/30 [06:53<33:59, 84.97s/it]save question success:  5
-Processing question 6: There exists a unique triple $(a, b, c)$ of positive real numbers that satisfies the equations
-$$
-2\...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 822.57it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:18<00:00, 78.78s/it, est. speed input: 1.73 toks/s, output: 229.09 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:18<00:00, 78.78s/it, est. speed input: 1.73 toks/s, output: 229.09 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:18<00:00, 78.78s/it, est. speed input: 1.73 toks/s, output: 229.09 toks/s]
- 23%|██▎       | 7/30 [08:12<31:48, 82.97s/it]save question success:  6
-Processing question 7: Define $\operatorname{sgn}(x)$ to be $1$ when $x$ is positive, $-1$ when $x$ is negative, and $0$ wh...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 687.93it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:35<00:00, 215.17s/it, est. speed input: 0.69 toks/s, output: 227.39 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:35<00:00, 215.17s/it, est. speed input: 0.69 toks/s, output: 227.39 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:35<00:00, 215.17s/it, est. speed input: 0.69 toks/s, output: 227.39 toks/s]
- 27%|██▋       | 8/30 [11:47<45:52, 125.11s/it]save question success:  7
-Processing question 8: Let $f$ be the unique polynomial of degree at most $2026$ such that for all $n \in\{1,2,3, \ldots, 2...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 563.90it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:46<00:00, 106.50s/it, est. speed input: 2.22 toks/s, output: 229.07 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:46<00:00, 106.50s/it, est. speed input: 2.22 toks/s, output: 229.07 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:46<00:00, 106.50s/it, est. speed input: 2.22 toks/s, output: 229.07 toks/s]
- 30%|███       | 9/30 [13:34<41:45, 119.31s/it]save question success:  8
-Processing question 9: Let $a, b$, and $c$ be pairwise distinct complex numbers such that
-$$
-a^{2}=b+6, \quad b^{2}=c+6, \q...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 977.92it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:29<00:00, 269.16s/it, est. speed input: 0.52 toks/s, output: 225.95 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:29<00:00, 269.16s/it, est. speed input: 0.52 toks/s, output: 225.95 toks/s][AProcessed prompts: 100%|██████████| 1/1 [04:29<00:00, 269.17s/it, est. speed input: 0.52 toks/s, output: 225.95 toks/s]
- 33%|███▎      | 10/30 [18:03<55:12, 165.63s/it]save question success:  9
-Processing question 10: Compute the number of ways to arrange the numbers $1,2,3,4,5,6$, and $7$ around a circle such that t...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 703.39it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:20<00:00, 140.26s/it, est. speed input: 0.78 toks/s, output: 228.17 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:20<00:00, 140.26s/it, est. speed input: 0.78 toks/s, output: 228.17 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:20<00:00, 140.26s/it, est. speed input: 0.78 toks/s, output: 228.17 toks/s]
- 37%|███▋      | 11/30 [20:23<50:00, 157.90s/it]save question success:  10
-Processing question 11: Kevin the frog in on the bottom-left lily pad of a $3 \times 3$ grid of lily pads, and his home is a...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 794.83it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:29<00:00, 149.84s/it, est. speed input: 0.93 toks/s, output: 227.71 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:29<00:00, 149.84s/it, est. speed input: 0.93 toks/s, output: 227.71 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:29<00:00, 149.84s/it, est. speed input: 0.93 toks/s, output: 227.71 toks/s]
- 40%|████      | 12/30 [22:53<46:38, 155.48s/it]save question success:  11
-Processing question 12: Ben has $16$ balls labeled $1,2,3, \ldots, 16$, as well as $4$ indistinguishable boxes. Two balls ar...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 759.29it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:35<00:00, 215.66s/it, est. speed input: 0.68 toks/s, output: 226.36 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:35<00:00, 215.66s/it, est. speed input: 0.68 toks/s, output: 226.36 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:35<00:00, 215.66s/it, est. speed input: 0.68 toks/s, output: 226.36 toks/s]
- 43%|████▎     | 13/30 [26:29<49:13, 173.74s/it]save question success:  12
-Processing question 13: Sophie is at $(0,0)$ on a coordinate grid and would like to get to $(3,3)$. If Sophie is at $(x, y)$...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 751.94it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:58<00:00, 178.53s/it, est. speed input: 1.01 toks/s, output: 228.03 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:58<00:00, 178.53s/it, est. speed input: 1.01 toks/s, output: 228.03 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:58<00:00, 178.53s/it, est. speed input: 1.01 toks/s, output: 228.03 toks/s]
- 47%|████▋     | 14/30 [29:28<46:43, 175.23s/it]save question success:  13
-Processing question 14: In an $11 \times 11$ grid of cells, each pair of edge-adjacent cells is connected by a door. Karthik...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 816.81it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:09<00:00, 129.37s/it, est. speed input: 1.10 toks/s, output: 227.66 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:09<00:00, 129.37s/it, est. speed input: 1.10 toks/s, output: 227.66 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:09<00:00, 129.37s/it, est. speed input: 1.10 toks/s, output: 227.66 toks/s]
- 50%|█████     | 15/30 [31:37<40:21, 161.43s/it]save question success:  14
-Processing question 15: Compute the number of ways to pick two rectangles in a $5 \times 5$ grid of squares such that the ed...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 828.75it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:40<00:00, 100.45s/it, est. speed input: 1.11 toks/s, output: 226.81 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:40<00:00, 100.45s/it, est. speed input: 1.11 toks/s, output: 226.81 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:40<00:00, 100.45s/it, est. speed input: 1.11 toks/s, output: 226.81 toks/s]
- 53%|█████▎    | 16/30 [33:18<33:23, 143.11s/it]save question success:  15
-Processing question 16: Compute the number of ways to arrange $3$ copies of each of the $26$ lowercase letters of the Englis...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 727.55it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:32<00:00, 152.91s/it, est. speed input: 0.92 toks/s, output: 227.54 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:32<00:00, 152.91s/it, est. speed input: 0.92 toks/s, output: 227.54 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:32<00:00, 152.91s/it, est. speed input: 0.92 toks/s, output: 227.54 toks/s]
- 57%|█████▋    | 17/30 [35:51<31:39, 146.11s/it]save question success:  16
-Processing question 17: Albert writes $2025$ numbers $a_{1}, \ldots, a_{2025}$ in a circle on a blackboard. Initially, each ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 775.43it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:52<00:00, 172.27s/it, est. speed input: 1.25 toks/s, output: 226.10 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:52<00:00, 172.27s/it, est. speed input: 1.25 toks/s, output: 226.10 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:52<00:00, 172.27s/it, est. speed input: 1.25 toks/s, output: 226.10 toks/s]
- 60%|██████    | 18/30 [38:43<30:48, 154.00s/it]save question success:  17
-Processing question 18: Two points are selected independently and uniformly at random inside a regular hexagon. Compute the ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1094.26it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:39<00:00, 159.47s/it, est. speed input: 0.55 toks/s, output: 226.12 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:39<00:00, 159.47s/it, est. speed input: 0.55 toks/s, output: 226.12 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:39<00:00, 159.47s/it, est. speed input: 0.55 toks/s, output: 226.12 toks/s]
- 63%|██████▎   | 19/30 [41:23<28:32, 155.68s/it]save question success:  18
-Processing question 19: The circumference of a circle is divided into $45$ arcs, each of length $1$. Initially, there are $1...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 703.98it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:58<00:00, 178.59s/it, est. speed input: 0.92 toks/s, output: 227.09 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:58<00:00, 178.59s/it, est. speed input: 0.92 toks/s, output: 227.09 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:58<00:00, 178.59s/it, est. speed input: 0.92 toks/s, output: 227.09 toks/s]
- 67%|██████▋   | 20/30 [44:22<27:06, 162.60s/it]save question success:  19
-Processing question 20: Equilateral triangles $\triangle A B C$ and $\triangle D E F$ are drawn such that points $B, E, F$, ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1075.74it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:33<00:00, 33.48s/it, est. speed input: 3.94 toks/s, output: 227.98 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:33<00:00, 33.48s/it, est. speed input: 3.94 toks/s, output: 227.98 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:33<00:00, 33.48s/it, est. speed input: 3.94 toks/s, output: 227.98 toks/s]
- 70%|███████   | 21/30 [44:55<18:34, 123.86s/it]save question success:  20
-Processing question 21: In a two-dimensional cave with a parallel floor and ceiling, two stalactites of lengths $16$ and $36...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1033.33it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:22<00:00, 82.25s/it, est. speed input: 1.62 toks/s, output: 227.18 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:22<00:00, 82.25s/it, est. speed input: 1.62 toks/s, output: 227.18 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:22<00:00, 82.25s/it, est. speed input: 1.62 toks/s, output: 227.18 toks/s]
- 73%|███████▎  | 22/30 [46:17<14:51, 111.40s/it]save question success:  21
-Processing question 22: Point $P$ lies inside square $A B C D$ such that the areas of $\triangle P A B, \triangle P B C, \tr...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 712.23it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:16<00:00, 76.09s/it, est. speed input: 1.68 toks/s, output: 226.90 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:16<00:00, 76.09s/it, est. speed input: 1.68 toks/s, output: 226.90 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:16<00:00, 76.09s/it, est. speed input: 1.68 toks/s, output: 226.90 toks/s]
- 77%|███████▋  | 23/30 [47:34<11:45, 100.82s/it]save question success:  22
-Processing question 23: A semicircle is inscribed in another semicircle if the smaller semicircle's diameter is a chord of t...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 433.79it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:11<00:00, 131.06s/it, est. speed input: 5.15 toks/s, output: 226.03 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:11<00:00, 131.06s/it, est. speed input: 5.15 toks/s, output: 226.03 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:11<00:00, 131.06s/it, est. speed input: 5.15 toks/s, output: 226.03 toks/s]
- 80%|████████  | 24/30 [49:45<10:59, 109.93s/it]save question success:  23
-Processing question 24: Let $\triangle A B C$ be an equilateral triangle with side length $6$. Let $P$ be a point inside tri...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1038.71it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:47<00:00, 167.69s/it, est. speed input: 0.86 toks/s, output: 226.45 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:47<00:00, 167.69s/it, est. speed input: 0.86 toks/s, output: 226.45 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:47<00:00, 167.69s/it, est. speed input: 0.86 toks/s, output: 226.45 toks/s]
- 83%|████████▎ | 25/30 [52:33<10:36, 127.31s/it]save question success:  24
-Processing question 25: Trapezoid $A B C D$, with $A B \| C D$, has side lengths $A B=11, B C=8, C D=19$, and $D A=4$. Compu...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1043.62it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:02<00:00, 62.48s/it, est. speed input: 2.19 toks/s, output: 227.58 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:02<00:00, 62.48s/it, est. speed input: 2.19 toks/s, output: 227.58 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:02<00:00, 62.48s/it, est. speed input: 2.19 toks/s, output: 227.58 toks/s]
- 87%|████████▋ | 26/30 [53:35<07:11, 107.88s/it]save question success:  25
-Processing question 26: Point $P$ is inside triangle $\triangle A B C$ such that $\angle A B P=\angle A C P$. Given that $A ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1119.68it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:16<00:00, 76.35s/it, est. speed input: 1.95 toks/s, output: 226.43 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:16<00:00, 76.35s/it, est. speed input: 1.95 toks/s, output: 226.43 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:16<00:00, 76.35s/it, est. speed input: 1.95 toks/s, output: 226.43 toks/s]
- 90%|█████████ | 27/30 [54:52<04:55, 98.44s/it] save question success:  26
-Processing question 27: Let $A B C D$ be an isosceles trapezoid such that $C D>A B=4$. Let $E$ be a point on line $C D$ such...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1103.76it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:08<00:00, 68.34s/it, est. speed input: 2.31 toks/s, output: 226.62 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:08<00:00, 68.34s/it, est. speed input: 2.31 toks/s, output: 226.62 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:08<00:00, 68.34s/it, est. speed input: 2.31 toks/s, output: 226.62 toks/s]
- 93%|█████████▎| 28/30 [56:00<02:58, 89.43s/it]save question success:  27
-Processing question 28: Let $A B C D$ be a rectangle with $B C=24$. Point $X$ lies inside the rectangle such that $\angle A ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1162.18it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:03<00:00, 183.48s/it, est. speed input: 0.72 toks/s, output: 225.97 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:03<00:00, 183.48s/it, est. speed input: 0.72 toks/s, output: 225.97 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:03<00:00, 183.48s/it, est. speed input: 0.72 toks/s, output: 225.97 toks/s]
- 97%|█████████▋| 29/30 [59:04<01:57, 117.74s/it]save question success:  28
-Processing question 29: A plane $\mathcal{P}$ intersects a rectangular prism at a hexagon which has side lengths $45,66,63,5...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1180.50it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:27<00:00, 267.60s/it, est. speed input: 0.42 toks/s, output: 224.64 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:27<00:00, 267.60s/it, est. speed input: 0.42 toks/s, output: 224.64 toks/s][AProcessed prompts: 100%|██████████| 1/1 [04:27<00:00, 267.60s/it, est. speed input: 0.42 toks/s, output: 224.64 toks/s]
-100%|██████████| 30/30 [1:03:32<00:00, 162.76s/it]100%|██████████| 30/30 [1:03:32<00:00, 127.07s/it]
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP0 pid=338082)[0;0m INFO 11-04 07:46:00 [multiproc_executor.py:546] Parent process exited, terminating worker
-[1;36m(Worker_TP0 pid=338082)[0;0m INFO 11-04 07:46:00 [multiproc_executor.py:587] WorkerProc shutting down.
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP1 pid=338083)[0;0m INFO 11-04 07:46:00 [multiproc_executor.py:546] Parent process exited, terminating worker
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP2 pid=338084)[0;0m INFO 11-04 07:46:00 [multiproc_executor.py:546] Parent process exited, terminating worker
-[1;36m(Worker_TP2 pid=338084)[0;0m INFO 11-04 07:46:00 [multiproc_executor.py:587] WorkerProc shutting down.
-[1;36m(Worker_TP1 pid=338083)[0;0m INFO 11-04 07:46:00 [multiproc_executor.py:587] WorkerProc shutting down.
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP3 pid=338085)[0;0m INFO 11-04 07:46:00 [multiproc_executor.py:546] Parent process exited, terminating worker
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP4 pid=338086)[0;0m INFO 11-04 07:46:00 [multiproc_executor.py:546] Parent process exited, terminating worker
-[1;36m(Worker_TP4 pid=338086)[0;0m INFO 11-04 07:46:00 [multiproc_executor.py:587] WorkerProc shutting down.
-[1;36m(Worker_TP3 pid=338085)[0;0m INFO 11-04 07:46:00 [multiproc_executor.py:587] WorkerProc shutting down.
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP5 pid=338087)[0;0m INFO 11-04 07:46:00 [multiproc_executor.py:546] Parent process exited, terminating worker
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP6 pid=338088)[0;0m INFO 11-04 07:46:00 [multiproc_executor.py:546] Parent process exited, terminating worker
-[1;36m(Worker_TP5 pid=338087)[0;0m INFO 11-04 07:46:00 [multiproc_executor.py:587] WorkerProc shutting down.
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m Not using ConfPerReqLogitsProcessor None
-[1;36m(Worker_TP7 pid=338089)[0;0m INFO 11-04 07:46:00 [multiproc_executor.py:546] Parent process exited, terminating worker
-save question success:  29

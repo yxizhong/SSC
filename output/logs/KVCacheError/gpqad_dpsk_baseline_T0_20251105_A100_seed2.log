@@ -1,978 +1,0 @@
-INFO 11-05 10:26:56 [__init__.py:216] Automatically detected platform cuda.
-Loading dataset from /share/yangxizhong/data/GPQA-Diamond/test/gpqa_diamond.jsonl...
-Initializing vLLM engine...
-INFO 11-05 10:26:58 [utils.py:328] non-default args: {'trust_remote_code': True, 'enable_prefix_caching': True, 'disable_log_stats': True, 'logits_processors': [<class 'model.processors.WrappedPerReqLogitsProcessor'>], 'model': '/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B'}
-The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
-Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
-INFO 11-05 10:27:04 [__init__.py:742] Resolved architecture: Qwen3ForCausalLM
-`torch_dtype` is deprecated! Use `dtype` instead!
-INFO 11-05 10:27:04 [__init__.py:1815] Using max model len 131072
-Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
-INFO 11-05 10:27:04 [scheduler.py:222] Chunked prefill is enabled with max_num_batched_tokens=8192.
-Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
-WARNING 11-05 10:27:05 [__init__.py:2974] We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing for more information. Reasons: CUDA is initialized
-INFO 11-05 10:27:08 [__init__.py:216] Automatically detected platform cuda.
-[1;36m(EngineCore_DP0 pid=117295)[0;0m INFO 11-05 10:27:10 [core.py:654] Waiting for init message from front-end.
-[1;36m(EngineCore_DP0 pid=117295)[0;0m INFO 11-05 10:27:10 [core.py:76] Initializing a V1 LLM engine (v0.10.2) with config: model='/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B', speculative_config=None, tokenizer='/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=131072, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.mamba_mixer2","vllm.mamba_mixer","vllm.short_conv","vllm.linear_attention","vllm.plamo2_mamba_mixer","vllm.gdn_attention"],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":1,"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"pass_config":{},"max_capture_size":512,"local_cache_dir":null}
-[W1105 10:27:12.404206940 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[1;36m(EngineCore_DP0 pid=117295)[0;0m INFO 11-05 10:27:12 [parallel_state.py:1165] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
-[1;36m(EngineCore_DP0 pid=117295)[0;0m WARNING 11-05 10:27:12 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
-[1;36m(EngineCore_DP0 pid=117295)[0;0m INFO 11-05 10:27:12 [gpu_model_runner.py:2338] Starting to load model /share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B...
-[1;36m(EngineCore_DP0 pid=117295)[0;0m INFO 11-05 10:27:12 [gpu_model_runner.py:2370] Loading model from scratch...
-[1;36m(EngineCore_DP0 pid=117295)[0;0m INFO 11-05 10:27:12 [cuda.py:362] Using Flash Attention backend on V1 engine.
-[1;36m(EngineCore_DP0 pid=117295)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
-[1;36m(EngineCore_DP0 pid=117295)[0;0m Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:02<00:02,  2.63s/it]
-[1;36m(EngineCore_DP0 pid=117295)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:05<00:00,  2.90s/it]
-[1;36m(EngineCore_DP0 pid=117295)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:05<00:00,  2.86s/it]
-[1;36m(EngineCore_DP0 pid=117295)[0;0m 
-[1;36m(EngineCore_DP0 pid=117295)[0;0m INFO 11-05 10:27:18 [default_loader.py:268] Loading weights took 5.94 seconds
-[1;36m(EngineCore_DP0 pid=117295)[0;0m INFO 11-05 10:27:19 [gpu_model_runner.py:2392] Model loading took 15.2898 GiB and 6.167697 seconds
-[1;36m(EngineCore_DP0 pid=117295)[0;0m INFO 11-05 10:27:25 [backends.py:539] Using cache directory: /root/.cache/vllm/torch_compile_cache/b549e05668/rank_0_0/backbone for vLLM's torch.compile
-[1;36m(EngineCore_DP0 pid=117295)[0;0m INFO 11-05 10:27:25 [backends.py:550] Dynamo bytecode transform time: 5.77 s
-[1;36m(EngineCore_DP0 pid=117295)[0;0m INFO 11-05 10:27:28 [backends.py:161] Directly load the compiled graph(s) for dynamic shape from the cache, took 2.283 s
-[1;36m(EngineCore_DP0 pid=117295)[0;0m INFO 11-05 10:27:29 [monitor.py:34] torch.compile takes 5.77 s in total
-[1;36m(EngineCore_DP0 pid=117295)[0;0m INFO 11-05 10:27:30 [gpu_worker.py:298] Available KV cache memory: 54.48 GiB
-[1;36m(EngineCore_DP0 pid=117295)[0;0m INFO 11-05 10:27:30 [kv_cache_utils.py:864] GPU KV cache size: 396,688 tokens
-[1;36m(EngineCore_DP0 pid=117295)[0;0m INFO 11-05 10:27:30 [kv_cache_utils.py:868] Maximum concurrency for 131,072 tokens per request: 3.03x
-[1;36m(EngineCore_DP0 pid=117295)[0;0m Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/67 [00:00<?, ?it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   3%|▎         | 2/67 [00:00<00:04, 15.07it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   6%|▌         | 4/67 [00:00<00:03, 16.32it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   9%|▉         | 6/67 [00:00<00:03, 16.97it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  12%|█▏        | 8/67 [00:00<00:03, 17.29it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  15%|█▍        | 10/67 [00:00<00:03, 17.48it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  18%|█▊        | 12/67 [00:00<00:03, 17.55it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  21%|██        | 14/67 [00:00<00:03, 16.96it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  24%|██▍       | 16/67 [00:00<00:02, 17.08it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  27%|██▋       | 18/67 [00:01<00:02, 17.38it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  30%|██▉       | 20/67 [00:01<00:02, 17.40it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  33%|███▎      | 22/67 [00:01<00:02, 17.11it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  36%|███▌      | 24/67 [00:01<00:02, 17.16it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  39%|███▉      | 26/67 [00:01<00:02, 17.81it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  42%|████▏     | 28/67 [00:01<00:02, 18.41it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  46%|████▋     | 31/67 [00:01<00:01, 18.93it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  49%|████▉     | 33/67 [00:01<00:01, 19.12it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  54%|█████▎    | 36/67 [00:01<00:01, 19.99it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  58%|█████▊    | 39/67 [00:02<00:01, 20.67it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  63%|██████▎   | 42/67 [00:02<00:01, 20.27it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  67%|██████▋   | 45/67 [00:02<00:01, 19.52it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  72%|███████▏  | 48/67 [00:02<00:00, 20.36it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  76%|███████▌  | 51/67 [00:02<00:00, 21.24it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  81%|████████  | 54/67 [00:02<00:00, 21.92it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  85%|████████▌ | 57/67 [00:02<00:00, 22.42it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  90%|████████▉ | 60/67 [00:03<00:00, 22.95it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  94%|█████████▍| 63/67 [00:03<00:00, 23.40it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  99%|█████████▊| 66/67 [00:03<00:00, 23.26it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 67/67 [00:03<00:00, 19.71it/s]
-[1;36m(EngineCore_DP0 pid=117295)[0;0m INFO 11-05 10:27:34 [gpu_model_runner.py:3118] Graph capturing finished in 4 secs, took 2.24 GiB
-[1;36m(EngineCore_DP0 pid=117295)[0;0m INFO 11-05 10:27:34 [gpu_worker.py:391] Free memory on device (78.66/79.15 GiB) on startup. Desired GPU memory utilization is (0.9, 71.24 GiB). Actual usage is 15.29 GiB for weight, 1.45 GiB for peak activation, 0.02 GiB for non-torch memory, and 2.24 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=55927124992` to fit into requested memory, or `--kv-cache-memory=63898137600` to fully utilize gpu memory. Current kv cache memory in use is 58494039040 bytes.
-[1;36m(EngineCore_DP0 pid=117295)[0;0m INFO 11-05 10:27:34 [core.py:218] init engine (profile, create kv cache, warmup model) took 15.52 seconds
-INFO 11-05 10:27:35 [llm.py:295] Supported_tasks: ['generate']
-INFO 11-05 10:27:35 [__init__.py:36] No IOProcessor plugins requested by the model
-vLLM engine initialized in 36.98 seconds
-Initializing tokenizer...
-Tokenizer initialized in 0.31 seconds
-  0%|          | 0/198 [00:00<?, ?it/s]Processing question 0: Among the following exoplanets, which one has the highest density?
-
-a) An Earth-mass and Earth-radiu...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 209.51it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:44<00:00, 104.12s/it, est. speed input: 1.44 toks/s, output: 78.42 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:44<00:00, 104.12s/it, est. speed input: 1.44 toks/s, output: 78.42 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:44<00:00, 104.12s/it, est. speed input: 1.44 toks/s, output: 78.42 toks/s]
-  1%|          | 1/198 [01:44<5:42:00, 104.16s/it]Processing question 1: Observations of structures located at a distance of about 2.1 gigaparsecs (2.1 Gpc) are being carrie...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 889.00it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:59<00:00, 119.89s/it, est. speed input: 1.30 toks/s, output: 78.34 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:59<00:00, 119.89s/it, est. speed input: 1.30 toks/s, output: 78.34 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:59<00:00, 119.89s/it, est. speed input: 1.30 toks/s, output: 78.34 toks/s]
-  1%|          | 2/198 [03:44<6:10:36, 113.45s/it]save question success:  1
-Processing question 2: Astronomers are studying a system of three exoplanets (Planet1, Planet2, and Planet3) with circular ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 550.65it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:26<00:00, 86.27s/it, est. speed input: 2.75 toks/s, output: 79.13 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:26<00:00, 86.27s/it, est. speed input: 2.75 toks/s, output: 79.13 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:26<00:00, 86.28s/it, est. speed input: 2.75 toks/s, output: 79.13 toks/s]
-  2%|▏         | 3/198 [05:10<5:28:35, 101.10s/it]save question success:  2
-Processing question 3: Astronomers are studying a star with a 1.5 solar radius and 1.1 solar masses. When the star's surfac...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 629.49it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:24<00:00, 264.39s/it, est. speed input: 0.96 toks/s, output: 75.17 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:24<00:00, 264.39s/it, est. speed input: 0.96 toks/s, output: 75.17 toks/s][AProcessed prompts: 100%|██████████| 1/1 [04:24<00:00, 264.39s/it, est. speed input: 0.96 toks/s, output: 75.17 toks/s]
-  2%|▏         | 4/198 [09:34<8:55:25, 165.59s/it]save question success:  3
-Processing question 4: Two planets have been detected orbiting a star using both the transit and radial velocity (RV) metho...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 583.35it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:16<00:00, 256.43s/it, est. speed input: 1.13 toks/s, output: 75.15 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:16<00:00, 256.43s/it, est. speed input: 1.13 toks/s, output: 75.15 toks/s][AProcessed prompts: 100%|██████████| 1/1 [04:16<00:00, 256.43s/it, est. speed input: 1.13 toks/s, output: 75.15 toks/s]
-  3%|▎         | 5/198 [13:51<10:38:05, 198.37s/it]save question success:  4
-Processing question 5: Astronomers are currently observing a star with a radius equal to that of the Sun. One  hemisphere o...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 548.85it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:32<00:00, 212.29s/it, est. speed input: 1.14 toks/s, output: 76.17 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:32<00:00, 212.29s/it, est. speed input: 1.14 toks/s, output: 76.17 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:32<00:00, 212.29s/it, est. speed input: 1.14 toks/s, output: 76.17 toks/s]
-  3%|▎         | 6/198 [17:23<10:49:59, 203.12s/it]save question success:  5
-Processing question 6: Which of the following stars can be detected with both the ESPRESSO spectrograph at the Paranal Obse...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 480.23it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:09<00:00, 69.70s/it, est. speed input: 7.42 toks/s, output: 79.38 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:09<00:00, 69.70s/it, est. speed input: 7.42 toks/s, output: 79.38 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:09<00:00, 69.70s/it, est. speed input: 7.42 toks/s, output: 79.38 toks/s]
-  4%|▎         | 7/198 [18:33<8:27:46, 159.51s/it] save question success:  6
-Processing question 7: Observations of a quasar across the electromagnetic spectrum are being carried out. Focusing on the ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 784.86it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:24<00:00, 204.03s/it, est. speed input: 1.06 toks/s, output: 76.33 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:24<00:00, 204.03s/it, est. speed input: 1.06 toks/s, output: 76.33 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:24<00:00, 204.03s/it, est. speed input: 1.06 toks/s, output: 76.33 toks/s]
-  4%|▍         | 8/198 [21:57<9:10:02, 173.70s/it]save question success:  7
-Processing question 8: Astronomers are studying two binary star systems: system_1 and system_2. Observations reveal that bo...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 840.21it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:37<00:00, 217.48s/it, est. speed input: 1.12 toks/s, output: 76.01 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:37<00:00, 217.48s/it, est. speed input: 1.12 toks/s, output: 76.01 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:37<00:00, 217.48s/it, est. speed input: 1.12 toks/s, output: 76.01 toks/s]
-  5%|▍         | 9/198 [25:35<9:50:18, 187.40s/it]save question success:  8
-Processing question 9: Very large number of neutrinos produced by the Sun reach the Earth (very large flux of neutrinos, de...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 554.07it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:53<00:00, 113.69s/it, est. speed input: 2.45 toks/s, output: 78.44 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:53<00:00, 113.69s/it, est. speed input: 2.45 toks/s, output: 78.44 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:53<00:00, 113.69s/it, est. speed input: 2.45 toks/s, output: 78.44 toks/s]
-  5%|▌         | 10/198 [27:28<8:35:54, 164.65s/it]save question success:  9
-Processing question 10: How many of the stars listed below would be detectable using the ESPRESSO spectrograph, when it is c...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 560.59it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:35<00:00, 155.15s/it, est. speed input: 2.17 toks/s, output: 77.41 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:35<00:00, 155.15s/it, est. speed input: 2.17 toks/s, output: 77.41 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:35<00:00, 155.15s/it, est. speed input: 2.17 toks/s, output: 77.41 toks/s]
-  6%|▌         | 11/198 [30:04<8:24:09, 161.76s/it]save question success:  10
-Processing question 11: In a specific region of the sky, astronomers have observed that the number of stars varies with para...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 875.64it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:01<00:00, 61.35s/it, est. speed input: 2.12 toks/s, output: 79.95 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:01<00:00, 61.35s/it, est. speed input: 2.12 toks/s, output: 79.95 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:01<00:00, 61.35s/it, est. speed input: 2.12 toks/s, output: 79.95 toks/s]
-  6%|▌         | 12/198 [31:05<6:46:47, 131.22s/it]save question success:  11
-Processing question 12: Astronomers are observing a planet with a radius of 1 Earth radius in a circular orbit, with a trans...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 875.45it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:24<00:00, 264.96s/it, est. speed input: 0.78 toks/s, output: 75.14 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:24<00:00, 264.96s/it, est. speed input: 0.78 toks/s, output: 75.14 toks/s][AProcessed prompts: 100%|██████████| 1/1 [04:24<00:00, 264.97s/it, est. speed input: 0.78 toks/s, output: 75.14 toks/s]
-  7%|▋         | 13/198 [35:30<8:49:35, 171.76s/it]save question success:  12
-Processing question 13: What is the concentration of calcium ions in a solution containing 0.02 M stochiometric Ca-EDTA comp...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 808.15it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:32<00:00, 92.56s/it, est. speed input: 1.73 toks/s, output: 78.85 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:32<00:00, 92.56s/it, est. speed input: 1.73 toks/s, output: 78.85 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:32<00:00, 92.56s/it, est. speed input: 1.73 toks/s, output: 78.85 toks/s]
-  7%|▋         | 14/198 [37:03<7:33:24, 147.85s/it]save question success:  13
-Processing question 14: A student regrets that he fell asleep during a lecture in electrochemistry, facing the following inc...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 750.46it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:36<00:00, 36.05s/it, est. speed input: 3.86 toks/s, output: 80.70 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:36<00:00, 36.05s/it, est. speed input: 3.86 toks/s, output: 80.70 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:36<00:00, 36.05s/it, est. speed input: 3.86 toks/s, output: 80.70 toks/s]
-  8%|▊         | 15/198 [37:39<5:48:10, 114.15s/it]save question success:  14
-Processing question 15: You have prepared a di-substituted 6-membered aromatic ring compound. The FTIR spectrum of this comp...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 812.22it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:33<00:00, 153.21s/it, est. speed input: 1.52 toks/s, output: 77.50 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:33<00:00, 153.21s/it, est. speed input: 1.52 toks/s, output: 77.50 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:33<00:00, 153.21s/it, est. speed input: 1.52 toks/s, output: 77.50 toks/s]
-  8%|▊         | 16/198 [40:12<6:21:57, 125.92s/it]save question success:  15
-Processing question 16: You have prepared an unknown organic compound. The following 1H NMR data was obtained:
-1H NMR: chemi...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 999.12it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:43<00:00, 223.77s/it, est. speed input: 0.92 toks/s, output: 75.95 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:43<00:00, 223.77s/it, est. speed input: 0.92 toks/s, output: 75.95 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:43<00:00, 223.77s/it, est. speed input: 0.92 toks/s, output: 75.95 toks/s]
-  9%|▊         | 17/198 [43:56<7:48:41, 155.37s/it]save question success:  16
-Processing question 17: Determine the pH of the solution of 500 mL of 0.1 M CH3COOH, 400 mL of 0.2 M HCl, and 300 mL of 0.3 ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 619.36it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:30<00:00, 90.39s/it, est. speed input: 1.54 toks/s, output: 79.03 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:30<00:00, 90.39s/it, est. speed input: 1.54 toks/s, output: 79.03 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:30<00:00, 90.39s/it, est. speed input: 1.54 toks/s, output: 79.03 toks/s]
-  9%|▉         | 18/198 [45:26<6:47:34, 135.86s/it]save question success:  17
-Processing question 18: reaction of solid A with 8 equivalents of gas B forms bright red product C.
-When C reacts with 2 equ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 550.58it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:35<00:00, 155.82s/it, est. speed input: 1.07 toks/s, output: 77.40 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:35<00:00, 155.82s/it, est. speed input: 1.07 toks/s, output: 77.40 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:35<00:00, 155.82s/it, est. speed input: 1.07 toks/s, output: 77.40 toks/s]
- 10%|▉         | 19/198 [48:02<7:03:14, 141.87s/it]save question success:  18
-Processing question 19: We dilute 20.00 cm3 0.05 M acetic acid with 20.00 cm3 water, then titrate the resulting solution wit...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 670.77it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:17<00:00, 77.72s/it, est. speed input: 2.51 toks/s, output: 79.35 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:17<00:00, 77.72s/it, est. speed input: 2.51 toks/s, output: 79.35 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:17<00:00, 77.72s/it, est. speed input: 2.51 toks/s, output: 79.35 toks/s]
- 10%|█         | 20/198 [49:20<6:03:46, 122.62s/it]save question success:  19
-Processing question 20: You have prepared a di-substituted 6-membered aromatic ring compound containing 8 carbon atoms in to...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 363.30it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:11<00:00, 131.45s/it, est. speed input: 2.36 toks/s, output: 77.92 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:11<00:00, 131.45s/it, est. speed input: 2.36 toks/s, output: 77.92 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:11<00:00, 131.45s/it, est. speed input: 2.36 toks/s, output: 77.92 toks/s]
- 11%|█         | 21/198 [51:31<6:09:35, 125.29s/it]save question success:  20
-Processing question 21: Calculate the enthalpy of formation of (CH3)2C=CH-CH2-CH(CH3)-CH2-CH=C(CH3)2. Given,
-Enthalpy of ato...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 609.28it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [06:22<00:00, 382.41s/it, est. speed input: 0.54 toks/s, output: 73.02 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [06:22<00:00, 382.41s/it, est. speed input: 0.54 toks/s, output: 73.02 toks/s][AProcessed prompts: 100%|██████████| 1/1 [06:22<00:00, 382.41s/it, est. speed input: 0.54 toks/s, output: 73.02 toks/s]
- 11%|█         | 22/198 [57:54<9:53:56, 202.48s/it]save question success:  21
-Processing question 22: You have prepared an unknown compound. To identify the product, you have used the following characte...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 507.60it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:10<00:00, 190.12s/it, est. speed input: 1.90 toks/s, output: 76.62 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:10<00:00, 190.12s/it, est. speed input: 1.90 toks/s, output: 76.62 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:10<00:00, 190.12s/it, est. speed input: 1.90 toks/s, output: 76.62 toks/s]
- 12%|█▏        | 23/198 [1:01:04<9:40:10, 198.91s/it]save question success:  22
-Processing question 23: You have prepared an unknown compound. To identify the product, you have used the following characte...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 795.28it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:21<00:00, 81.51s/it, est. speed input: 3.02 toks/s, output: 79.28 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:21<00:00, 81.51s/it, est. speed input: 3.02 toks/s, output: 79.28 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:21<00:00, 81.51s/it, est. speed input: 3.02 toks/s, output: 79.28 toks/s]
- 12%|█▏        | 24/198 [1:02:26<7:54:50, 163.74s/it]save question success:  23
-Processing question 24: The 1H NMR spectrum of a solution containing a 1:1 mixture of two aromatic compounds with the molecu...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 557.75it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:21<00:00, 261.44s/it, est. speed input: 1.27 toks/s, output: 75.05 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:21<00:00, 261.44s/it, est. speed input: 1.27 toks/s, output: 75.05 toks/s][AProcessed prompts: 100%|██████████| 1/1 [04:21<00:00, 261.44s/it, est. speed input: 1.27 toks/s, output: 75.05 toks/s]
- 13%|█▎        | 25/198 [1:06:48<9:16:42, 193.08s/it]save question success:  24
-Processing question 25: We have a solution which has the volume of 200.00 cm3 and contains 1.00 g KH2PO4 (Mw = 136.09 g/mol)...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 530.19it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:48<00:00, 168.88s/it, est. speed input: 1.49 toks/s, output: 77.07 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:48<00:00, 168.88s/it, est. speed input: 1.49 toks/s, output: 77.07 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:48<00:00, 168.88s/it, est. speed input: 1.49 toks/s, output: 77.07 toks/s]
- 13%|█▎        | 26/198 [1:09:37<8:52:43, 185.84s/it]save question success:  25
-Processing question 26: Calculate the enthalpy of neutralization when 500 mL 0.2 M HCl, 300 mL 0.3 M H2SO4 and 200 mL 0.5 M ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 795.43it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:07<00:00, 127.09s/it, est. speed input: 1.13 toks/s, output: 78.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:07<00:00, 127.09s/it, est. speed input: 1.13 toks/s, output: 78.00 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:07<00:00, 127.09s/it, est. speed input: 1.13 toks/s, output: 78.00 toks/s]
- 14%|█▎        | 27/198 [1:11:44<7:59:26, 168.22s/it]save question success:  26
-Processing question 27: A chemical reaction for the synthesis of a product containing H+ ion was proceeding at room temperat...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 610.61it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:39<00:00, 39.88s/it, est. speed input: 4.34 toks/s, output: 80.51 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:39<00:00, 39.88s/it, est. speed input: 4.34 toks/s, output: 80.51 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:39<00:00, 39.88s/it, est. speed input: 4.34 toks/s, output: 80.51 toks/s]
- 14%|█▍        | 28/198 [1:12:24<6:07:33, 129.73s/it]save question success:  27
-Processing question 28: Five binary compounds of fluorine with element Y are known. The bright-red substance A1 decomposes a...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 554.22it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:49<00:00, 289.27s/it, est. speed input: 0.79 toks/s, output: 74.63 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:49<00:00, 289.27s/it, est. speed input: 0.79 toks/s, output: 74.63 toks/s][AProcessed prompts: 100%|██████████| 1/1 [04:49<00:00, 289.27s/it, est. speed input: 0.79 toks/s, output: 74.63 toks/s]
- 15%|█▍        | 29/198 [1:17:13<8:20:17, 177.62s/it]save question success:  28
-Processing question 29: You are analyzing a small peptidic compound that has been chemically synthesized. The 1H NMR spectru...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 506.86it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:33<00:00, 33.55s/it, est. speed input: 7.51 toks/s, output: 80.80 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:33<00:00, 33.55s/it, est. speed input: 7.51 toks/s, output: 80.80 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:33<00:00, 33.55s/it, est. speed input: 7.51 toks/s, output: 80.80 toks/s]
- 15%|█▌        | 30/198 [1:17:47<6:16:23, 134.43s/it]save question success:  29
-Processing question 30: We would like to dissolve (at 25°С) 0.1 g Fe(OH)3 in 100 cm3 total volume. What is the minimum volum...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1024.00it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [05:36<00:00, 336.45s/it, est. speed input: 0.57 toks/s, output: 73.89 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [05:36<00:00, 336.45s/it, est. speed input: 0.57 toks/s, output: 73.89 toks/s][AProcessed prompts: 100%|██████████| 1/1 [05:36<00:00, 336.45s/it, est. speed input: 0.57 toks/s, output: 73.89 toks/s]
- 16%|█▌        | 31/198 [1:23:23<9:02:56, 195.07s/it]save question success:  30
-Processing question 31: In an industrial research lab, a scientist performs ethylene polymerization with a homogeneous organ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 420.82it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:52<00:00, 52.17s/it, est. speed input: 5.35 toks/s, output: 80.08 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:52<00:00, 52.17s/it, est. speed input: 5.35 toks/s, output: 80.08 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:52<00:00, 52.17s/it, est. speed input: 5.35 toks/s, output: 80.08 toks/s]
- 16%|█▌        | 32/198 [1:24:15<7:01:07, 152.21s/it]save question success:  31
-Processing question 32: We have a solution containing Co(II) ions and thiocyanate, where the total cobalt concentration is c...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 875.64it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:44<00:00, 164.60s/it, est. speed input: 1.21 toks/s, output: 77.26 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:44<00:00, 164.60s/it, est. speed input: 1.21 toks/s, output: 77.26 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:44<00:00, 164.60s/it, est. speed input: 1.21 toks/s, output: 77.26 toks/s]
- 17%|█▋        | 33/198 [1:27:00<7:08:52, 155.95s/it]save question success:  32
-Processing question 33: The Mott-Gurney equation describes the dark current (J) versus voltage (V) behavior of a semiconduct...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 620.09it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:31<00:00, 31.05s/it, est. speed input: 8.92 toks/s, output: 80.84 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:31<00:00, 31.05s/it, est. speed input: 8.92 toks/s, output: 80.84 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:31<00:00, 31.05s/it, est. speed input: 8.92 toks/s, output: 80.84 toks/s]
- 17%|█▋        | 34/198 [1:27:31<5:23:52, 118.49s/it]save question success:  33
-Processing question 34: In a parallel universe where a magnet can have an isolated North or South pole, Maxwell’s equations ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 545.92it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:05<00:00, 65.71s/it, est. speed input: 2.36 toks/s, output: 79.79 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:05<00:00, 65.71s/it, est. speed input: 2.36 toks/s, output: 79.79 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:05<00:00, 65.71s/it, est. speed input: 2.36 toks/s, output: 79.79 toks/s]
- 18%|█▊        | 35/198 [1:28:37<4:38:54, 102.67s/it]save question success:  34
-Processing question 35: If a charge q is placed d distance away from the center of a grounded conducting sphere of radius R....
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 688.15it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:40<00:00, 220.40s/it, est. speed input: 0.77 toks/s, output: 76.03 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:40<00:00, 220.40s/it, est. speed input: 0.77 toks/s, output: 76.03 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:40<00:00, 220.40s/it, est. speed input: 0.77 toks/s, output: 76.03 toks/s]
- 18%|█▊        | 36/198 [1:32:17<6:12:37, 138.01s/it]save question success:  35
-Processing question 36: Imagine a point charge q is moving with a trajectory $\vec{s}(t)$, where t is time, with respect to ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 389.15it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:47<00:00, 107.35s/it, est. speed input: 4.82 toks/s, output: 78.38 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:47<00:00, 107.35s/it, est. speed input: 4.82 toks/s, output: 78.38 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:47<00:00, 107.35s/it, est. speed input: 4.82 toks/s, output: 78.38 toks/s]
- 19%|█▊        | 37/198 [1:34:05<5:45:41, 128.83s/it]save question success:  36
-Processing question 37: A vector field f(r) falls off radially as 1/r^2 from the origin, i.e. the magnitude of the field is ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 671.20it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:12<00:00, 132.81s/it, est. speed input: 1.41 toks/s, output: 78.01 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:12<00:00, 132.81s/it, est. speed input: 1.41 toks/s, output: 78.01 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:12<00:00, 132.82s/it, est. speed input: 1.41 toks/s, output: 78.01 toks/s]
- 19%|█▉        | 38/198 [1:36:18<5:46:46, 130.04s/it]save question success:  37
-Processing question 38: Consider an oscillating charge distribution, which is spheroid in shape (with the symmetry axis alon...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 749.52it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:54<00:00, 174.41s/it, est. speed input: 1.25 toks/s, output: 77.04 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:54<00:00, 174.41s/it, est. speed input: 1.25 toks/s, output: 77.04 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:54<00:00, 174.41s/it, est. speed input: 1.25 toks/s, output: 77.04 toks/s]
- 20%|█▉        | 39/198 [1:39:12<6:19:58, 143.39s/it]save question success:  38
-Processing question 39: Imagine an uncharged spherical conductor of radius $R$ having a small spherical cavity inside. The c...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 700.45it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:04<00:00, 244.32s/it, est. speed input: 1.34 toks/s, output: 75.50 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:04<00:00, 244.32s/it, est. speed input: 1.34 toks/s, output: 75.50 toks/s][AProcessed prompts: 100%|██████████| 1/1 [04:04<00:00, 244.32s/it, est. speed input: 1.34 toks/s, output: 75.50 toks/s]
- 20%|██        | 40/198 [1:43:17<7:37:25, 173.70s/it]save question success:  39
-Processing question 40: You perform a high-throughput experiment on white lupine to find genes contributing to resistance to...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 411.17it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:00<00:00, 120.16s/it, est. speed input: 3.94 toks/s, output: 78.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:00<00:00, 120.16s/it, est. speed input: 3.94 toks/s, output: 78.00 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:00<00:00, 120.16s/it, est. speed input: 3.94 toks/s, output: 78.00 toks/s]
- 21%|██        | 41/198 [1:45:17<6:52:32, 157.66s/it]save question success:  40
-Processing question 41: You have an interesting drought-resistant cultivar of barley, which, unfortunately, contains an anti...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 395.61it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:19<00:00, 139.30s/it, est. speed input: 2.91 toks/s, output: 77.60 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:19<00:00, 139.30s/it, est. speed input: 2.91 toks/s, output: 77.60 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:19<00:00, 139.30s/it, est. speed input: 2.91 toks/s, output: 77.60 toks/s]
- 21%|██        | 42/198 [1:47:36<6:35:38, 152.17s/it]save question success:  41
-Processing question 42: In an inactive state, a transcription factor subunit awaits an activation signal from the membrane p...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 574.09it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:58<00:00, 58.75s/it, est. speed input: 3.61 toks/s, output: 79.61 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:58<00:00, 58.75s/it, est. speed input: 3.61 toks/s, output: 79.61 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:58<00:00, 58.75s/it, est. speed input: 3.61 toks/s, output: 79.61 toks/s]
- 22%|██▏       | 43/198 [1:48:35<5:20:44, 124.16s/it]save question success:  42
-Processing question 43: Which of the following issues are the most common sources of difficult-to-spot erroneous results gen...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 870.55it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:46<00:00, 46.63s/it, est. speed input: 2.92 toks/s, output: 80.29 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:46<00:00, 46.63s/it, est. speed input: 2.92 toks/s, output: 80.29 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:46<00:00, 46.63s/it, est. speed input: 2.92 toks/s, output: 80.29 toks/s]
- 22%|██▏       | 44/198 [1:49:22<4:19:00, 100.91s/it]save question success:  43
-Processing question 44: The universe is filled with the Cosmic Microwave Background. Consider the annihilation of high energ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 737.40it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:54<00:00, 114.59s/it, est. speed input: 1.68 toks/s, output: 78.26 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:54<00:00, 114.59s/it, est. speed input: 1.68 toks/s, output: 78.26 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:54<00:00, 114.59s/it, est. speed input: 1.68 toks/s, output: 78.26 toks/s]
- 23%|██▎       | 45/198 [1:51:16<4:27:49, 105.03s/it]save question success:  44
-Processing question 45: Find KE of product particles in,
-Pi(+) = mu(+) + nu
-here Pi(+) is stationary.
-Rest mass of Pi(+) &  ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 914.19it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:05<00:00, 125.56s/it, est. speed input: 1.40 toks/s, output: 78.14 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:05<00:00, 125.56s/it, est. speed input: 1.40 toks/s, output: 78.14 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:05<00:00, 125.56s/it, est. speed input: 1.40 toks/s, output: 78.14 toks/s]
- 23%|██▎       | 46/198 [1:53:22<4:41:43, 111.21s/it]save question success:  45
-Processing question 46: What is the energy of the Relativistic Heavy Ion Collider (RHIC) so that the speed of the nucleus X ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 877.47it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:59<00:00, 239.98s/it, est. speed input: 0.66 toks/s, output: 75.58 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:59<00:00, 239.98s/it, est. speed input: 0.66 toks/s, output: 75.58 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:59<00:00, 239.99s/it, est. speed input: 0.66 toks/s, output: 75.58 toks/s]
- 24%|██▎       | 47/198 [1:57:22<6:17:09, 149.86s/it]save question success:  46
-Processing question 47: Your colleague has devised a new quantum field theory on four-dimensional spacetime, and is explorin...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 589.00it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:45<00:00, 105.87s/it, est. speed input: 1.92 toks/s, output: 78.51 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:45<00:00, 105.87s/it, est. speed input: 1.92 toks/s, output: 78.51 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:45<00:00, 105.87s/it, est. speed input: 1.92 toks/s, output: 78.51 toks/s]
- 24%|██▍       | 48/198 [1:59:08<5:41:50, 136.74s/it]save question success:  47
-Processing question 48: Which of the following physical theories never requires regularization at high energies?
-
-A. Classic...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1021.26it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:23<00:00, 23.80s/it, est. speed input: 3.74 toks/s, output: 81.41 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:23<00:00, 23.80s/it, est. speed input: 3.74 toks/s, output: 81.41 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:23<00:00, 23.80s/it, est. speed input: 3.74 toks/s, output: 81.41 toks/s]
- 25%|██▍       | 49/198 [1:59:32<4:15:27, 102.87s/it]save question success:  48
-Processing question 49: Which of the following symmetries must be respected by all operators in the SMEFT?
-
-1. Lorentz Symme...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1138.52it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:36<00:00, 36.29s/it, est. speed input: 3.47 toks/s, output: 80.67 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:36<00:00, 36.29s/it, est. speed input: 3.47 toks/s, output: 80.67 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:36<00:00, 36.29s/it, est. speed input: 3.47 toks/s, output: 80.67 toks/s]
- 25%|██▌       | 50/198 [2:00:08<3:24:30, 82.91s/it] save question success:  49
-Processing question 50: In the CERN Bubble Chamber a decay occurs, $X^{0}\rightarrow Y^{+}Z^{-}$ in \tau_{0}=8\times10^{-16}...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 819.04it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:19<00:00, 259.77s/it, est. speed input: 0.79 toks/s, output: 75.24 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:19<00:00, 259.77s/it, est. speed input: 0.79 toks/s, output: 75.24 toks/s][AProcessed prompts: 100%|██████████| 1/1 [04:19<00:00, 259.78s/it, est. speed input: 0.79 toks/s, output: 75.24 toks/s]
- 26%|██▌       | 51/198 [2:04:28<5:33:13, 136.01s/it]save question success:  50
-Processing question 51: The Interaction between the bosonic field X and fermions is given by
-
-\mathcal{L}\left(y\right)=-\la...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 514.45it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:13<00:00, 73.63s/it, est. speed input: 4.89 toks/s, output: 79.38 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:13<00:00, 73.63s/it, est. speed input: 4.89 toks/s, output: 79.38 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:13<00:00, 73.63s/it, est. speed input: 4.89 toks/s, output: 79.38 toks/s]
- 26%|██▋       | 52/198 [2:05:42<4:45:29, 117.32s/it]save question success:  51
-Processing question 52: A synchrocyclotron is a special type of cyclotron. A proton is injected at \$t=0\$ with negligible k...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 781.35it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:49<00:00, 109.88s/it, est. speed input: 2.11 toks/s, output: 78.41 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:49<00:00, 109.88s/it, est. speed input: 2.11 toks/s, output: 78.41 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:49<00:00, 109.89s/it, est. speed input: 2.11 toks/s, output: 78.41 toks/s]
- 27%|██▋       | 53/198 [2:07:32<4:38:12, 115.12s/it]save question success:  52
-Processing question 53: X is a meson resonance. What is the mean decay distance? Knowing that the production energy is $E_{X...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 813.80it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:42<00:00, 222.68s/it, est. speed input: 0.79 toks/s, output: 76.03 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:42<00:00, 222.68s/it, est. speed input: 0.79 toks/s, output: 76.03 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:42<00:00, 222.69s/it, est. speed input: 0.79 toks/s, output: 76.03 toks/s]
- 27%|██▋       | 54/198 [2:11:15<5:53:47, 147.41s/it]save question success:  53
-Processing question 54: Consider this annihilation process
-
-$p+\bar{p}\rightarrow2A^{+}+2A^{-}$
-
-The antiproton is slowly mo...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1125.08it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:55<00:00, 115.71s/it, est. speed input: 1.23 toks/s, output: 78.48 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:55<00:00, 115.71s/it, est. speed input: 1.23 toks/s, output: 78.48 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:55<00:00, 115.71s/it, est. speed input: 1.23 toks/s, output: 78.48 toks/s]
- 28%|██▊       | 55/198 [2:13:10<5:28:45, 137.94s/it]save question success:  54
-Processing question 55: Consider the extension of the Standard Model given by the following Lagrangian
-
-\mathcal{L}\subset i...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 455.46it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:25<00:00, 145.58s/it, est. speed input: 6.24 toks/s, output: 77.21 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:25<00:00, 145.58s/it, est. speed input: 6.24 toks/s, output: 77.21 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:25<00:00, 145.59s/it, est. speed input: 6.24 toks/s, output: 77.21 toks/s]
- 28%|██▊       | 56/198 [2:15:36<5:31:57, 140.26s/it]save question success:  55
-Processing question 56: Given the following Lagrangian
-
-\mathcal{L}_{int}=\kappa\bar{\psi}\sigma_{\mu\nu}\psi F^{\mu\nu}
-
-wh...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 957.39it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:53<00:00, 53.51s/it, est. speed input: 4.47 toks/s, output: 79.97 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:53<00:00, 53.51s/it, est. speed input: 4.47 toks/s, output: 79.97 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:53<00:00, 53.51s/it, est. speed input: 4.47 toks/s, output: 79.97 toks/s]
- 29%|██▉       | 57/198 [2:16:30<4:28:30, 114.26s/it]save question success:  56
-Processing question 57: Which of the following (effective) particles is not associated with a spontaneously-broken symmetry?...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 880.23it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:17<00:00, 17.49s/it, est. speed input: 5.09 toks/s, output: 81.75 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:17<00:00, 17.49s/it, est. speed input: 5.09 toks/s, output: 81.75 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:17<00:00, 17.49s/it, est. speed input: 5.09 toks/s, output: 81.75 toks/s]
- 29%|██▉       | 58/198 [2:16:47<3:18:54, 85.25s/it] save question success:  57
-Processing question 58: An equimolar mixture of salts A and B weighing 7.20 g was heated to 200°C without air. In this case,...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 706.94it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [06:46<00:00, 406.03s/it, est. speed input: 0.60 toks/s, output: 72.63 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [06:46<00:00, 406.03s/it, est. speed input: 0.60 toks/s, output: 72.63 toks/s][AProcessed prompts: 100%|██████████| 1/1 [06:46<00:00, 406.03s/it, est. speed input: 0.60 toks/s, output: 72.63 toks/s]
- 30%|██▉       | 59/198 [2:23:34<7:00:32, 181.53s/it]save question success:  58
-Processing question 59: All the following statements about the molecular biology of Severe Acute Respiratory Syndrome Corona...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 436.09it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:35<00:00, 35.93s/it, est. speed input: 11.16 toks/s, output: 80.45 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:35<00:00, 35.93s/it, est. speed input: 11.16 toks/s, output: 80.45 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:35<00:00, 35.93s/it, est. speed input: 11.16 toks/s, output: 80.45 toks/s]
- 30%|███       | 60/198 [2:24:09<5:17:05, 137.86s/it]save question success:  59
-Processing question 60: ChIP-seq on a PFA-fixed sample with an antibody to the IKAROS transcription factor in human B cells ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 935.18it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:28<00:00, 28.18s/it, est. speed input: 5.32 toks/s, output: 81.16 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:28<00:00, 28.18s/it, est. speed input: 5.32 toks/s, output: 81.16 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:28<00:00, 28.18s/it, est. speed input: 5.32 toks/s, output: 81.16 toks/s]
- 31%|███       | 61/198 [2:24:38<3:59:41, 104.97s/it]save question success:  60
-Processing question 61: "Oh, I know you," the ribonucleoprotein particle says to the nascent chain as they meet. "Pause ther...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 796.94it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:47<00:00, 47.47s/it, est. speed input: 3.48 toks/s, output: 80.27 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:47<00:00, 47.47s/it, est. speed input: 3.48 toks/s, output: 80.27 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:47<00:00, 47.47s/it, est. speed input: 3.48 toks/s, output: 80.27 toks/s]
- 31%|███▏      | 62/198 [2:25:25<3:18:53, 87.74s/it] save question success:  61
-Processing question 62: A eukaryotic cell evolved a mechanism to turn macromolecular building blocks into energy. The proces...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 431.91it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:27<00:00, 27.49s/it, est. speed input: 11.46 toks/s, output: 81.01 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:27<00:00, 27.49s/it, est. speed input: 11.46 toks/s, output: 81.01 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:27<00:00, 27.49s/it, est. speed input: 11.46 toks/s, output: 81.01 toks/s]
- 32%|███▏      | 63/198 [2:25:53<2:36:46, 69.68s/it]save question success:  62
-Processing question 63: You want to study the role of the GADD45G protein in a mouse model. You are highly interested in whe...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 465.26it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [16:27<00:00, 987.46s/it, est. speed input: 0.65 toks/s, output: 64.81 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [16:27<00:00, 987.46s/it, est. speed input: 0.65 toks/s, output: 64.81 toks/s][AProcessed prompts: 100%|██████████| 1/1 [16:27<00:00, 987.46s/it, est. speed input: 0.65 toks/s, output: 64.81 toks/s]
- 32%|███▏      | 64/198 [2:42:20<12:50:39, 345.07s/it]save question success:  63
-Processing question 64: You want to create a mouse embryonic chimera with induced pluripotent stem cells from somatic cells ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 420.19it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:55<00:00, 55.16s/it, est. speed input: 4.04 toks/s, output: 79.85 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:55<00:00, 55.16s/it, est. speed input: 4.04 toks/s, output: 79.85 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:55<00:00, 55.16s/it, est. speed input: 4.04 toks/s, output: 79.85 toks/s]
- 33%|███▎      | 65/198 [2:43:16<9:32:09, 258.12s/it] save question success:  64
-Processing question 65: You come across an algorithm that gives the following output (written as input -> output):
-
-AGG -> 1...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1007.76it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:06<00:00, 186.37s/it, est. speed input: 0.65 toks/s, output: 76.84 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:06<00:00, 186.37s/it, est. speed input: 0.65 toks/s, output: 76.84 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:06<00:00, 186.37s/it, est. speed input: 0.65 toks/s, output: 76.84 toks/s]
- 33%|███▎      | 66/198 [2:46:22<8:40:34, 236.63s/it]save question success:  65
-Processing question 66: You tag the inner capsid proteins of rotavirus with a GFP and deliver them to mice via oral gavage. ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 567.41it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:13<00:00, 13.70s/it, est. speed input: 12.40 toks/s, output: 81.14 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:13<00:00, 13.70s/it, est. speed input: 12.40 toks/s, output: 81.14 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:13<00:00, 13.70s/it, est. speed input: 12.40 toks/s, output: 81.14 toks/s]
- 34%|███▍      | 67/198 [2:46:36<6:10:38, 169.76s/it]save question success:  66
-Processing question 67: "Scientist aims to run quantitative polymerase chain reaction (qPCR) on some samples. He first wants...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 588.59it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:44<00:00, 104.19s/it, est. speed input: 3.83 toks/s, output: 78.42 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:44<00:00, 104.19s/it, est. speed input: 3.83 toks/s, output: 78.42 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:44<00:00, 104.19s/it, est. speed input: 3.83 toks/s, output: 78.42 toks/s]
- 34%|███▍      | 68/198 [2:48:20<5:25:14, 150.11s/it]save question success:  67
-Processing question 68: In gametogenesis, the germline undergoes two cycles of meiosis to give rise to haploid gametes. The ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 615.18it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:28<00:00, 28.50s/it, est. speed input: 9.61 toks/s, output: 80.98 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:28<00:00, 28.50s/it, est. speed input: 9.61 toks/s, output: 80.98 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:28<00:00, 28.50s/it, est. speed input: 9.61 toks/s, output: 80.98 toks/s]
- 35%|███▍      | 69/198 [2:48:49<4:04:19, 113.64s/it]save question success:  68
-Processing question 69: You identified a new ligand-receptor pair initially expressed in the neural crest cells and want to ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 427.21it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:45<00:00, 45.38s/it, est. speed input: 9.72 toks/s, output: 80.02 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:45<00:00, 45.38s/it, est. speed input: 9.72 toks/s, output: 80.02 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:45<00:00, 45.38s/it, est. speed input: 9.72 toks/s, output: 80.02 toks/s]
- 35%|███▌      | 70/198 [2:49:34<3:18:46, 93.18s/it] save question success:  69
-Processing question 70: Imagine a situation where a novel natural molecule, Xantheraquin, is discovered and is being investi...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 632.24it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:23<00:00, 23.58s/it, est. speed input: 11.96 toks/s, output: 81.14 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:23<00:00, 23.58s/it, est. speed input: 11.96 toks/s, output: 81.14 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:23<00:00, 23.58s/it, est. speed input: 11.96 toks/s, output: 81.14 toks/s]
- 36%|███▌      | 71/198 [2:49:58<2:33:03, 72.31s/it]save question success:  70
-Processing question 71: Congratulations, you just landed your dream job at one of the top structural biology labs at Stanfor...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 262.39it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [05:39<00:00, 339.57s/it, est. speed input: 8.29 toks/s, output: 72.42 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [05:39<00:00, 339.57s/it, est. speed input: 8.29 toks/s, output: 72.42 toks/s][AProcessed prompts: 100%|██████████| 1/1 [05:39<00:00, 339.57s/it, est. speed input: 8.29 toks/s, output: 72.42 toks/s]
- 36%|███▋      | 72/198 [2:55:37<5:20:19, 152.53s/it]save question success:  71
-Processing question 72: You identified a new quorum-sensing peptide in the bacteria Lactobacillus acidophilus. You are highl...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 413.93it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:25<00:00, 25.17s/it, est. speed input: 7.83 toks/s, output: 81.14 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:25<00:00, 25.17s/it, est. speed input: 7.83 toks/s, output: 81.14 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:25<00:00, 25.17s/it, est. speed input: 7.83 toks/s, output: 81.14 toks/s]
- 37%|███▋      | 73/198 [2:56:03<3:58:12, 114.34s/it]save question success:  72
-Processing question 73: There has been an outbreak of an viral infectious disease in your city. You have been asked to desig...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 591.66it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:32<00:00, 32.70s/it, est. speed input: 6.45 toks/s, output: 80.79 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:32<00:00, 32.70s/it, est. speed input: 6.45 toks/s, output: 80.79 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:32<00:00, 32.70s/it, est. speed input: 6.45 toks/s, output: 80.79 toks/s]
- 37%|███▋      | 74/198 [2:56:35<3:05:43, 89.86s/it] save question success:  73
-Processing question 74: Consider an aperture, which shapes like a N-sided polygon. All the apothems are of the same length a...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 272.36it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:52<00:00, 172.87s/it, est. speed input: 1.16 toks/s, output: 77.03 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:52<00:00, 172.87s/it, est. speed input: 1.16 toks/s, output: 77.03 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:52<00:00, 172.87s/it, est. speed input: 1.16 toks/s, output: 77.03 toks/s]
- 38%|███▊      | 75/198 [2:59:28<3:55:19, 114.80s/it]save question success:  74
-Processing question 75: trans-cinnamaldehyde was treated with methylmagnesium bromide, forming product 1.
-
-1 was treated wit...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 513.63it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:20<00:00, 140.74s/it, est. speed input: 1.12 toks/s, output: 77.82 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:20<00:00, 140.74s/it, est. speed input: 1.12 toks/s, output: 77.82 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:20<00:00, 140.74s/it, est. speed input: 1.12 toks/s, output: 77.82 toks/s]
- 38%|███▊      | 76/198 [3:01:49<4:09:18, 122.61s/it]save question success:  75
-Processing question 76: which of the following molecules has c3h symmetry?
-triisopropyl borate
-quinuclidine
-benzo[1,2-c:3,4-...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 649.78it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:18<00:00, 78.37s/it, est. speed input: 3.37 toks/s, output: 79.28 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:18<00:00, 78.37s/it, est. speed input: 3.37 toks/s, output: 79.28 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:18<00:00, 78.37s/it, est. speed input: 3.37 toks/s, output: 79.28 toks/s]
- 39%|███▉      | 77/198 [3:03:08<3:40:32, 109.36s/it]save question success:  76
-Processing question 77: A methanol solution of (R)-(+)-Limonene is stirred with Pd/C under a Hydrogen atmosphere. After 1 eq...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 500.51it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:37<00:00, 277.54s/it, est. speed input: 1.23 toks/s, output: 74.78 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:37<00:00, 277.54s/it, est. speed input: 1.23 toks/s, output: 74.78 toks/s][AProcessed prompts: 100%|██████████| 1/1 [04:37<00:00, 277.54s/it, est. speed input: 1.23 toks/s, output: 74.78 toks/s]
- 39%|███▉      | 78/198 [3:07:45<5:19:41, 159.85s/it]save question success:  77
-Processing question 78: How many of the following compounds will exhibit optical activity?
-
-(Z)-1-chloro-2-methylbut-1-ene
-(...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 561.04it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:18<00:00, 138.03s/it, est. speed input: 1.62 toks/s, output: 77.89 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:18<00:00, 138.03s/it, est. speed input: 1.62 toks/s, output: 77.89 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:18<00:00, 138.03s/it, est. speed input: 1.62 toks/s, output: 77.89 toks/s]
- 40%|███▉      | 79/198 [3:10:03<5:04:05, 153.33s/it]save question success:  78
-Processing question 79: The Michael reaction is a chemical process in organic chemistry where a nucleophile adds to a molecu...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 363.27it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:27<00:00, 267.37s/it, est. speed input: 2.04 toks/s, output: 74.90 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:27<00:00, 267.37s/it, est. speed input: 2.04 toks/s, output: 74.90 toks/s][AProcessed prompts: 100%|██████████| 1/1 [04:27<00:00, 267.37s/it, est. speed input: 2.04 toks/s, output: 74.90 toks/s]
- 40%|████      | 80/198 [3:14:31<6:08:53, 187.57s/it]save question success:  79
-Processing question 80: Compounds that have the same molecular formula but are different in their structural arrangement are...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 495.25it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:05<00:00, 65.82s/it, est. speed input: 4.24 toks/s, output: 79.60 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:05<00:00, 65.82s/it, est. speed input: 4.24 toks/s, output: 79.60 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:05<00:00, 65.82s/it, est. speed input: 4.24 toks/s, output: 79.60 toks/s]
- 41%|████      | 81/198 [3:15:37<4:54:34, 151.07s/it]save question success:  80
-Processing question 81: In an experiment, a researcher reacted ((2,2-dimethylbut-3-en-1-yl)oxy)benzene with hydrogen bromide...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 774.29it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:17<00:00, 197.58s/it, est. speed input: 1.40 toks/s, output: 76.39 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:17<00:00, 197.58s/it, est. speed input: 1.40 toks/s, output: 76.39 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:17<00:00, 197.58s/it, est. speed input: 1.40 toks/s, output: 76.39 toks/s]
- 41%|████▏     | 82/198 [3:18:54<5:19:05, 165.05s/it]save question success:  81
-Processing question 82: If an equimolar mixture X of two liquids, which decolorizes bromine water, is treated with platinum ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 579.80it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:14<00:00, 254.04s/it, est. speed input: 0.89 toks/s, output: 75.31 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:14<00:00, 254.04s/it, est. speed input: 0.89 toks/s, output: 75.31 toks/s][AProcessed prompts: 100%|██████████| 1/1 [04:14<00:00, 254.04s/it, est. speed input: 0.89 toks/s, output: 75.31 toks/s]
- 42%|████▏     | 83/198 [3:23:09<6:07:34, 191.78s/it]save question success:  82
-Processing question 83: Name reactions in chemistry refer to a specific set of well-known chemical reactions that are typica...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 517.24it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:19<00:00, 199.91s/it, est. speed input: 1.83 toks/s, output: 76.31 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:19<00:00, 199.91s/it, est. speed input: 1.83 toks/s, output: 76.31 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:19<00:00, 199.91s/it, est. speed input: 1.83 toks/s, output: 76.31 toks/s]
- 42%|████▏     | 84/198 [3:26:29<6:09:08, 194.28s/it]save question success:  83
-Processing question 84: Dienes are organic compounds with two adjacent double bonds in their structure, and they exhibit uni...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 495.90it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:10<00:00, 250.90s/it, est. speed input: 1.49 toks/s, output: 75.26 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:10<00:00, 250.90s/it, est. speed input: 1.49 toks/s, output: 75.26 toks/s][AProcessed prompts: 100%|██████████| 1/1 [04:10<00:00, 250.91s/it, est. speed input: 1.49 toks/s, output: 75.26 toks/s]
- 43%|████▎     | 85/198 [3:30:40<6:37:56, 211.30s/it]save question success:  84
-Processing question 85: S)-4-hydroxycyclohex-2-en-1-one is treated with tert-Butyldimethylsilyl chloride and triethylamine, ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 574.25it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:10<00:00, 250.19s/it, est. speed input: 1.31 toks/s, output: 75.45 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [04:10<00:00, 250.19s/it, est. speed input: 1.31 toks/s, output: 75.45 toks/s][AProcessed prompts: 100%|██████████| 1/1 [04:10<00:00, 250.19s/it, est. speed input: 1.31 toks/s, output: 75.45 toks/s]
- 43%|████▎     | 86/198 [3:34:50<6:56:15, 222.99s/it]save question success:  85
-Processing question 86: A textile dye containing an extensively conjugated pi-electrons emits light with energy of 2.3393 eV...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 975.42it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:56<00:00, 116.68s/it, est. speed input: 0.88 toks/s, output: 78.44 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:56<00:00, 116.68s/it, est. speed input: 0.88 toks/s, output: 78.44 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:56<00:00, 116.69s/it, est. speed input: 0.88 toks/s, output: 78.44 toks/s]
- 44%|████▍     | 87/198 [3:36:47<5:53:34, 191.12s/it]save question success:  86
-Processing question 87: toluene is treated with nitric acid and sulfuric acid, forming product 1.
-
-1 is treated with MnO2 an...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1114.62it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:37<00:00, 97.29s/it, est. speed input: 1.41 toks/s, output: 78.85 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [01:37<00:00, 97.29s/it, est. speed input: 1.41 toks/s, output: 78.85 toks/s][AProcessed prompts: 100%|██████████| 1/1 [01:37<00:00, 97.29s/it, est. speed input: 1.41 toks/s, output: 78.85 toks/s]
- 44%|████▍     | 88/198 [3:38:24<4:58:50, 163.00s/it]save question success:  87
-Processing question 88: Identify the EXO product of the following [4+2] cycloaddition reaction.
-2,5-dimethylthiophene + Fura...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 597.22it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:35<00:00, 215.03s/it, est. speed input: 1.51 toks/s, output: 76.07 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:35<00:00, 215.03s/it, est. speed input: 1.51 toks/s, output: 76.07 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:35<00:00, 215.04s/it, est. speed input: 1.51 toks/s, output: 76.07 toks/s]
- 45%|████▍     | 89/198 [3:41:59<5:24:31, 178.64s/it]save question success:  88
-Processing question 89: "1,2-Rearrangement reaction in which vicinal diols are allowed to react with acid is called Pinacol ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 630.44it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [05:51<00:00, 351.89s/it, est. speed input: 1.35 toks/s, output: 73.51 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [05:51<00:00, 351.89s/it, est. speed input: 1.35 toks/s, output: 73.51 toks/s][AProcessed prompts: 100%|██████████| 1/1 [05:51<00:00, 351.89s/it, est. speed input: 1.35 toks/s, output: 73.51 toks/s]
- 45%|████▌     | 90/198 [3:47:51<6:55:10, 230.65s/it]save question success:  89
-Processing question 90: Identify the number of 13C-NMR signals produced by the final product, denoted as E, resulting from t...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 674.43it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:35<00:00, 155.89s/it, est. speed input: 1.06 toks/s, output: 77.43 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:35<00:00, 155.89s/it, est. speed input: 1.06 toks/s, output: 77.43 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:35<00:00, 155.89s/it, est. speed input: 1.06 toks/s, output: 77.43 toks/s]
- 46%|████▌     | 91/198 [3:50:27<6:11:22, 208.25s/it]save question success:  90
-Processing question 91: Enamine reactions include nucleophilic substitutions, electrophilic additions, and the condensation ...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 652.91it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:50<00:00, 170.59s/it, est. speed input: 1.79 toks/s, output: 76.99 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:50<00:00, 170.59s/it, est. speed input: 1.79 toks/s, output: 76.99 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:50<00:00, 170.59s/it, est. speed input: 1.79 toks/s, output: 76.99 toks/s]
- 46%|████▋     | 92/198 [3:53:18<5:48:00, 196.98s/it]save question success:  91
-Processing question 92: Your overhear two chemists talking to each other as they leave a synthetic organic chemistry lab. On...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 775.00it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:27<00:00, 27.25s/it, est. speed input: 6.42 toks/s, output: 81.03 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [00:27<00:00, 27.25s/it, est. speed input: 6.42 toks/s, output: 81.03 toks/s][AProcessed prompts: 100%|██████████| 1/1 [00:27<00:00, 27.25s/it, est. speed input: 6.42 toks/s, output: 81.03 toks/s]
- 47%|████▋     | 93/198 [3:53:45<4:15:39, 146.09s/it]save question success:  92
-Processing question 93: A benzene ring has a carboxylic acid a carbaldehyde and a cyano group all meta to one another. Ortho...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 768.75it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:52<00:00, 172.08s/it, est. speed input: 1.58 toks/s, output: 77.03 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:52<00:00, 172.08s/it, est. speed input: 1.58 toks/s, output: 77.03 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:52<00:00, 172.08s/it, est. speed input: 1.58 toks/s, output: 77.03 toks/s]
- 47%|████▋     | 94/198 [3:56:38<4:26:47, 153.92s/it]save question success:  93
-Processing question 94: Racemic 3-methylpent-1-ene is treated with Grubbs catalyst. How many possible products are there (ex...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 1195.64it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:37<00:00, 217.44s/it, est. speed input: 0.46 toks/s, output: 76.16 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:37<00:00, 217.44s/it, est. speed input: 0.46 toks/s, output: 76.16 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:37<00:00, 217.45s/it, est. speed input: 0.46 toks/s, output: 76.16 toks/s]
- 48%|████▊     | 95/198 [4:00:15<4:57:02, 173.03s/it]save question success:  94
-Processing question 95: Identify the compound C9H11NO2 using the given data.
-IR: medium to strong intensity bands at 3420 cm...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 801.82it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:12<00:00, 132.73s/it, est. speed input: 1.66 toks/s, output: 77.90 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [02:12<00:00, 132.73s/it, est. speed input: 1.66 toks/s, output: 77.90 toks/s][AProcessed prompts: 100%|██████████| 1/1 [02:12<00:00, 132.73s/it, est. speed input: 1.66 toks/s, output: 77.90 toks/s]
- 48%|████▊     | 96/198 [4:02:28<4:33:40, 160.98s/it]save question success:  95
-Processing question 96: cyclohexanone was treated with bromine, forming product 1.
-1 was heated with sodium hydroxide, formi...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 722.53it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:28<00:00, 208.36s/it, est. speed input: 0.75 toks/s, output: 76.22 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:28<00:00, 208.36s/it, est. speed input: 0.75 toks/s, output: 76.22 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:28<00:00, 208.36s/it, est. speed input: 0.75 toks/s, output: 76.22 toks/s]
- 49%|████▉     | 97/198 [4:05:57<4:54:59, 175.24s/it]save question success:  96
-Processing question 97: Sigmatropic rearrangement is a class of pericyclic reactions. In these reactions, the terminal pi bo...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 436.91it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:23<00:00, 203.40s/it, est. speed input: 2.11 toks/s, output: 76.21 toks/s][A
-Processed prompts: 100%|██████████| 1/1 [03:23<00:00, 203.40s/it, est. speed input: 2.11 toks/s, output: 76.21 toks/s][AProcessed prompts: 100%|██████████| 1/1 [03:23<00:00, 203.40s/it, est. speed input: 2.11 toks/s, output: 76.21 toks/s]
- 49%|████▉     | 98/198 [4:09:20<5:06:12, 183.72s/it]save question success:  97
-Processing question 98: Determine the starting material needed to synthesize 5-isopropyl-3,4-dimethylcyclohex-1-ene via ring...
-Preparing prompt...
-
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s][AAdding requests: 100%|██████████| 1/1 [00:00<00:00, 710.18it/s]
-
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A/share/yangxizhong/env/anaconda/envs/deepconf/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
-  warnings.warn('resource_tracker: There appear to be %d '

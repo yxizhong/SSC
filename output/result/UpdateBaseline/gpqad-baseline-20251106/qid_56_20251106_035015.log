@@ -1,64 +1,0 @@
-INFO 11-06 05:34:35 [__init__.py:216] Automatically detected platform cuda.
-Using Device: NVIDIA H800
-Loading dataset from /share/yangxizhong/data/GPQA-Diamond/test/gpqa_diamond.jsonl...
-Initializing vLLM engine...
-INFO 11-06 05:34:36 [utils.py:328] non-default args: {'trust_remote_code': True, 'enable_prefix_caching': True, 'disable_log_stats': True, 'logits_processors': [<class 'model.processors.WrappedPerReqLogitsProcessor'>], 'model': '/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B'}
-The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
-Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
-INFO 11-06 05:34:43 [__init__.py:742] Resolved architecture: Qwen3ForCausalLM
-`torch_dtype` is deprecated! Use `dtype` instead!
-INFO 11-06 05:34:43 [__init__.py:1815] Using max model len 131072
-Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
-INFO 11-06 05:34:44 [scheduler.py:222] Chunked prefill is enabled with max_num_batched_tokens=16384.
-Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'attn_factor'}
-WARNING 11-06 05:34:44 [__init__.py:2974] We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing for more information. Reasons: CUDA is initialized
-INFO 11-06 05:34:49 [__init__.py:216] Automatically detected platform cuda.
-[1;36m(EngineCore_DP0 pid=600957)[0;0m INFO 11-06 05:34:50 [core.py:654] Waiting for init message from front-end.
-[1;36m(EngineCore_DP0 pid=600957)[0;0m INFO 11-06 05:34:50 [core.py:76] Initializing a V1 LLM engine (v0.10.2) with config: model='/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B', speculative_config=None, tokenizer='/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=131072, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.mamba_mixer2","vllm.mamba_mixer","vllm.short_conv","vllm.linear_attention","vllm.plamo2_mamba_mixer","vllm.gdn_attention"],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":1,"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"pass_config":{},"max_capture_size":512,"local_cache_dir":null}
-[W1106 05:34:52.395550960 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
-[1;36m(EngineCore_DP0 pid=600957)[0;0m INFO 11-06 05:34:52 [parallel_state.py:1165] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
-[1;36m(EngineCore_DP0 pid=600957)[0;0m WARNING 11-06 05:34:52 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
-[1;36m(EngineCore_DP0 pid=600957)[0;0m INFO 11-06 05:34:52 [gpu_model_runner.py:2338] Starting to load model /share/yangxizhong/ckpt/DeepSeek-R1-0528-Qwen3-8B...
-[1;36m(EngineCore_DP0 pid=600957)[0;0m INFO 11-06 05:34:52 [gpu_model_runner.py:2370] Loading model from scratch...
-[1;36m(EngineCore_DP0 pid=600957)[0;0m INFO 11-06 05:34:52 [cuda.py:362] Using Flash Attention backend on V1 engine.
-[1;36m(EngineCore_DP0 pid=600957)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
-[1;36m(EngineCore_DP0 pid=600957)[0;0m Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:03<00:03,  3.54s/it]
-[1;36m(EngineCore_DP0 pid=600957)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:07<00:00,  3.95s/it]
-[1;36m(EngineCore_DP0 pid=600957)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:07<00:00,  3.88s/it]
-[1;36m(EngineCore_DP0 pid=600957)[0;0m 
-[1;36m(EngineCore_DP0 pid=600957)[0;0m INFO 11-06 05:35:00 [default_loader.py:268] Loading weights took 8.06 seconds
-[1;36m(EngineCore_DP0 pid=600957)[0;0m INFO 11-06 05:35:01 [gpu_model_runner.py:2392] Model loading took 15.2898 GiB and 8.276871 seconds
-[1;36m(EngineCore_DP0 pid=600957)[0;0m INFO 11-06 05:35:07 [backends.py:539] Using cache directory: /root/.cache/vllm/torch_compile_cache/37187f4919/rank_0_0/backbone for vLLM's torch.compile
-[1;36m(EngineCore_DP0 pid=600957)[0;0m INFO 11-06 05:35:07 [backends.py:550] Dynamo bytecode transform time: 5.96 s
-[1;36m(EngineCore_DP0 pid=600957)[0;0m INFO 11-06 05:35:10 [backends.py:161] Directly load the compiled graph(s) for dynamic shape from the cache, took 2.238 s
-[1;36m(EngineCore_DP0 pid=600957)[0;0m INFO 11-06 05:35:11 [monitor.py:34] torch.compile takes 5.96 s in total
-[1;36m(EngineCore_DP0 pid=600957)[0;0m INFO 11-06 05:35:12 [gpu_worker.py:298] Available KV cache memory: 104.81 GiB
-[1;36m(EngineCore_DP0 pid=600957)[0;0m INFO 11-06 05:35:12 [kv_cache_utils.py:864] GPU KV cache size: 763,200 tokens
-[1;36m(EngineCore_DP0 pid=600957)[0;0m INFO 11-06 05:35:12 [kv_cache_utils.py:868] Maximum concurrency for 131,072 tokens per request: 5.82x
-[1;36m(EngineCore_DP0 pid=600957)[0;0m Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/67 [00:00<?, ?it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   4%|▍         | 3/67 [00:00<00:02, 25.22it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   9%|▉         | 6/67 [00:00<00:02, 26.11it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  13%|█▎        | 9/67 [00:00<00:02, 26.19it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  18%|█▊        | 12/67 [00:00<00:02, 26.04it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  22%|██▏       | 15/67 [00:00<00:02, 25.71it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  27%|██▋       | 18/67 [00:00<00:01, 26.32it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  31%|███▏      | 21/67 [00:00<00:01, 27.36it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  36%|███▌      | 24/67 [00:00<00:01, 26.14it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  40%|████      | 27/67 [00:01<00:01, 26.23it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  45%|████▍     | 30/67 [00:01<00:01, 25.82it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  49%|████▉     | 33/67 [00:01<00:01, 25.58it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  54%|█████▎    | 36/67 [00:01<00:01, 25.11it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  58%|█████▊    | 39/67 [00:01<00:01, 24.58it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  63%|██████▎   | 42/67 [00:01<00:01, 24.40it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  67%|██████▋   | 45/67 [00:01<00:00, 24.40it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  72%|███████▏  | 48/67 [00:01<00:00, 24.19it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  76%|███████▌  | 51/67 [00:02<00:00, 23.52it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  81%|████████  | 54/67 [00:02<00:00, 22.56it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  85%|████████▌ | 57/67 [00:02<00:00, 21.74it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  90%|████████▉ | 60/67 [00:02<00:00, 21.65it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  94%|█████████▍| 63/67 [00:02<00:00, 21.53it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  99%|█████████▊| 66/67 [00:02<00:00, 22.21it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 67/67 [00:02<00:00, 24.05it/s]
-[1;36m(EngineCore_DP0 pid=600957)[0;0m INFO 11-06 05:35:15 [gpu_model_runner.py:3118] Graph capturing finished in 3 secs, took 0.77 GiB
-[1;36m(EngineCore_DP0 pid=600957)[0;0m INFO 11-06 05:35:15 [gpu_worker.py:391] Free memory on device (139.23/139.83 GiB) on startup. Desired GPU memory utilization is (0.9, 125.85 GiB). Actual usage is 15.29 GiB for weight, 5.68 GiB for peak activation, 0.07 GiB for non-torch memory, and 0.77 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=111552297267` to fit into requested memory, or `--kv-cache-memory=125919479296` to fully utilize gpu memory. Current kv cache memory in use is 112540055859 bytes.
-[1;36m(EngineCore_DP0 pid=600957)[0;0m INFO 11-06 05:35:15 [core.py:218] init engine (profile, create kv cache, warmup model) took 14.33 seconds
-INFO 11-06 05:35:16 [llm.py:295] Supported_tasks: ['generate']
-INFO 11-06 05:35:16 [__init__.py:36] No IOProcessor plugins requested by the model
-vLLM engine initialized in 39.73 seconds
-Initializing tokenizer...
-Tokenizer initialized in 0.37 seconds
-Processing question 56: Given the following Lagrangian
-
-\mathcal{L}_{int}=\kappa\bar{\psi}\sigma_{\mu\nu}\psi F^{\mu\nu}
-
-wh...
-Preparing prompt...
-[{'role': 'system', 'content': '该助手为DeepSeek-R1，由深度求索公司创造。\n今天是2025年5月28日，星期一。\n'}, {'role': 'user', 'content': 'Return your final response within \\boxed{} and only include the letter choice (A, B, C, or D) as your final response. Given the following Lagrangian\n\n\\mathcal{L}_{int}=\\kappa\\bar{\\psi}\\sigma_{\\mu\\nu}\\psi F^{\\mu\\nu}\n\nwhere \\sigma_{\\mu\\nu}=\\frac{i}{2}\\left[\\gamma_{\\mu},\\gamma_{\\nu}\\right].\n\nWhat is the mass dimension of \\kappa? Is the theory renormalizable?\n\nA. The mass dimension \\left[\\kappa\\right]_{M}=-1. The theory is not renormalizable.\nB. The mass dimension \\left[\\kappa\\right]_{M}=1. The theory is not renormalizable.\nC. The mass dimension \\left[\\kappa\\right]_{M}=-1. The theory is renormalizable.\nD. The mass dimension \\left[\\kappa\\right]_{M}=1. The theory is renormalizable.'}]
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s]Adding requests: 100%|██████████| 1/1 [00:00<00:00, 101.38it/s]
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:39<00:00, 39.62s/it, est. speed input: 6.39 toks/s, output: 153.63 toks/s]Processed prompts: 100%|██████████| 1/1 [00:39<00:00, 39.62s/it, est. speed input: 6.39 toks/s, output: 153.63 toks/s]Processed prompts: 100%|██████████| 1/1 [00:39<00:00, 39.62s/it, est. speed input: 6.39 toks/s, output: 153.63 toks/s]
-[1;36m(EngineCore_DP0 pid=600957)[0;0m Not using ConfPerReqLogitsProcessor None
-[rank0]:[W1106 05:35:56.730642317 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-save question success:  56
